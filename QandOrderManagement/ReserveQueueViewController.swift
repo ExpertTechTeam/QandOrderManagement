@@ -31,6 +31,7 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
     let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
     let subTitleFont = UIFont(name: "ravenna-serial-light-regular", size: 13.0)
     
+    var firstAllowContact : Bool = true
     var queueModel : QueueModel = QueueModel()
     
     override func viewDidLoad() {
@@ -57,6 +58,9 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         
         self.babyCarriage.transform =  CGAffineTransformMakeScale(0.70, 0.70)
         self.wheelchair.transform = CGAffineTransformMakeScale(0.70, 0.70)
+        self.babyCarriage.on = false
+        self.wheelchair.on = false
+        
         self.specialRequest.font = customFont
         configureStepper()
         
@@ -130,17 +134,24 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
     
     
     @IBAction func displayAlert(){
-        let alertController = UIAlertController(title: "", message: "Application would like to access your contacts?", preferredStyle: .Alert)
-        
-        let dontAllowAction = UIAlertAction(title: "Don't Allow", style: .Default, handler: nil)
-        let allowAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
+        if(self.firstAllowContact){
+            let alertController = UIAlertController(title: "", message: "Application would like to access your contacts?", preferredStyle: .Alert)
+            
+            let dontAllowAction = UIAlertAction(title: "Don't Allow", style: .Default, handler: nil)
+            let allowAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
+                self.performSegueWithIdentifier("addfriend", sender: self)
+            }
+            
+            alertController.addAction(dontAllowAction)
+            alertController.addAction(allowAction)
+            presentViewController(alertController, animated: true, completion: nil)
+            self.firstAllowContact = false
+            
+        }else{
             self.performSegueWithIdentifier("addfriend", sender: self)
         }
         
-        alertController.addAction(dontAllowAction)
-        alertController.addAction(allowAction)
         
-        presentViewController(alertController, animated: true, completion: nil)
         
     }
     
@@ -162,6 +173,7 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         if(segue.identifier == "addfriend"){
             print("ADD FRIEND SEGUE")
             let controller = segue.destinationViewController as! ContactListTableViewController
+            controller.selectedRow = self.friendArray
             controller.delegate = self
         }else if(segue.identifier == "continueBtnTapped"){
             

@@ -70,10 +70,11 @@ class ContactLis2tTableViewController: UITableViewController {
         cell.textLabel!.text = self.contactList[indexPath.row]
         cell.textLabel?.font = customFont
         
-        if (cell.selected){
+        if(self.selectedRow.contains(self.contactList[indexPath.row])){
+            //Contain
+            print("Contain : \(self.contactList[indexPath.row])\n")
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
-        }else{
-            cell.accessoryType = UITableViewCellAccessoryType.None
+            
         }
         
         return cell
@@ -98,7 +99,12 @@ class ContactLis2tTableViewController: UITableViewController {
         if(self.selectedRow.count == 0){
             self.selectedRow = [cell!.textLabel!.text!]
         }else{
-            self.selectedRow.append((cell?.textLabel?.text!)!)
+            if(self.selectedRow.contains((cell?.textLabel?.text!)!)){
+                
+            }else{
+                self.selectedRow.append((cell?.textLabel?.text!)!)
+            }
+            
         }
         
     }

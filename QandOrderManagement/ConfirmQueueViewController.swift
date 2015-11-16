@@ -101,23 +101,16 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         self.bookingViewVisible += 1
         if(self.bookingViewVisible % 2 == 1){
             //Show view
-            print("Show")
             self.bookingView.hidden = false
-//            self.viewBookingBtn.t
-            self.viewBookingBtn.titleLabel?.text = "Hide Booking Information"
-            
+            self.viewBookingBtn.setTitle("Hide Booking Information", forState: UIControlState.Normal)
+          
         }else{
             //Hide view
-            print("Hide")
             self.bookingView.hidden = true
-            self.viewBookingBtn.titleLabel?.text = "Show Booking Information"
+            self.viewBookingBtn.setTitle("Show Booking Information", forState: UIControlState.Normal)
+            
         }
         
-        
-        print("Begin")
-        
-        
-        print("End")
     }
     
     
@@ -129,7 +122,6 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
     
     
     func backToConfirmPage(contactList:[String]){
-        print("2")
         self.friendArray = contactList
         var friend : String = ""
         for i in 0..<contactList.count {
@@ -151,6 +143,7 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         if(segue.identifier == "addfriend2"){
             print("ADD FRIEND SEGUE")
             let controller = segue.destinationViewController as! ContactLis2tTableViewController
+            controller.selectedRow = self.friendArray
             controller.delegate = self
         }
         
