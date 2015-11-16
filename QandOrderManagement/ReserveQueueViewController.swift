@@ -9,7 +9,7 @@
 import UIKit
 
 class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDelegate {
-
+    
     @IBOutlet weak var restaurantImage : UIImage!
     @IBOutlet weak var branchName : UILabel!
     @IBOutlet weak var branchLocation : UILabel!
@@ -31,9 +31,11 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
     let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
     let subTitleFont = UIFont(name: "ravenna-serial-light-regular", size: 13.0)
     
+    var queueModel : QueueModel = QueueModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //Setup Nav
         self.navigationItem.title = self.selectedRestaurant
         self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
@@ -45,9 +47,9 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
             continueItem.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)}
         continueItem.tintColor = UIColor.whiteColor()
         self.navigationItem.rightBarButtonItem = continueItem
-//            self.navigationItem.hidesBackButton = true
+        //            self.navigationItem.hidesBackButton = true
         
-    
+        
         
         self.branchName.text = selectedBranch.res_branch_name
         self.branchLocation.text = selectedBranch.res_address
@@ -60,12 +62,12 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         
         // Do any additional setup after loading the view.
     }
-
-
+    
+    
     func continueBtnTapped(){
         self.performSegueWithIdentifier("continueBtnTapped", sender: self)
     }
-
+    
     func configureStepper() {
         self.stepper = KWStepper(
             decrementButton: self.decrementButton,
@@ -125,8 +127,8 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         print("Min value clamped")
         stepperDidClampValue()
     }
-
-
+    
+    
     @IBAction func displayAlert(){
         let alertController = UIAlertController(title: "", message: "Application would like to access your contacts?", preferredStyle: .Alert)
         
@@ -147,11 +149,11 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
@@ -162,16 +164,59 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
             let controller = segue.destinationViewController as! ContactListTableViewController
             controller.delegate = self
         }else if(segue.identifier == "continueBtnTapped"){
+            
+            
+            self.queueModel.queueNo = "A012"
+            self.queueModel.noOfPerson = self.countLabel!.text!
+            if(self.babyCarriage.on){
+                //True
+                self.queueModel.babyFlag = true
+            }else{
+                //False
+                self.queueModel.babyFlag = false
+            }
+            
+            if(self.wheelchair.on){
+                //True
+                self.queueModel.wheelchairFlag = true
+            }else{
+                //False
+                self.queueModel.wheelchairFlag = false
+            }
+            
+            if(self.specialRequest.text.isEmpty){
+                print("1")
+                self.queueModel.specialRequest = "-"
+                
+            }else{
+                print("2")
+                self.queueModel.specialRequest = self.specialRequest.text
+                
+            }
+            
+            if(self.friendList.text.isEmpty){
+                self.queueModel.friendList = []
+            }else{
+                self.queueModel.friendList = self.friendArray
+                
+            }
+            
+            self.queueModel.confirmCode = self.randomInt(100000, max: 999999)
             let confirmQueueController = segue.destinationViewController as! ConfirmQueueViewController
             confirmQueueController.selectedBranch = self.selectedBranch
+            confirmQueueController.queueModel = self.queueModel
         }
         
+    }
+    
+    func randomInt(min: Int, max:Int) -> Int {
+        return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     }
     
     
     func backToReservePage(contactList:[String]){
         print("2")
-        
+        self.friendArray = contactList
         var friend : String = ""
         for i in 0..<contactList.count {
             friend = friend + contactList[i] + "\r\n"
@@ -180,5 +225,5 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         self.friendList.text = friend
     }
     
-
+    
 }

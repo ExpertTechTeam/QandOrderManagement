@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A2F18281BFA02A200367FA2 /* QueueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F18271BFA02A200367FA2 /* QueueModel.swift */; settings = {ASSET_TAGS = (); }; };
+		3A2F182A1BFA02AA00367FA2 /* ContactList2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3A4FBDC71BF87D9C00B37E11 /* ConfirmQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4FBDC61BF87D9C00B37E11 /* ConfirmQueueViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3A4FBDD71BF8962E00B37E11 /* chef_hat5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4FBDD61BF8962E00B37E11 /* chef_hat5.png */; settings = {ASSET_TAGS = (); }; };
 		3A4FBDDA1BF897E400B37E11 /* view_qr_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4FBDD81BF897E400B37E11 /* view_qr_2.png */; settings = {ASSET_TAGS = (); }; };
@@ -255,6 +257,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A2F18271BFA02A200367FA2 /* QueueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueModel.swift; sourceTree = "<group>"; };
+		3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactList2TableViewController.swift; sourceTree = "<group>"; };
 		3A4FBDC61BF87D9C00B37E11 /* ConfirmQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmQueueViewController.swift; sourceTree = "<group>"; };
 		3A4FBDD61BF8962E00B37E11 /* chef_hat5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chef_hat5.png; sourceTree = "<group>"; };
 		3A4FBDD81BF897E400B37E11 /* view_qr_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view_qr_2.png; sourceTree = "<group>"; };
@@ -640,6 +644,7 @@
 				3A6E5BAB1BF328390078A941 /* ReserveQueueViewController.swift */,
 				3A6E5BC51BF4A3B50078A941 /* ContactListTableViewController.swift */,
 				3A4FBDC61BF87D9C00B37E11 /* ConfirmQueueViewController.swift */,
+				3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -692,6 +697,7 @@
 				A1FA24B11BF9D17D00F6B0B9 /* MenuModel.swift */,
 				3A6E5B681BF1F3D20078A941 /* PromotionModel.swift */,
 				3A6E5B691BF1F3D20078A941 /* RestaurantModel.swift */,
+				3A2F18271BFA02A200367FA2 /* QueueModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1224,6 +1230,7 @@
 				3A6E5B801BF1F4540078A941 /* FMDatabaseAdditions.m in Sources */,
 				A1FA24B31BF9D17D00F6B0B9 /* MenuModel.swift in Sources */,
 				3A6E5BAC1BF328390078A941 /* ReserveQueueViewController.swift in Sources */,
+				3A2F18281BFA02A200367FA2 /* QueueModel.swift in Sources */,
 				A1FA25F41BF9D41A00F6B0B9 /* OrderListViewController.swift in Sources */,
 				A1FA25E71BF9D40300F6B0B9 /* MenuLevel1Section2TableViewCell.swift in Sources */,
 				A1FA26021BF9D4AD00F6B0B9 /* PinAnnotationView.swift in Sources */,
@@ -1232,6 +1239,7 @@
 				A1FA24B81BF9D1EF00F6B0B9 /* UIExpandableTableView.swift in Sources */,
 				A1FA24B21BF9D17D00F6B0B9 /* MenuController.swift in Sources */,
 				A1FA25E21BF9D3F900F6B0B9 /* MenuDetailViewController.swift in Sources */,
+				3A2F182A1BFA02AA00367FA2 /* ContactList2TableViewController.swift in Sources */,
 				A1FA25E01BF9D3F900F6B0B9 /* BeefButton.swift in Sources */,
 				3A6E5B831BF1F4540078A941 /* FMResultSet.m in Sources */,
 				3A6E5B6B1BF1F3D20078A941 /* RestaurantModel.swift in Sources */,

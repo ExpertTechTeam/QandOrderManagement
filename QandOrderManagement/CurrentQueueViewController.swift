@@ -17,6 +17,7 @@ class CurrentQueueViewController: UIViewController {
     
     var selectedRestaurant : String = ""
     var selectedBranch : RestaurantModel = RestaurantModel()
+    let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,15 @@ class CurrentQueueViewController: UIViewController {
         self.navigationItem.title = self.selectedRestaurant
         self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Heiti SC", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        
+        var continueItem = UIBarButtonItem(title: "Continue", style: .Plain, target: self, action: "continueBtnTapped")
+        
+        if let font = customFont {
+            continueItem.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)}
+        continueItem.tintColor = UIColor.whiteColor()
+        self.navigationItem.rightBarButtonItem = continueItem
+
         
         self.branchName!.text = self.selectedBranch.res_branch_name
         self.branchLocation!.text = self.selectedBranch.res_address
@@ -38,7 +48,9 @@ class CurrentQueueViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func continueBtnTapped(){
+        self.performSegueWithIdentifier("reserveQueue", sender: self)
+    }
     
     // MARK: - Navigation
 
