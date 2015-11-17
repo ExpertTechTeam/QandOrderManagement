@@ -33,12 +33,22 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
     var queueModel : QueueModel = QueueModel()
     var bookingViewVisible : Int = 0
     var selectedBranch : RestaurantModel = RestaurantModel()
+    var selectedRestaurant : String = ""
     
+    let navigationFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
     let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
     let subTitleFont = UIFont(name: "ravenna-serial-light-regular", size: 13.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Setup Nav
+        self.navigationItem.title = self.selectedRestaurant
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationItem.hidesBackButton = true
+        
+        
         self.branchName!.text = selectedBranch.res_branch_name
         self.branchLocation!.text = selectedBranch.res_address
         self.branchServiceTimeContact!.text = "Open 10:00 - 21:30 "+"Tel. "+self.selectedBranch.res_contact
@@ -115,6 +125,9 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         
     }
     
+    @IBAction func viewQr(){
+        self.performSegueWithIdentifier("viewqrcode", sender: self)
+    }
     
     func addFriendBtnTapped(sender: AnyObject){
         self.performSegueWithIdentifier("addfriend2", sender: self)
@@ -146,6 +159,10 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
             let controller = segue.destinationViewController as! ContactLis2tTableViewController
             controller.selectedRow = self.friendArray
             controller.delegate = self
+        }else if(segue.identifier == "viewqrcode"){
+            let controller = segue.destinationViewController as! ViewQrViewController
+            controller.selectedRestaurant = self.selectedRestaurant
+            controller.selectedBranch = self.selectedBranch
         }
         
         

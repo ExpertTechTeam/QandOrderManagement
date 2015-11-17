@@ -28,6 +28,9 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
     var selectedRestaurant : String = ""
     var selectedBranch : RestaurantModel = RestaurantModel()
     var friendArray : [String] = []
+    
+    
+    let navigationFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
     let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
     let subTitleFont = UIFont(name: "ravenna-serial-light-regular", size: 13.0)
     
@@ -42,7 +45,7 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         //Setup Nav
         self.navigationItem.title = self.selectedRestaurant
         self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Heiti SC", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         var continueItem = UIBarButtonItem(title: "Continue", style: .Plain, target: self, action: "continueBtnTapped")
         
@@ -249,6 +252,7 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
             let confirmQueueController = segue.destinationViewController as! ConfirmQueueViewController
             confirmQueueController.selectedBranch = self.selectedBranch
             confirmQueueController.queueModel = self.queueModel
+            confirmQueueController.selectedRestaurant = self.selectedRestaurant
         }
         
     }

@@ -12,15 +12,15 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var tbvBranch : UITableView!
     var selectedRestaurant : String = ""
-    let headerFont = UIFont(name: "ravenna-serial-medium-regular", size: 15.0)
-    let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
     
     var selectedBranchIndex : NSIndexPath = NSIndexPath()
     var branchArray : [RestaurantModel] = []
     var branchFavouriteArray : [RestaurantModel] = []
     
-//    var branchFavouriteArray : [String] = ["Central Plaza Ladprao", "Siam Center"]
-//    var branchArray : [String] = ["Siam Center", "Siam One", "Central World", "Central Ladprao"]
+    let headerFont = UIFont(name: "ravenna-serial-medium-regular", size: 15.0)
+    let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
+    let navigationFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         //Setup Navigation
         self.navigationItem.title = self.selectedRestaurant
         self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Heiti SC", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         self.tbvBranch.rowHeight = 35.0
         
@@ -127,7 +127,7 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         var headerLabel = ""
         if(section == 0){
-            headerLabel = "Favourite"
+            headerLabel = "MyQ"
         }else{
             headerLabel = "Nearby"
         }

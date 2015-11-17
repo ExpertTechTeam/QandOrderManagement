@@ -10,4 +10,7 @@ import Foundation
 struct MyVariables {
     static var orderList:[Order] = []
     static var countCart : Int = 0
+    static var activeQueueList:[QueueModel] = []
+    static var tempQueueList:[QueueModel] = []
+    
 }

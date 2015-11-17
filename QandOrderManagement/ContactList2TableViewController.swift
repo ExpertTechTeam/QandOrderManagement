@@ -16,10 +16,13 @@ protocol contact2Delegate{
 class ContactLis2tTableViewController: UITableViewController {
     
     var contactList : [String] = ["Albert C.", "Arnold C", "Barry P.", "Catherine E.", "Harry R.", "Jonathan Y.", "John A.", "Lucy D.", "Michael R.", "Monica A.", "Patty S.", "Patricia O.", "Paul T.", "Peter P.", "Smith M.", "Steve R."]
+    
+    let navigationFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
     let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
     var lastSelectedIndexPath = NSIndexPath(forRow: -1, inSection: 0)
     var selectedRow : [String] = []
     var delegate:contact2Delegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,7 @@ class ContactLis2tTableViewController: UITableViewController {
         //Setup Navigation
         self.navigationItem.title = "Contacts"
         self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "ravenna-serial-light-regular", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         var doneItem = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "back")
         

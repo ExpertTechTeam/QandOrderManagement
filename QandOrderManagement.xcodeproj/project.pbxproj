@@ -81,6 +81,8 @@
 		3A6E5BC61BF4A3B50078A941 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E5BC51BF4A3B50078A941 /* ContactListTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3A6E5BC91BF4E86E0078A941 /* tick_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A6E5BC71BF4E86E0078A941 /* tick_1.jpg */; settings = {ASSET_TAGS = (); }; };
 		3A6E5BCA1BF4E86E0078A941 /* tick_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A6E5BC81BF4E86E0078A941 /* tick_2.jpg */; settings = {ASSET_TAGS = (); }; };
+		3AD5F4CA1BFB30F300AA64DA /* ViewQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5F4C91BFB30F300AA64DA /* ViewQrViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3AD5F4CC1BFB33DE00AA64DA /* MyQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5F4CB1BFB33DE00AA64DA /* MyQTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A1FA24AB1BF9D0AA00F6B0B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FA24AA1BF9D0AA00F6B0B9 /* libsqlite3.0.tbd */; };
 		A1FA24AD1BF9D0C700F6B0B9 /* DatabaseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA24AC1BF9D0C700F6B0B9 /* DatabaseUtil.swift */; settings = {ASSET_TAGS = (); }; };
 		A1FA24AF1BF9D13000F6B0B9 /* ExtensionFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA24AE1BF9D13000F6B0B9 /* ExtensionFormat.swift */; settings = {ASSET_TAGS = (); }; };
@@ -343,6 +345,8 @@
 		3A6E5BC51BF4A3B50078A941 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 		3A6E5BC71BF4E86E0078A941 /* tick_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tick_1.jpg; sourceTree = "<group>"; };
 		3A6E5BC81BF4E86E0078A941 /* tick_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tick_2.jpg; sourceTree = "<group>"; };
+		3AD5F4C91BFB30F300AA64DA /* ViewQrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewQrViewController.swift; sourceTree = "<group>"; };
+		3AD5F4CB1BFB33DE00AA64DA /* MyQTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQTableViewController.swift; sourceTree = "<group>"; };
 		A1FA24AA1BF9D0AA00F6B0B9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		A1FA24AC1BF9D0C700F6B0B9 /* DatabaseUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUtil.swift; sourceTree = "<group>"; };
 		A1FA24AE1BF9D13000F6B0B9 /* ExtensionFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFormat.swift; sourceTree = "<group>"; };
@@ -645,6 +649,8 @@
 				3A6E5BC51BF4A3B50078A941 /* ContactListTableViewController.swift */,
 				3A4FBDC61BF87D9C00B37E11 /* ConfirmQueueViewController.swift */,
 				3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */,
+				3AD5F4C91BFB30F300AA64DA /* ViewQrViewController.swift */,
+				3AD5F4CB1BFB33DE00AA64DA /* MyQTableViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -1243,6 +1249,7 @@
 				A1FA25E01BF9D3F900F6B0B9 /* BeefButton.swift in Sources */,
 				3A6E5B831BF1F4540078A941 /* FMResultSet.m in Sources */,
 				3A6E5B6B1BF1F3D20078A941 /* RestaurantModel.swift in Sources */,
+				3AD5F4CC1BFB33DE00AA64DA /* MyQTableViewController.swift in Sources */,
 				3A6E5B8F1BF211CE0078A941 /* PromotionController.swift in Sources */,
 				A1FA24B71BF9D1EF00F6B0B9 /* HeaderView.swift in Sources */,
 				A1FA25FC1BF9D48000F6B0B9 /* PromotionMainTableViewController.swift in Sources */,
@@ -1257,6 +1264,7 @@
 				A1FA25F51BF9D41A00F6B0B9 /* OrderTableViewCell.swift in Sources */,
 				A1FA25F31BF9D41A00F6B0B9 /* MenuLevel2ViewController.swift in Sources */,
 				3A4FBDC71BF87D9C00B37E11 /* ConfirmQueueViewController.swift in Sources */,
+				3AD5F4CA1BFB30F300AA64DA /* ViewQrViewController.swift in Sources */,
 				A1FA24AF1BF9D13000F6B0B9 /* ExtensionFormat.swift in Sources */,
 				3A6E5B901BF211CE0078A941 /* RestaurantController.swift in Sources */,
 				A1FA25D81BF9D33C00F6B0B9 /* GlobalVariable.swift in Sources */,
