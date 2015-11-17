@@ -33,6 +33,8 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
     
     var firstAllowContact : Bool = true
     var queueModel : QueueModel = QueueModel()
+    var originY : CGFloat = 0.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +50,9 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
             continueItem.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)}
         continueItem.tintColor = UIColor.whiteColor()
         self.navigationItem.rightBarButtonItem = continueItem
-        //            self.navigationItem.hidesBackButton = true
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name:UIKeyboardWillHideNotification, object: nil);
         
         
         
@@ -66,6 +70,26 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         
         // Do any additional setup after loading the view.
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        
+        if(self.view.frame.origin.y == 0){
+            self.view.frame.origin.y -= 180
+        }
+        
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        if(self.view.frame.origin.y != 0.0){
+            self.view.frame.origin.y = 0.0
+        }
+        
+    }
+    
     
     
     func continueBtnTapped(){
@@ -134,16 +158,25 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
     
     
     @IBAction func displayAlert(){
+        print("before alert : \(self.view.frame.origin.y)")
+        if(self.view.frame.origin.y != 0.0){
+            print("set to 0.0")
+            self.view.frame.origin.y = 0.0
+        }
+        
         if(self.firstAllowContact){
             let alertController = UIAlertController(title: "", message: "Application would like to access your contacts?", preferredStyle: .Alert)
+            
             
             let dontAllowAction = UIAlertAction(title: "Don't Allow", style: .Default, handler: nil)
             let allowAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
                 self.performSegueWithIdentifier("addfriend", sender: self)
             }
             
+            
             alertController.addAction(dontAllowAction)
             alertController.addAction(allowAction)
+            
             presentViewController(alertController, animated: true, completion: nil)
             self.firstAllowContact = false
             
@@ -171,7 +204,6 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         // Pass the selected object to the new view controller.
         
         if(segue.identifier == "addfriend"){
-            print("ADD FRIEND SEGUE")
             let controller = segue.destinationViewController as! ContactListTableViewController
             controller.selectedRow = self.friendArray
             controller.delegate = self
@@ -235,6 +267,7 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         }
         self.friendList.font = subTitleFont
         self.friendList.text = friend
+        
     }
     
     

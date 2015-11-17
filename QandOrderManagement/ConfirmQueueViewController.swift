@@ -25,6 +25,7 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
     
     @IBOutlet weak var specialReq : UILabel!
     @IBOutlet weak var friendList : UITextView!
+    @IBOutlet weak var scrollView : UIScrollView!
     
     @IBOutlet weak var viewBookingBtn : UIButton!
     
@@ -70,8 +71,6 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
             print("Blank")
         }
         
-        
-        
         self.specialReq.text = self.queueModel.specialRequest
         var tmpFriend = ""
         if (self.queueModel.friendList.count > 0){
@@ -83,13 +82,8 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
             self.friendList.text = "-"
         }
         
-        self.view.addSubview(bookingView)
+        self.scrollView.contentSize = CGSizeMake(self.view.frame.width, 551)
         
-        bookingView.hidden = true
-        
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -97,31 +91,39 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     @IBAction func viewBookingInfo(){
         self.bookingViewVisible += 1
         if(self.bookingViewVisible % 2 == 1){
             //Show view
-            self.bookingView.hidden = false
             self.viewBookingBtn.setTitle("Hide Booking Information", forState: UIControlState.Normal)
-          
+            
+            var addFriendBtn = UIButton(type: UIButtonType.Custom)
+            addFriendBtn.frame = CGRectMake(290, 73, 17, 17)
+            addFriendBtn.setImage(UIImage(named: "Plus"), forState: UIControlState.Normal)
+            addFriendBtn.addTarget(self, action: "addFriendBtnTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+            self.bookingView.addSubview(addFriendBtn)
+            self.scrollView.setContentOffset(CGPointMake(0, 50), animated: true)
+            
         }else{
             //Hide view
-            self.bookingView.hidden = true
             self.viewBookingBtn.setTitle("Show Booking Information", forState: UIControlState.Normal)
-            
+            self.scrollView.setContentOffset(CGPointMake(0, -64), animated: true)
+           
         }
         
     }
     
     
-    @IBAction func addFriendBtnTapped(){
+    func addFriendBtnTapped(sender: AnyObject){
         self.performSegueWithIdentifier("addfriend2", sender: self)
         
     }
-
     
     
     func backToConfirmPage(contactList:[String]){
+        print("bact to main")
         self.friendArray = contactList
         var friend : String = ""
         for i in 0..<contactList.count {
@@ -129,8 +131,8 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         }
         self.friendList.font = subTitleFont
         self.friendList.text = friend
+ 
     }
-    
     
     
     // MARK: - Navigation
@@ -141,7 +143,6 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         // Pass the selected object to the new view controller.
         
         if(segue.identifier == "addfriend2"){
-            print("ADD FRIEND SEGUE")
             let controller = segue.destinationViewController as! ContactLis2tTableViewController
             controller.selectedRow = self.friendArray
             controller.delegate = self
