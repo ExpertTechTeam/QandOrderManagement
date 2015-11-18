@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuLevel2DrinkViewController:UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MenuLevel2DrinkViewController:UIViewController, UITableViewDataSource, UITableViewDelegate, menuLevel2DrinkDelegate {
     @IBOutlet weak var tableView:UIExpandableTableView!
     @IBOutlet weak var btnCart:UIButton!
     var lblCartCount:UILabel!
@@ -21,10 +21,8 @@ class MenuLevel2DrinkViewController:UIViewController, UITableViewDataSource, UIT
         self.configureCart()
         if isFavorite {
             self.title = "Favorite"
-            print(menuList.count)
             self.tableView.sectionOpen.append(0)
             menuListBySection.append(menuList)
-            print(menuListBySection.count)
         }else{
             
             var i = 0
@@ -35,8 +33,6 @@ class MenuLevel2DrinkViewController:UIViewController, UITableViewDataSource, UIT
                 i++
             }
         }
-        
-        
         tableView.menuListBySection = menuListBySection
         
     }
@@ -74,7 +70,7 @@ class MenuLevel2DrinkViewController:UIViewController, UITableViewDataSource, UIT
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 95
+        return 75
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return sectionList.count
@@ -96,6 +92,8 @@ class MenuLevel2DrinkViewController:UIViewController, UITableViewDataSource, UIT
         let cell = tableView.dequeueReusableCellWithIdentifier("menuListCell", forIndexPath: indexPath) as! MenuLevel2DrinkTableViewCell
         let menuList = menuListBySection[indexPath.section]!
         let menu = menuList[indexPath.row]
+        cell.delegate = self
+        cell.menu = menu
         cell.txtMenuName.text = menu.menu_name
         cell.txtMenuName.font =  UIFont(name: "ravenna-serial-light-regular", size: 15)
         cell.lblMenuPrice.text = NSDecimalNumber(double: menu.menu_price).currency
@@ -114,7 +112,6 @@ class MenuLevel2DrinkViewController:UIViewController, UITableViewDataSource, UIT
         print("View Header in section")
         let headerView = HeaderView(tableView: self.tableView, section: section)
         headerView.backgroundColor = UIColor(red: 121/255.0, green: 183/255.0, blue: 224/255.0, alpha: 1.0)
-        
         let label = UILabel(frame: headerView.frame)
         label.text = sectionList[section]
         label.textAlignment = NSTextAlignment.Center
@@ -138,6 +135,71 @@ class MenuLevel2DrinkViewController:UIViewController, UITableViewDataSource, UIT
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
+    func addToCart(sender: AnyObject?, menu:MenuModel?) {
+        let quantity = 1
+        let btnAdd = sender as! UIButton
+        let addFrame:CGRect = btnAdd.convertRect(btnAdd.bounds, toView: nil)
+        
+        let endPoint = btnCart.center
+        
+        let cartCountView:UIView = UIView(frame: CGRectMake(0, 0, 25, 25))
+        let circleView:UIView = UIView(frame: CGRectMake(0,  0, 25, 25))
+        circleView.layer.cornerRadius = circleView.frame.size.width/2
+        circleView.clipsToBounds = true
+        circleView.backgroundColor = UIColor(red: 121/255.0, green: 183/255.0, blue: 224/255.0, alpha: 1.0)
+        cartCountView.addSubview(circleView)
+        let lblCartCount:UILabel = UILabel(frame: CGRectMake(0, 0, 25, 25))
+        lblCartCount.text = String(quantity)
+        lblCartCount.font = UIFont.boldSystemFontOfSize(12)
+        lblCartCount.textColor = UIColor.whiteColor()
+        lblCartCount.textAlignment = .Center
+        circleView.addSubview(lblCartCount)
+        let cur:UIWindow? = UIApplication.sharedApplication().keyWindow
+        cur?.addSubview(cartCountView)
+        
+        let pathAnimation:CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "position");
+        pathAnimation.calculationMode = kCAAnimationPaced;
+        pathAnimation.fillMode = kCAFillModeForwards;
+        pathAnimation.removedOnCompletion = false;
+        pathAnimation.duration=1;
+        pathAnimation.delegate=self;
+        
+        let path = UIBezierPath()
+        path.moveToPoint(CGPointMake(addFrame.origin.x, addFrame.origin.y))
+        path.addQuadCurveToPoint(CGPoint(x: endPoint.x+14, y: endPoint.y + btnAdd.frame.height/2 + 2), controlPoint: CGPoint(x:20, y:5))
+        pathAnimation.path = path.CGPath
+        
+        // apply transform animation
+        let animation:CABasicAnimation = CABasicAnimation(keyPath: "transform")
+        let transform : CATransform3D = CATransform3DMakeScale(0.25, 0.25, 0.25 ) //0.25, 0.25, 0.25);
+        
+        animation.setValue(NSValue(CATransform3D: transform), forKey: "transform")
+        animation.duration = 1.5
+        
+        cartCountView.layer.addAnimation(pathAnimation, forKey: "curveAnimation")
+        cartCountView.layer.addAnimation(animation, forKey: "transform")
+        
+        MyVariables.countCart = MyVariables.countCart + quantity
+        
+        
+        UIView.animateWithDuration(2, animations: {
+            cartCountView.alpha = 0
+            cartCountView.transform = CGAffineTransformMakeScale(0.7, 0.7)
+            //self.setupNav.addAmountInCart(Int(self.amount.text!)!)
+            }, completion: {
+                finished in
+                cartCountView.removeFromSuperview()
+                self.lblCartCount.text = "\(MyVariables.countCart)"
+                
+        })
+        
+        let order = Order(orderMenuName: (menu?.menu_name)!, orderMenuSideDisk:"", orderQuantity:quantity, orderPrice: NSDecimalNumber(double: (menu?.menu_price)!))
+        MyVariables.orderList.append(order)
+        
+        
+    }
+    
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "orderSegue" {

@@ -8,13 +8,41 @@
 
 import UIKit
 
-class OrderListViewController: UIViewController, UITableViewDataSource, changeQuantityValueDelegate {
+class OrderListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, changeQuantityValueDelegate {
     let orderList = MyVariables.orderList
+    @IBOutlet weak var orderListTableView:UITableView!
     @IBOutlet weak var lblTotalPrice: UILabel!
+    @IBOutlet weak var btnCart:UIButton!
+    var lblCartCount:UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.orderListTableView.contentOffset = CGPointMake(0, 10)
+        self.orderListTableView.backgroundColor = UIColor.whiteColor()
+        self.configureCart()
         self.reCalculate()
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(animated: Bool) {
+        lblCartCount.text = "\(MyVariables.countCart)"
+    }
+    func configureCart(){
+        var amount = 0
+        for order in MyVariables.orderList {
+            amount += order.orderQuantity
+        }
+        let cartCountView:UIView = UIView(frame: CGRectMake(0, 0, 18, 18))
+        let circleView:UIView = UIView(frame: CGRectMake(25,  4, 18, 18))
+        circleView.layer.cornerRadius = circleView.frame.size.width/2
+        circleView.clipsToBounds = true
+        circleView.backgroundColor = UIColor(red: 121/255.0, green: 183/255.0, blue: 224/255.0, alpha: 1.0)
+        cartCountView.addSubview(circleView)
+        lblCartCount = UILabel(frame: CGRectMake(0, 0, 18, 18))
+        lblCartCount.text = "\(amount)"
+        lblCartCount.font = UIFont.boldSystemFontOfSize(12)
+        lblCartCount.textColor = UIColor.whiteColor()
+        lblCartCount.textAlignment = .Center
+        circleView.addSubview(lblCartCount)
+        btnCart.addSubview(circleView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,22 +74,45 @@ class OrderListViewController: UIViewController, UITableViewDataSource, changeQu
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             MyVariables.orderList.removeAtIndex(indexPath.row)
+            
             tableView.beginUpdates()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Top)
             tableView.endUpdates()
+            self.reCalculate()
 
         }
     }
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return nil
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.min
+    }
+    
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat.min
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return nil
+    }
+
     func reCalculate(){
         print("recalculate")
         var grandTotal:NSDecimalNumber = 0
+        var totalQuantity = 0
         
         for order in MyVariables.orderList {
             let quantity = NSDecimalNumber(integer: order.orderQuantity)
+            totalQuantity += order.orderQuantity
             let totalPrice = quantity.decimalNumberByMultiplyingBy(order.orderPrice)
             grandTotal = grandTotal.decimalNumberByAdding(totalPrice)
         }
+        MyVariables.countCart = totalQuantity
         self.lblTotalPrice.text = grandTotal.currency
+        self.lblCartCount.text = "\(MyVariables.countCart)"
     }
     
     override func viewDidDisappear(animated: Bool) {

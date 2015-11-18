@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentationControllerDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentationControllerDelegate , CLLocationManagerDelegate, mapViewDetailDelegate {
     @IBOutlet weak var vMapView: MKMapView!
     let locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 10
@@ -81,6 +81,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentatio
         if (view.annotation?.title)! == "pin" {
             mapView.deselectAnnotation(view.annotation, animated: true)
             let controller = self.storyboard?.instantiateViewControllerWithIdentifier("PopOverDetailMapViewController") as! PopOverDetailMapViewController
+            controller.delegate = self
             controller.resId = ((view.annotation?.subtitle)!)!
             controller.modalPresentationStyle = .Popover
             controller.view.layer.borderWidth = 0.8
@@ -130,7 +131,19 @@ class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentatio
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func tappedViewButton(res:RestaurantModel?){
+        performSegueWithIdentifier("viewFromMapSegue", sender: res)
+    }
 
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "viewFromMapSegue"{
+            let res = sender as! RestaurantModel
+            let currentQueueViewController = segue.destinationViewController as! CurrentQueueViewController
+            
+            currentQueueViewController.selectedRestaurant = "Sizzler"
+            currentQueueViewController.selectedBranch = res
+        }
+    }
 }
 

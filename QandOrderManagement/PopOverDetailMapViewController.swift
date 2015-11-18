@@ -8,20 +8,26 @@
 
 import UIKit
 
+protocol mapViewDetailDelegate{
+    func tappedViewButton(res:RestaurantModel?)
+}
+
 class PopOverDetailMapViewController: UIViewController {
     
     @IBOutlet weak var btnView:UIButton!
     @IBOutlet weak var lblBranchName:UILabel!
     @IBOutlet weak var txtAddress:UITextView!
     var resId : String = ""
+    var restaurant:RestaurantModel?
+    var delegate:mapViewDetailDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         btnView.layer.cornerRadius = 5.0
         if let res_id = Int32(resId){
-            let res = RestaurantController().getRestaurantById(res_id)
-            lblBranchName.text = res.res_branch_name
-            txtAddress.text = res.res_address
+            restaurant = RestaurantController().getRestaurantById(res_id)
+            lblBranchName.text = restaurant!.res_branch_name
+            txtAddress.text = restaurant!.res_address
         }
         
     }
@@ -37,5 +43,17 @@ class PopOverDetailMapViewController: UIViewController {
     
     @IBAction func onSelectedDetail(sender: AnyObject) {
         print("on select detail")
+        delegate?.tappedViewButton(restaurant)
     }
+    /*
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "viewFromMapSegue"{
+            let navVC = segue.destinationViewController as! UINavigationController
+            let currentQueueViewController = navVC.topViewController as! CurrentQueueViewController
+            
+            currentQueueViewController.selectedRestaurant = "Sizzler"
+            currentQueueViewController.selectedBranch = restaurant!
+        }
+    }
+       */
 }

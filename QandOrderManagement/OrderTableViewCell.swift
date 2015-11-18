@@ -67,7 +67,7 @@ class OrderTableViewCell: UITableViewCell, KWStepperDelegate {
         print("inner : recalculate")
         self.lblCount.text = NSString(format: "%.f", self.stepper!.value) as String
         order!.orderQuantity = Int((self.stepper?.value)!)
-        MyVariables.orderList[index!] = order!
+      //  MyVariables.orderList[index!] = order!
         self.lblPrice.text = order!.orderPrice.decimalNumberByMultiplyingBy(NSDecimalNumber(integer: order!.orderQuantity)).currency
         
         delegate?.reCalculate()
