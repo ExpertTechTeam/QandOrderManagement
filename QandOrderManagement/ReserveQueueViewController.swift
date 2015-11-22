@@ -10,7 +10,7 @@ import UIKit
 
 class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDelegate {
     
-    @IBOutlet weak var restaurantImage : UIImage!
+    @IBOutlet weak var restaurantImage : UIImageView!
     @IBOutlet weak var branchName : UILabel!
     @IBOutlet weak var branchLocation : UILabel!
     @IBOutlet weak var branchServiceTimeContact : UILabel!
@@ -24,30 +24,92 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
     @IBOutlet weak var specialRequest : UITextView!
     @IBOutlet weak var friendList : UITextView!
     
+    var newqueue : Bool = true
+    var queueModel : QueueModel = QueueModel()
+    
     var stepper: KWStepper?
     var selectedRestaurant : String = ""
     var selectedBranch : RestaurantModel = RestaurantModel()
     var friendArray : [String] = []
-    
     
     let navigationFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
     let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
     let subTitleFont = UIFont(name: "ravenna-serial-light-regular", size: 13.0)
     
     var firstAllowContact : Bool = true
-    var queueModel : QueueModel = QueueModel()
+    var tempQueueModel : QueueModel = QueueModel()
     var originY : CGFloat = 0.0
     
+    var continueItem = UIBarButtonItem()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if(newqueue){
+            
+            continueItem = UIBarButtonItem(title: "Continue", style: .Plain, target: self, action: "continueBtnTapped")
+            
+            //Create New Queue
+            self.branchName.text = selectedBranch.res_branch_name
+            self.branchLocation.text = selectedBranch.res_address
+            self.branchServiceTimeContact!.text = "Open 10:00 - 21:30 "+"Tel. "+self.selectedBranch.res_contact
+            
+            self.babyCarriage.transform =  CGAffineTransformMakeScale(0.70, 0.70)
+            self.wheelchair.transform = CGAffineTransformMakeScale(0.70, 0.70)
+            self.babyCarriage.on = false
+            self.wheelchair.on = false
+            
+            self.specialRequest.font = subTitleFont
+            configureStepper(1)
+            
+        }else{
+            
+            continueItem = UIBarButtonItem(title: "Confirm", style: .Plain, target: self, action: "confirmBtnTapped")
+            
+            //Tapped Temp Q from MyQ Page
+            //Get Information from QueueModel
+            var resImage : UIImage!
+            if(self.tempQueueModel.restaurant == "Sizzler"){
+                resImage = UIImage(named: "Sizzler_Logo_3.png")
+            }else if(self.tempQueueModel.restaurant == "The Pizza Company"){
+                resImage = UIImage(named: "pizza_logo.png")
+            }else if(self.tempQueueModel.restaurant == "Swensen"){
+                resImage = UIImage(named: "SW_LOGO2.jpg")
+            }
+            
+            self.restaurantImage.image = resImage
+            
+            self.branchName.text = self.tempQueueModel.branchModel.res_branch_name
+            self.branchLocation.text = self.tempQueueModel.branchModel.res_address
+            self.branchServiceTimeContact!.text = "Open 10:00 - 21:30 "+"Tel. "+self.tempQueueModel.branchModel.res_contact
+            
+            self.countLabel.text = self.tempQueueModel.noOfPerson
+            self.babyCarriage.transform =  CGAffineTransformMakeScale(0.70, 0.70)
+            self.wheelchair.transform = CGAffineTransformMakeScale(0.70, 0.70)
+            self.babyCarriage.on = self.tempQueueModel.babyFlag
+            self.wheelchair.on = self.tempQueueModel.wheelchairFlag
+            self.specialRequest.text = self.tempQueueModel.specialRequest
+            self.friendArray = self.tempQueueModel.friendList
+            self.specialRequest.font = customFont
+            
+            var friendString = ""
+            for i in 0..<self.tempQueueModel.friendList.count {
+                friendString = friendString + self.tempQueueModel.friendList[i] + "\r\n"
+            }
+        
+            self.friendList.text = friendString
+            self.specialRequest.font = subTitleFont
+            self.friendList.font = subTitleFont
+            configureStepper(Int(self.tempQueueModel.noOfPerson)!)
+        }
+        
         //Setup Nav
         self.navigationItem.title = self.selectedRestaurant
         self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         
-        var continueItem = UIBarButtonItem(title: "Continue", style: .Plain, target: self, action: "continueBtnTapped")
         
         if let font = customFont {
             continueItem.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)}
@@ -58,18 +120,6 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name:UIKeyboardWillHideNotification, object: nil);
         
         
-        
-        self.branchName.text = selectedBranch.res_branch_name
-        self.branchLocation.text = selectedBranch.res_address
-        self.branchServiceTimeContact!.text = "Open 10:00 - 21:30 "+"Tel. "+self.selectedBranch.res_contact
-        
-        self.babyCarriage.transform =  CGAffineTransformMakeScale(0.70, 0.70)
-        self.wheelchair.transform = CGAffineTransformMakeScale(0.70, 0.70)
-        self.babyCarriage.on = false
-        self.wheelchair.on = false
-        
-        self.specialRequest.font = customFont
-        configureStepper()
         
         // Do any additional setup after loading the view.
     }
@@ -93,13 +143,38 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         
     }
     
-    
+    func confirmBtnTapped(){
+        print("ConfirmBtnTapped")
+        
+        //Remove TempQueue from List and Append to Active Queue
+        for i in 0..<MyVariables.tempQueueList.count {
+            var temp = MyVariables.tempQueueList[i]
+            if(tempQueueModel.queueNo == temp.queueNo){
+                //get index
+                MyVariables.tempQueueList.removeAtIndex(i)
+                
+                tempQueueModel.babyFlag = self.babyCarriage.on
+                tempQueueModel.wheelchairFlag = self.wheelchair.on
+                tempQueueModel.noOfPerson = self.countLabel.text!
+                tempQueueModel.specialRequest = self.specialRequest.text
+                tempQueueModel.status = "Active"
+                tempQueueModel.friendList = self.friendArray
+                tempQueueModel.queueNo = "A017"
+                tempQueueModel.confirmCode = self.randomInt(100000, max: 999999)
+                MyVariables.activeQueueList.append(tempQueueModel)
+                
+            }
+            
+        }
+        self.performSegueWithIdentifier("confirmBtnTapped", sender: self)
+        
+    }
     
     func continueBtnTapped(){
         self.performSegueWithIdentifier("continueBtnTapped", sender: self)
     }
     
-    func configureStepper() {
+    func configureStepper(starter: Int) {
         self.stepper = KWStepper(
             decrementButton: self.decrementButton,
             incrementButton: self.incrementButton)
@@ -114,7 +189,7 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
             stepper.wraps = true
             stepper.minimumValue = 1
             stepper.maximumValue = 30
-            stepper.value = 1
+            stepper.value = Double(starter)
             stepper.incrementStepValue = 1
             stepper.decrementStepValue = 1
             
@@ -212,7 +287,6 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
             controller.delegate = self
         }else if(segue.identifier == "continueBtnTapped"){
             
-            
             self.queueModel.queueNo = "A012"
             self.queueModel.noOfPerson = self.countLabel!.text!
             if(self.babyCarriage.on){
@@ -247,12 +321,24 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
                 self.queueModel.friendList = self.friendArray
                 
             }
+            self.queueModel.status = "Active"
+            self.queueModel.restaurant = "Sizzler"
+            self.queueModel.branchModel = self.selectedBranch
+            MyVariables.activeQueueList.append(self.queueModel)
             
             self.queueModel.confirmCode = self.randomInt(100000, max: 999999)
             let confirmQueueController = segue.destinationViewController as! ConfirmQueueViewController
             confirmQueueController.selectedBranch = self.selectedBranch
             confirmQueueController.queueModel = self.queueModel
             confirmQueueController.selectedRestaurant = self.selectedRestaurant
+            
+            
+        }else if(segue.identifier == "confirmBtnTapped"){
+            let confirmQueueController = segue.destinationViewController as! ConfirmQueueViewController
+            confirmQueueController.selectedBranch = self.tempQueueModel.branchModel
+            confirmQueueController.queueModel = self.tempQueueModel
+            confirmQueueController.selectedRestaurant = self.tempQueueModel.restaurant
+            
         }
         
     }

@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         UINavigationBar.appearance().titleTextAttributes = [
-            NSFontAttributeName: UIFont(name: "ravenna-serial-medium-regular", size: 20)!,
+            NSFontAttributeName: UIFont(name: "ravenna-serial-light-regular", size: 20)!,
             NSForegroundColorAttributeName : UIColor.whiteColor()
         ]
         let barAppearace = UIBarButtonItem.appearance()

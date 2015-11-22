@@ -28,6 +28,8 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         //Setup Navigation
         self.navigationItem.title = self.selectedRestaurant
         self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         self.tbvBranch.rowHeight = 35.0
@@ -45,17 +47,11 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.selectedBranchIndex = indexPath
-        self.performSegueWithIdentifier("selectedbranch", sender: nil)
-    }
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if(tableView.ta
         if(section == 0){
             return branchFavouriteArray.count
         }else{
@@ -66,7 +62,7 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if(section == 0){
-            return "Favourite"
+            return "Favorite"
         }else{
             return "Nearby"
         }
@@ -76,19 +72,18 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         var cell = tableView.dequeueReusableCellWithIdentifier("cell1") as! BranchTableViewCell!
         
-        
         if(indexPath.section == 0){
             cell.favButton.setImage(UIImage(named: "star_check.png"), forState: UIControlState.Normal)
             cell.favButton.addTarget(self, action: "setFavourite:", forControlEvents: UIControlEvents.TouchUpInside)
-//            cell.branchLabel.text = branchFavouriteArray[indexPath.row]
             cell.branchLabel.text = branchFavouriteArray[indexPath.row].res_branch_name
+            cell.branchLabel.font = customFont
             
         }else{
             
             cell.favButton.setImage(UIImage(named: "star_uncheck.png"), forState: UIControlState.Normal)
             cell.favButton.addTarget(self, action: "setFavourite:", forControlEvents: UIControlEvents.TouchUpInside)
-//            cell.branchLabel.text = branchArray[indexPath.row]
             cell.branchLabel.text = branchArray[indexPath.row].res_branch_name
+            cell.branchLabel.font = customFont
             
         }
         
@@ -127,7 +122,7 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         var headerLabel = ""
         if(section == 0){
-            headerLabel = "MyQ"
+            headerLabel = "Favorite"
         }else{
             headerLabel = "Nearby"
         }
@@ -137,9 +132,11 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         header.textLabel!.font = headerFont
         header.textLabel!.textColor = UIColor.whiteColor()
         header.textLabel!.textAlignment = NSTextAlignment.Left
-        header.backgroundView?.backgroundColor = UIColor(red: 121/255, green: 183/255, blue: 224/255, alpha: 1.0)
-        
+        var sectionImgView = UIImageView(image: UIImage(named: "section_background3.png"))
+        header.backgroundView = sectionImgView
 
+        //        header.backgroundView?.backgroundColor = UIColor(red: 121/255, green: 183/255, blue: 224/255, alpha: 1.0)
+        
     }
     
     // MARK: - Navigation
@@ -150,15 +147,18 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         // Pass the selected object to the new view controller.
         
         if (segue.identifier == "selectedbranch") {
+            print("Branch List PerformSegue")
+            
+            let indexPath = self.tbvBranch.indexPathForSelectedRow!
             let currentQueueViewController = segue.destinationViewController as! CurrentQueueViewController
             currentQueueViewController.selectedRestaurant = self.selectedRestaurant
-            if(selectedBranchIndex.section == 0){
+            if(indexPath.section == 0){
                 //Fav
-                currentQueueViewController.selectedBranch = self.branchFavouriteArray[selectedBranchIndex.row]
+                currentQueueViewController.selectedBranch = self.branchFavouriteArray[indexPath.row]
                 
             }else{
                 //Not Fav
-                currentQueueViewController.selectedBranch = self.branchArray[selectedBranchIndex.row]
+                currentQueueViewController.selectedBranch = self.branchArray[indexPath.row]
             }
             
         }

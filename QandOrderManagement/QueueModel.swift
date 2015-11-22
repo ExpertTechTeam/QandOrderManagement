@@ -11,12 +11,30 @@ import Foundation
 public class QueueModel {
     
     var queueNo : String = ""
+    var restaurant : String = ""
+    var branchModel : RestaurantModel = RestaurantModel()
     var noOfPerson : String = ""
     var babyFlag : Bool = false
     var wheelchairFlag : Bool = false
     var specialRequest : String = ""
     var friendList : [String] = [""]
     var confirmCode : Int = 0
+    var status : String = ""
     
+    init(){}
+    
+    init(queueNo: String, restaurant : String, branchModel: RestaurantModel, noOfPerson: String, babyFlag: Bool, wheelchairFlag: Bool, specialRequest: String, friendList: [String], confirmCode: Int, status: String){
+        self.queueNo = queueNo
+        self.restaurant = restaurant
+        self.branchModel = branchModel
+        self.noOfPerson = noOfPerson
+        self.babyFlag = babyFlag
+        self.wheelchairFlag = wheelchairFlag
+        self.specialRequest = specialRequest
+        self.friendList = friendList
+        self.confirmCode = confirmCode
+        self.status = status
+        
+    }
     
 }

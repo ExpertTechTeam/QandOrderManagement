@@ -18,7 +18,7 @@ class BillTableViewController: UITableViewController {
         
         //Setup Navigation
         self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "ravenna-serial-medium-regular", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "ravenna-serial-light-regular", size: 20)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         //Setup Barbutton Item
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         let customFont = UIFont(name: "ravenna-serial-medium-regular", size: 13.0)

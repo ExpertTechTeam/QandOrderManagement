@@ -21,121 +21,116 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableVie
     var countTimer:Int = 0
     var selectedRestaurant : Int = 0
     
-    var customFont = UIFont(name: "ravenna-serial-light-regular", size: 17.0)
+    var customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
+    let headerFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
     
-    var promotionArray : [String] = ["SizzlerPromotion.jpg", "PizzaPromotion.jpg", "SwensenPromotion.jpg"]
-    var restaurantArray : [String] = ["Sizzler", "The Pizza Company", "Swensen", "DQ", "Burger King"]
+    var promotionArray : [String] = ["SizzlerPromotion9.png", "PizzaPromotion.jpg", "SwensenPromotion.jpg"]
+    var restaurantArray : [String] = ["Sizzler", "The Pizza Company", "Burger King"]
+    var imageNames : [String] = ["res_sizzler.png", "res_pizzacompany1.png", "res_swensen.jpg"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        scvPromotion.frame.origin.x = 0
-        scvPromotion.frame.origin.y = 80
-        scvPromotion.frame.size.width = 320
-        scvPromotion.frame.size.height = 190
-        print("scvPromotion.frame: \(scvPromotion.frame)")
         
-        //Get Promotion Image
-        print("promotionController")
+//        -----Insert App Logo-----
+//        let applogo = UIImageView(image: UIImage(named: "myq_white.png"))
+//        self.navigationItem.titleView = applogo
         
+        //Setup Navigation
+        self.navigationItem.title = "SMART Q AND ORDER"
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: headerFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         
-        for i in 0..<(promotionArray.count) {
-            print(".... \(promotionArray[i])")
-            pageImages.append(UIImage(named: promotionArray[i])!)
-        }
-        
-        let pageCount = promotionArray.count
-        
-        // Set up the page control
-        pcPromotion.currentPage = 0
-        pcPromotion.numberOfPages = pageCount
-        pcPromotion.backgroundColor = UIColor(white: 1, alpha: 0)
-        // Set up the array to hold the views for each page
-        for _ in 0..<pageCount {
-            pageViews.append(nil)
-        }
-        print(">>> \(pageImages.count)")
-        // Set up the content size of the scroll view
-        let pagesScrollViewSize = scvPromotion.frame.size
-        scvPromotion.contentSize = CGSizeMake(pagesScrollViewSize.width * CGFloat(pageImages.count), pagesScrollViewSize.height)
-        
-        // Load the initial set of pages that are on screen
-        loadVisiblePages()
-        //
 //        setupTable()
         self.tbvRestaurant.delegate = self
-
+        self.tbvRestaurant.separatorStyle = UITableViewCellSeparatorStyle.None
+      
         
+        //1
+        self.scvPromotion.frame = CGRectMake(0, 0, self.scvPromotion.frame.width, self.scvPromotion.frame.height)
+        let scrollViewWidth:CGFloat = self.scvPromotion.frame.width
+        let scrollViewHeight:CGFloat = self.scvPromotion.frame.height
+        
+        //3
+        let imgOne = UIImageView(frame: CGRectMake(0, 0,scrollViewWidth, scrollViewHeight))
+        imgOne.image = UIImage(named: "SizzlerPromotion9.png")
+        let imgTwo = UIImageView(frame: CGRectMake(scrollViewWidth, 0,scrollViewWidth, scrollViewHeight))
+        imgTwo.image = UIImage(named: "Swensens_Mango.jpg")
+        let imgThree = UIImageView(frame: CGRectMake(scrollViewWidth*2, 0,scrollViewWidth, scrollViewHeight))
+        imgThree.image = UIImage(named: "PizzaPromotion.png")
+        
+        
+        self.scvPromotion.addSubview(imgOne)
+        self.scvPromotion.addSubview(imgTwo)
+        self.scvPromotion.addSubview(imgThree)
+        //4
+        self.scvPromotion.contentSize = CGSizeMake(self.scvPromotion.frame.width * 3, self.scvPromotion.frame.height)
+        self.scvPromotion.delegate = self
+        self.pcPromotion.currentPage = 0
+
+        // Schedule a timer to auto slide to next page
+        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
         
         // Do any additional setup after loading the view.
     }
 
-    //Start - Promotion
-    func loadVisiblePages() {
-        // First, determine which page is currently visible
-        let pageWidth = scvPromotion.frame.size.width
-        let page = Int(floor((scvPromotion.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
-        //print("page \(page)")
-        // Update the page control
-        pcPromotion.currentPage = page
-        // Work out which pages you want to load
-        let firstPage = page - 1
-        let lastPage = page + 1
-        // Purge anything before the first page
-        for var index = 0; index < firstPage; ++index {
-            purgePage(index)
-        }
-        // Load pages in our range
-        for var index = 0; index < pageImages.count; ++index{
-            loadPage(index)
-        }
+    func moveToNextPage (){
         
-        // Purge anything after the last page
-        for var index = lastPage+1; index < pageImages.count; ++index {
-            purgePage(index)
+        // Move to next page
+        let pageWidth:CGFloat = CGRectGetWidth(self.scvPromotion.frame)
+        let maxWidth:CGFloat = pageWidth * 3
+        let contentOffset:CGFloat = self.scvPromotion.contentOffset.x
+        
+        var slideToX = contentOffset + pageWidth
+        
+        if  contentOffset + pageWidth == maxWidth{
+            slideToX = 0
+            // Each time you move back to the first slide, you may want to hide the button, uncomment the animation below to do so
+            //            UIView.animateWithDuration(0.5, animations: { () -> Void in
+            //                self.startButton.alpha = 0.0
+            //            })
         }
+        self.scvPromotion.scrollRectToVisible(CGRectMake(slideToX, 0, pageWidth, CGRectGetHeight(self.scvPromotion.frame)), animated: true)
     }
-    func purgePage(page: Int) {
-        if page < 0 || page >= pageImages.count {
-            // If it's outside the range of what you have to display, then do nothing
-            return
-        }
-        // Remove a page from the scroll view and reset the container array
-        if let pageView = pageViews[page] {
-            pageView.removeFromSuperview()
-            pageViews[page] = nil
-        }
+
+    
+    //MARK: UIScrollViewDelegate
+    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView){
+        
+        // Test the offset and calculate the current page after scrolling ends
+        let pageWidth:CGFloat = CGRectGetWidth(scrollView.frame)
+        let currentPage:CGFloat = floor((scrollView.contentOffset.x-pageWidth/2)/pageWidth)+1
+        // Change the indicator
+        self.pcPromotion.currentPage = Int(currentPage);
+        
+        let btnPromotion = UIButton()
+        //btnPromotion.setImage(pageImages[page],forState: .Normal)
+        btnPromotion.titleLabel!.text = String(currentPage)
+//        btnPromotion.backgroundColor = UIColor.blueColor()
+        btnPromotion.titleLabel?.hidden = true
+        btnPromotion.addTarget(self, action: "btnPromotionTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+        btnPromotion.frame = CGRectMake((self.scvPromotion.frame.width * CGFloat(currentPage)) , 0, self.scvPromotion.frame.width, self.scvPromotion.frame.height)
+        //btnPromotion.frame = CGRectMake(0, 0, frame.width, frame.height)
+        
+        self.scvPromotion.addSubview(btnPromotion)
+        
+        
+        
+        // Change the text accordingly
+//        if Int(currentPage) == 0{
+//            textView.text = "Sweettutos.com is your blog of choice for Mobile tutorials"
+//        }else if Int(currentPage) == 1{
+//            textView.text = "I write mobile tutorials mainly targeting iOS"
+//        }else if Int(currentPage) == 2{
+//            textView.text = "And sometimes I write games tutorials about Unity"
+//        }else{
+//            textView.text = "Keep visiting sweettutos.com for new coming tutorials, and don't forget to subscribe to be notified by email :)"
+//            // Show the "Let's Start" button in the last slide (with a fade in animation)
+//            UIView.animateWithDuration(1.0, animations: { () -> Void in
+//                self.startButton.alpha = 1.0
+//            })
+//        }
     }
-    func loadPage(page: Int) {
-        if page < 0 || page >= pageImages.count {
-            // If it's outside the range of what you have to display, then do nothing
-            return
-        }
-        //        // Load an individual page, first checking if you've already loaded it
-        if let pageView = pageViews[page] {
-            // Do nothing. The view is already loaded.
-        } else {
-            var frame = scvPromotion.bounds
-            frame.origin.x = frame.size.width * CGFloat(page)
-            frame.origin.y = 0.0
-            //frame = CGRectInset(frame, 10.0, 0.0)
-            let newPageView = UIImageView(image: pageImages[page])
-            //newPageView.contentMode = .ScaleAspectFit
-            newPageView.frame = frame
-            //
-            let btnPromotion = UIButton()
-            //btnPromotion.setImage(pageImages[page],forState: .Normal)
-            btnPromotion.titleLabel!.text = String(page)
-            btnPromotion.titleLabel?.hidden = true
-            btnPromotion.addTarget(self, action: "btnPromotionTapped:", forControlEvents: UIControlEvents.TouchUpInside)
-            btnPromotion.frame = CGRectMake((frame.width * CGFloat(page)) , 0, frame.width, frame.height)
-            //btnPromotion.frame = CGRectMake(0, 0, frame.width, frame.height)
-            
-            scvPromotion.addSubview(btnPromotion)
-            scvPromotion.addSubview(newPageView)
-            
-            pageViews[page] = newPageView
-        }
-    }
+
     
     func btnPromotionTapped(sender:UIButton!){
         /*
@@ -155,42 +150,28 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableVie
         
         
     }
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        pointNow = scrollView.contentOffset;
-    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func viewDidAppear(animated: Bool) {
-         myTimer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("autoSlidePromotionImg"), userInfo: nil, repeats: true)
-    }
-    
-    func autoSlidePromotionImg(){
-        if (countTimer < pcPromotion.numberOfPages) {
-            scvPromotion.setContentOffset(CGPointMake(CGFloat(countTimer*320), 0), animated: false)
-            
-        }else{
-            countTimer = 0
-            scvPromotion.setContentOffset(CGPointMake(CGFloat(countTimer*320), 0), animated: false)
-        }
-        countTimer++
-    }
-
+  
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("cell1") as! UITableViewCell!
-        cell.textLabel!.text = restaurantArray[indexPath.row]
-        cell.textLabel?.font = customFont
-        
-        
+    
+        var imageView = UIImageView(frame: CGRectMake(5, 5, cell.frame.width-10, cell.frame.height - 5))
+        print("\(imageNames[indexPath.row])")
+        let image = UIImage(named: imageNames[indexPath.row])
+        imageView.image = image
+        //Just add imageView as subview of cell
+        cell.addSubview(imageView)
+        cell.sendSubviewToBack(imageView)
         
         return cell
     }

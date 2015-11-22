@@ -30,7 +30,8 @@ class OrderListTableViewController: UITableViewController {
     {
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.font = UIFont(name: "ravenna-serial-medium-regular", size: 15)!
-        header.backgroundView?.backgroundColor = UIColor(red: 163/255, green: 205/255, blue: 234/255, alpha: 1.0)
+        var sectionImgView = UIImageView(image: UIImage(named: "section_background3.png"))
+        header.backgroundView = sectionImgView
         header.textLabel?.textColor = UIColor.whiteColor()
     }
 

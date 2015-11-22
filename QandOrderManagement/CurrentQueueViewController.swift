@@ -27,6 +27,8 @@ class CurrentQueueViewController: UIViewController {
         //Setup Nav
         self.navigationItem.title = self.selectedRestaurant
         self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         
@@ -41,8 +43,11 @@ class CurrentQueueViewController: UIViewController {
         self.branchName!.text = self.selectedBranch.res_branch_name
         self.branchLocation!.text = self.selectedBranch.res_address
         self.branchServiceTimeContact!.text = "Open 10:00 - 21:30 "+"Tel. "+self.selectedBranch.res_contact
-        
+
         // Do any additional setup after loading the view.
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

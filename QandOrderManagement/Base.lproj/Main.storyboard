@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="v4m-BW-ODp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="v4m-BW-ODp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="ravenna-serial-light-regular.ttf">
+            <string>Ravenna-Serial-Light-Regular</string>
             <string>Ravenna-Serial-Light-Regular</string>
             <string>Ravenna-Serial-Light-Regular</string>
             <string>Ravenna-Serial-Light-Regular</string>
@@ -179,6 +180,7 @@
             <string>Ravenna-Serial-Medium-Regular</string>
             <string>Ravenna-Serial-Medium-Regular</string>
             <string>Ravenna-Serial-Medium-Regular</string>
+            <string>Ravenna-Serial-Medium-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -218,58 +220,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTA-ck-yDe">
-                                <rect key="frame" x="0.0" y="92" width="320" height="190"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WsZ-JA-qZR">
+                                <rect key="frame" x="0.0" y="245" width="320" height="28"/>
                                 <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="f85-81-UZC">
-                                        <rect key="frame" x="141" y="145" width="39" height="37"/>
-                                    </pageControl>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="section_background3.png" translatesAutoresizingMaskIntoConstraints="NO" id="LsX-YR-eON">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="28"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ca2-2h-w7M">
+                                        <rect key="frame" x="8" y="3" width="111" height="21"/>
+                                        <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
                                 </subviews>
-                                <connections>
-                                    <outlet property="delegate" destination="NZZ-vk-Ect" id="Chc-KS-TMQ"/>
-                                </connections>
-                            </scrollView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-gU-jbk">
-                                <rect key="frame" x="0.0" y="281" width="320" height="238"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-gU-jbk">
+                                <rect key="frame" x="0.0" y="272" width="320" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" id="zc5-jN-dXl">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" id="zc5-jN-dXl">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zc5-jN-dXl" id="n3P-2A-01d">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" id="hdd-c6-5IE">
-                                        <rect key="frame" x="0.0" y="78" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="128" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hdd-c6-5IE" id="S1U-2A-ZLL">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell3" id="Zdh-lD-Axi">
-                                        <rect key="frame" x="0.0" y="128" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="228" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zdh-lD-Axi" id="Oyu-DT-thG">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell4" id="6eC-iB-8Xq">
-                                        <rect key="frame" x="0.0" y="178" width="320" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6eC-iB-8Xq" id="bEb-se-F4n">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell5" id="dQx-hZ-aej">
-                                        <rect key="frame" x="0.0" y="228" width="320" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dQx-hZ-aej" id="w6m-vy-gCb">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -279,9 +268,17 @@
                                     <outlet property="delegate" destination="NZZ-vk-Ect" id="HIy-Q1-8p2"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hot-promotion.png" translatesAutoresizingMaskIntoConstraints="NO" id="cwr-uj-NOS">
-                                <rect key="frame" x="7" y="24" width="179" height="70"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTA-ck-yDe">
+                                <rect key="frame" x="0.0" y="64" width="320" height="185"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="f85-81-UZC">
+                                        <rect key="frame" x="141" y="143" width="39" height="37"/>
+                                    </pageControl>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="NZZ-vk-Ect" id="Chc-KS-TMQ"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -310,18 +307,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sizzler_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="0ed-gR-sKr">
-                                <rect key="frame" x="0.0" y="64" width="320" height="186"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pork_porkrib_half.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0ed-gR-sKr">
+                                <rect key="frame" x="-5" y="65" width="325" height="216"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ikN-3Y-6p2">
-                                <rect key="frame" x="0.0" y="249" width="319" height="279"/>
+                                <rect key="frame" x="-2" y="279" width="322" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" id="9He-Yg-0Em" userLabel="cell1" customClass="BranchTableViewCell" customModule="QandOrderManagement" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="319" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="322" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9He-Yg-0Em" id="zG2-tR-s7y">
-                                            <rect key="frame" x="0.0" y="0.0" width="319" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="322" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDa-UT-Oh8">
@@ -348,9 +345,6 @@
                                     <outlet property="delegate" destination="b16-RU-lO1" id="sCs-i7-Cyx"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sizzler_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mDp-aZ-fxV">
-                                <rect key="frame" x="8" y="72" width="89" height="38"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -711,15 +705,17 @@
                         <outlet property="decrementButton" destination="9IY-5R-6E2" id="060-Sg-gpX"/>
                         <outlet property="friendList" destination="Kgl-Dg-UE0" id="SeA-Gc-zbP"/>
                         <outlet property="incrementButton" destination="7jZ-JP-fVu" id="Fpe-NE-efF"/>
+                        <outlet property="restaurantImage" destination="qEz-oH-SbA" id="Mzw-t5-fFD"/>
                         <outlet property="specialRequest" destination="ghc-In-yx9" id="ujA-SU-PQF"/>
                         <outlet property="wheelchair" destination="6oX-KA-yYF" id="wub-eD-7AF"/>
                         <segue destination="VVX-R9-Swe" kind="push" identifier="addfriend" id="gjA-SO-2eB"/>
                         <segue destination="YBg-yC-c33" kind="push" identifier="continueBtnTapped" id="Fei-ii-dyT"/>
+                        <segue destination="YBg-yC-c33" kind="push" identifier="confirmBtnTapped" id="H7f-Ae-rEH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEs-2e-iQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549" y="658"/>
+            <point key="canvasLocation" x="2586" y="621"/>
         </scene>
         <!--Confirm Queue View Controller-->
         <scene sceneID="kP8-Wb-P4E">
@@ -903,7 +899,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="eTx-G9-ZGa">
-                        <barButtonItem key="rightBarButtonItem" image="busket.png" id="0p4-nb-MPP"/>
+                        <barButtonItem key="rightBarButtonItem" image="busket.png" id="0p4-nb-MPP">
+                            <connections>
+                                <segue destination="rMU-AF-lRZ" kind="push" id="pgn-Dw-udU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bookingView" destination="cjO-uu-wtk" id="Xpi-2x-t2f"/>
@@ -916,6 +916,7 @@
                         <outlet property="img2" destination="EuB-jC-FIB" id="bBO-T8-a0d"/>
                         <outlet property="noOfPerson" destination="lQe-pn-reX" id="nJc-hb-dhJ"/>
                         <outlet property="queueNo" destination="wKw-Mn-9Ty" id="boK-9b-Djo"/>
+                        <outlet property="restaurantImage" destination="bXp-mN-g6K" id="ctG-IU-loN"/>
                         <outlet property="scrollView" destination="4hj-L1-LBc" id="1Bo-Zr-I5I"/>
                         <outlet property="specialReq" destination="Tdk-yh-0Dk" id="Vjo-rG-Zye"/>
                         <outlet property="viewBookingBtn" destination="REb-5p-gpM" id="hu4-GN-uTy"/>
@@ -925,7 +926,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAv-eI-yzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3742" y="938"/>
+            <point key="canvasLocation" x="3742" y="844"/>
         </scene>
         <!--View Qr View Controller-->
         <scene sceneID="sbp-U4-hmO">
@@ -939,9 +940,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qr_code.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P0U-lW-mY8">
-                                <rect key="frame" x="8" y="202" width="299" height="277"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Branch Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ot-DE-UwJ">
                                 <rect key="frame" x="145" y="102" width="167" height="21"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="12"/>
@@ -972,6 +970,9 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sizzler_Logo_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uum-Vm-DHZ">
                                 <rect key="frame" x="7" y="77" width="130" height="93"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qr_code.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P0U-lW-mY8">
+                                <rect key="frame" x="33" y="215" width="255" height="225"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1028,7 +1029,7 @@
                     <connections>
                         <segue destination="opq-dw-JpA" kind="relationship" relationship="viewControllers" id="xNu-1F-0v2"/>
                         <segue destination="hc6-fs-vT0" kind="relationship" relationship="viewControllers" id="q0I-NT-hdW"/>
-                        <segue destination="vQV-Sr-LtI" kind="relationship" relationship="viewControllers" id="EpT-7O-tjb"/>
+                        <segue destination="rdh-bC-qM8" kind="relationship" relationship="viewControllers" id="EpT-7O-tjb"/>
                         <segue destination="zgL-uW-hba" kind="relationship" relationship="viewControllers" id="Ew5-3V-sMy"/>
                         <segue destination="UFu-nb-4DD" kind="relationship" relationship="viewControllers" id="IPm-h5-z5Z"/>
                     </connections>
@@ -1037,22 +1038,68 @@
             </objects>
             <point key="canvasLocation" x="-1256" y="1056"/>
         </scene>
-        <!--MyQ-->
+        <!--MyQ Table View Controller-->
         <scene sceneID="GqU-bX-SYR">
             <objects>
-                <tableViewController id="vQV-Sr-LtI" sceneMemberID="viewController">
+                <tableViewController id="vQV-Sr-LtI" customClass="MyQTableViewController" customModule="QandOrderManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="614-mQ-YrX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NOc-Si-AD9">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="NOc-Si-AD9" customClass="MyQTableViewCell" customModule="QandOrderManagement" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NOc-Si-AD9" id="VUT-Nl-O1v">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9n-Xk-kc6">
+                                            <rect key="frame" x="8" y="9" width="90" height="52"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X60-Wt-D64">
+                                            <rect key="frame" x="112" y="14" width="57" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daz-Zn-Wzg">
+                                            <rect key="frame" x="179" y="14" width="22" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="people.png" translatesAutoresizingMaskIntoConstraints="NO" id="oa8-3T-LQi">
+                                            <rect key="frame" x="182" y="15" width="25" height="20"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EX5-Xc-cst">
+                                            <rect key="frame" x="199" y="17" width="17" height="15"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Central Ladprao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRm-qu-MnB">
+                                            <rect key="frame" x="112" y="35" width="135" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4h3-qb-7at">
+                                            <rect key="frame" x="216" y="18" width="17" height="15"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co8-oO-NkT">
+                                            <rect key="frame" x="170" y="15" width="19" height="19"/>
+                                            <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="branchName" destination="fRm-qu-MnB" id="X7f-iy-Cz2"/>
+                                    <outlet property="img1" destination="EX5-Xc-cst" id="Iog-Nm-iwQ"/>
+                                    <outlet property="img2" destination="4h3-qb-7at" id="eem-hy-HjS"/>
+                                    <outlet property="noOfPerson" destination="daz-Zn-Wzg" id="chV-SG-9MP"/>
+                                    <outlet property="queueNo" destination="X60-Wt-D64" id="UVn-4e-RVj"/>
+                                    <outlet property="restuarnatImg" destination="Z9n-Xk-kc6" id="C6W-Nt-mDc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1060,11 +1107,15 @@
                             <outlet property="delegate" destination="vQV-Sr-LtI" id="ABq-ir-ySw"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="MyQ" image="smiley.png" id="w8e-CM-7fr"/>
+                    <navigationItem key="navigationItem" id="wEj-en-M7o"/>
+                    <connections>
+                        <segue destination="5Wj-BS-Sg6" kind="push" identifier="viewtempqueue" id="Rri-Qb-Nue"/>
+                        <segue destination="YBg-yC-c33" kind="push" identifier="viewactivequeue" id="CAd-t5-nNn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obv-Wf-Knw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="2702"/>
+            <point key="canvasLocation" x="888" y="2702"/>
         </scene>
         <!--home-->
         <scene sceneID="nvp-lR-Ubv">
@@ -2263,19 +2314,19 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siam Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96h-4l-Con">
                                                     <rect key="frame" x="104" y="13" width="183" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1,268 B." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLI-kG-eCi">
                                                     <rect key="frame" x="242" y="36" width="70" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A012 [20 Nov 2015]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN7-f6-pDO">
                                                     <rect key="frame" x="104" y="36" width="123" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -2302,23 +2353,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizza_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="DML-bd-VBX">
-                                                    <rect key="frame" x="10" y="9" width="90" height="52"/>
+                                                    <rect key="frame" x="8" y="9" width="90" height="52"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Central Rama 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkh-eD-74I">
                                                     <rect key="frame" x="104" y="13" width="202" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C003 [20 Nov 2015]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8d-PH-74G">
                                                     <rect key="frame" x="104" y="36" width="126" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="989 B." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4m-Lq-pd3">
                                                     <rect key="frame" x="242" y="36" width="70" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -2362,26 +2413,26 @@
                                     <constraint firstAttribute="width" constant="130" id="pN6-Sg-rwV"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siam Center [A012]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0z-OB-ODF">
-                                <rect key="frame" x="139" y="94" width="160" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siam Center [ A012 ]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0z-OB-ODF">
+                                <rect key="frame" x="144" y="94" width="160" height="20"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Table: A6 /  3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTu-6T-TqR">
-                                <rect key="frame" x="139" y="134" width="90" height="20"/>
+                                <rect key="frame" x="144" y="132" width="90" height="20"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date: 20 Nov 2015/19:30PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNa-hc-Wt6">
-                                <rect key="frame" x="139" y="114" width="170" height="20"/>
+                                <rect key="frame" x="144" y="115" width="170" height="20"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="people.png" translatesAutoresizingMaskIntoConstraints="NO" id="PBW-xB-Vg6">
-                                <rect key="frame" x="205" y="131" width="30" height="23"/>
+                                <rect key="frame" x="210" y="129" width="30" height="23"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IG1-3e-nTW">
                                 <rect key="frame" x="15" y="180" width="290" height="151"/>
@@ -3911,7 +3962,7 @@
                                     <action selector="selectBirthdate:" destination="eNc-On-TPd" eventType="valueChanged" id="dMI-dA-84a"/>
                                 </connections>
                             </datePicker>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syt-hM-eY0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="syt-hM-eY0">
                                 <rect key="frame" x="95" y="95" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="4zy-9Y-NrW"/>
@@ -4095,6 +4146,25 @@
             </objects>
             <point key="canvasLocation" x="356" y="5429"/>
         </scene>
+        <!--MyQ-->
+        <scene sceneID="573-ev-ylr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rdh-bC-qM8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="MyQ" image="smiley.png" id="w8e-CM-7fr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1gd-Hj-Jgt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vQV-Sr-LtI" kind="relationship" relationship="rootViewController" id="Ze5-tF-gho"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LOV-eK-ZoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="2702"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Button_Account_2.png" width="495" height="504"/>
@@ -4139,20 +4209,20 @@
         <image name="header_Seafood.jpg" width="367" height="159"/>
         <image name="hoisin_banner.png" width="283" height="83"/>
         <image name="home.png" width="25" height="25"/>
-        <image name="hot-promotion.png" width="289" height="98"/>
         <image name="lock3.png" width="179" height="162"/>
         <image name="password_icon.png" width="33" height="36"/>
         <image name="people.png" width="800" height="800"/>
         <image name="pizza_logo.png" width="697" height="319"/>
+        <image name="pork_porkrib_half.jpg" width="1000" height="667"/>
         <image name="prom_hoisinchic.jpg" width="1000" height="667"/>
         <image name="qr_code.jpg" width="575" height="575"/>
         <image name="scanQRcode.png" width="435" height="437"/>
+        <image name="section_background3.png" width="191" height="24"/>
         <image name="settings.png" width="25" height="25"/>
         <image name="side_baked_potato.png" width="250" height="150"/>
         <image name="side_baked_vegetable.png" width="250" height="150"/>
         <image name="side_frenchfries.png" width="250" height="150"/>
         <image name="side_rice.png" width="250" height="150"/>
-        <image name="sizzler_header.png" width="347" height="224"/>
         <image name="sizzler_logo.png" width="697" height="319"/>
         <image name="smiley.png" width="30" height="30"/>
         <image name="star_check.png" width="128" height="128"/>
@@ -4160,9 +4230,12 @@
         <image name="view_qr_2.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Rri-Qb-Nue"/>
+        <segue reference="H7f-Ae-rEH"/>
+        <segue reference="pgn-Dw-udU"/>
+        <segue reference="37K-yQ-AsI"/>
+        <segue reference="eDy-Rb-Duf"/>
+        <segue reference="rSP-Jd-XeI"/>
         <segue reference="gh0-4n-3KS"/>
-        <segue reference="ZJm-sn-grv"/>
-        <segue reference="vMy-ol-8q2"/>
-        <segue reference="0Fr-sh-Vjk"/>
     </inferredMetricsTieBreakers>
 </document>

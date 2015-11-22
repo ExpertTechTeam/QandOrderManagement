@@ -10,7 +10,7 @@ import UIKit
 
 class ConfirmQueueViewController: UIViewController, contact2Delegate {
     
-    @IBOutlet weak var restaurantImage : UIImage!
+    @IBOutlet weak var restaurantImage : UIImageView!
     @IBOutlet weak var branchName : UILabel!
     @IBOutlet weak var branchLocation : UILabel!
     @IBOutlet weak var branchServiceTimeContact : UILabel!
@@ -29,6 +29,7 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
     
     @IBOutlet weak var viewBookingBtn : UIButton!
     
+    var hidebackitem : Bool = true
     var friendArray : [String] = []
     var queueModel : QueueModel = QueueModel()
     var bookingViewVisible : Int = 0
@@ -45,9 +46,20 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         //Setup Nav
         self.navigationItem.title = self.selectedRestaurant
         self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        self.navigationItem.hidesBackButton = true
+        self.navigationItem.hidesBackButton = self.hidebackitem
         
+        var resImage : UIImage!
+        if(self.selectedRestaurant == "Sizzler"){
+            resImage = UIImage(named: "Sizzler_Logo_3.png")
+        }else if(self.selectedRestaurant == "The Pizza Company"){
+            resImage = UIImage(named: "pizza_logo.png")
+        }else if(self.selectedRestaurant == "Swensen"){
+            resImage = UIImage(named: "SW_LOGO2.jpg")
+        }
+        
+        self.restaurantImage.image = resImage
         
         self.branchName!.text = selectedBranch.res_branch_name
         self.branchLocation!.text = selectedBranch.res_address
