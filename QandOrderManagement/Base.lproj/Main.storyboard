@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="v4m-BW-ODp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="v4m-BW-ODp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="ravenna-serial-light-regular.ttf">
+            <string>Ravenna-Serial-Light-Regular</string>
             <string>Ravenna-Serial-Light-Regular</string>
             <string>Ravenna-Serial-Light-Regular</string>
             <string>Ravenna-Serial-Light-Regular</string>
@@ -683,15 +684,15 @@
                                     <action selector="displayAlert" destination="5Wj-BS-Sg6" eventType="touchUpInside" id="Gew-0G-ylA"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sizzler_Logo_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="qEz-oH-SbA">
-                                <rect key="frame" x="7" y="77" width="130" height="93"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kgl-Dg-UE0">
                                 <rect key="frame" x="33" y="420" width="256" height="61"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sizzler_Logo_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="qEz-oH-SbA">
+                                <rect key="frame" x="7" y="77" width="130" height="93"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -772,7 +773,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKw-Mn-9Ty">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A009" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKw-Mn-9Ty">
                                                 <rect key="frame" x="0.0" y="194" width="320" height="93"/>
                                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="50"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1649,25 +1650,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sizzler_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Az-zb-TOr">
-                                <rect key="frame" x="20" y="64" width="137" height="99"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="99" id="Kme-V7-3VD"/>
-                                    <constraint firstAttribute="width" constant="137" id="ndI-RN-16s"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sizzler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7v-Qw-Ahl">
-                                <rect key="frame" x="173" y="83" width="127" height="21"/>
-                                <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A012" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKH-CQ-mRp">
-                                <rect key="frame" x="173" y="103" width="127" height="21"/>
-                                <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="63" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="KKW-Dd-ZkF">
                                 <rect key="frame" x="0.0" y="160" width="320" height="359"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
@@ -1770,23 +1752,59 @@
                                     <constraint firstItem="v4Y-wN-SRy" firstAttribute="leading" secondItem="skK-Ng-uV0" secondAttribute="trailing" constant="14" id="p0E-7C-TdP"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Siam Center [A009]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8L-a3-Wb3">
+                                <rect key="frame" x="155" y="82" width="155" height="20"/>
+                                <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Table: A6 /  3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvI-VL-9sd">
+                                <rect key="frame" x="155" y="124" width="79" height="20"/>
+                                <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date: 20 Nov 2015/19:30PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6d-Hn-wzA">
+                                <rect key="frame" x="155" y="104" width="161" height="20"/>
+                                <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="people.png" translatesAutoresizingMaskIntoConstraints="NO" id="fRO-Dv-Reb">
+                                <rect key="frame" x="219" y="122" width="30" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="m5O-xd-YDg"/>
+                                    <constraint firstAttribute="width" constant="30" id="qVi-hN-RlW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Sizzler_Logo_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Az-zb-TOr">
+                                <rect key="frame" x="6" y="72" width="147" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="Kme-V7-3VD"/>
+                                    <constraint firstAttribute="width" constant="147" id="ndI-RN-16s"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="R7v-Qw-Ahl" firstAttribute="leading" secondItem="7Az-zb-TOr" secondAttribute="trailing" constant="16" id="6mV-FF-C84"/>
+                            <constraint firstItem="z8L-a3-Wb3" firstAttribute="top" secondItem="p4a-2e-GPg" secondAttribute="bottom" constant="18" id="0CR-EX-PHw"/>
+                            <constraint firstItem="k6d-Hn-wzA" firstAttribute="leading" secondItem="7Az-zb-TOr" secondAttribute="trailing" constant="2" id="GVV-fF-iBr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KKW-Dd-ZkF" secondAttribute="trailing" constant="-20" id="IWx-zZ-HhE"/>
                             <constraint firstItem="LnD-XY-dYm" firstAttribute="centerX" secondItem="Z28-Sr-h7Z" secondAttribute="centerX" id="LHK-WT-zfV"/>
                             <constraint firstItem="KKW-Dd-ZkF" firstAttribute="leading" secondItem="Z28-Sr-h7Z" secondAttribute="leadingMargin" constant="-20" id="La6-xf-JAa"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="7Az-zb-TOr" secondAttribute="leading" id="Pdp-NM-HZm"/>
+                            <constraint firstItem="k6d-Hn-wzA" firstAttribute="top" secondItem="z8L-a3-Wb3" secondAttribute="bottom" constant="2" id="Ol3-YC-ZoH"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="7Az-zb-TOr" secondAttribute="leading" constant="14" id="Pdp-NM-HZm"/>
                             <constraint firstItem="ydx-J0-Xh2" firstAttribute="top" secondItem="KKW-Dd-ZkF" secondAttribute="bottom" id="UH9-8o-vs6"/>
-                            <constraint firstItem="EKH-CQ-mRp" firstAttribute="leading" secondItem="7Az-zb-TOr" secondAttribute="trailing" constant="16" id="VlL-OJ-atS"/>
-                            <constraint firstItem="KKW-Dd-ZkF" firstAttribute="top" secondItem="7Az-zb-TOr" secondAttribute="bottom" constant="-3" id="WWl-wi-T7k"/>
+                            <constraint firstItem="KKW-Dd-ZkF" firstAttribute="top" secondItem="7Az-zb-TOr" secondAttribute="bottom" constant="-6" id="WWl-wi-T7k"/>
+                            <constraint firstItem="fRO-Dv-Reb" firstAttribute="leading" secondItem="KvI-VL-9sd" secondAttribute="trailing" constant="-15" id="WkJ-9o-Fyu"/>
+                            <constraint firstItem="KvI-VL-9sd" firstAttribute="top" secondItem="k6d-Hn-wzA" secondAttribute="bottom" id="bRx-j2-n7p"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LnD-XY-dYm" secondAttribute="trailing" constant="-20" id="c9a-4b-o8r"/>
+                            <constraint firstItem="z8L-a3-Wb3" firstAttribute="leading" secondItem="7Az-zb-TOr" secondAttribute="trailing" constant="2" id="cvV-UY-caw"/>
                             <constraint firstItem="ydx-J0-Xh2" firstAttribute="top" secondItem="LnD-XY-dYm" secondAttribute="bottom" id="eCc-Rs-vTd"/>
-                            <constraint firstItem="EKH-CQ-mRp" firstAttribute="top" secondItem="R7v-Qw-Ahl" secondAttribute="bottom" constant="-1" id="edp-NG-QAL"/>
+                            <constraint firstItem="KvI-VL-9sd" firstAttribute="leading" secondItem="7Az-zb-TOr" secondAttribute="trailing" constant="2" id="eZg-lW-Wx7"/>
                             <constraint firstItem="LnD-XY-dYm" firstAttribute="leading" secondItem="Z28-Sr-h7Z" secondAttribute="leadingMargin" constant="-20" id="hsI-5t-Zci"/>
-                            <constraint firstItem="R7v-Qw-Ahl" firstAttribute="top" secondItem="p4a-2e-GPg" secondAttribute="bottom" constant="19" id="iNE-q3-Hb3"/>
-                            <constraint firstItem="7Az-zb-TOr" firstAttribute="top" secondItem="p4a-2e-GPg" secondAttribute="bottom" id="wPn-MJ-8JL"/>
+                            <constraint firstItem="fRO-Dv-Reb" firstAttribute="top" secondItem="k6d-Hn-wzA" secondAttribute="bottom" constant="-2" id="q23-oJ-kCT"/>
+                            <constraint firstItem="7Az-zb-TOr" firstAttribute="top" secondItem="p4a-2e-GPg" secondAttribute="bottom" constant="8" id="wPn-MJ-8JL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Order" id="isc-dq-VbP">
@@ -2318,12 +2336,6 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1,268 B." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLI-kG-eCi">
-                                                    <rect key="frame" x="242" y="36" width="70" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A012 [20 Nov 2015]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN7-f6-pDO">
                                                     <rect key="frame" x="104" y="36" width="123" height="20"/>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
@@ -2333,6 +2345,12 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sizzler_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="z14-QA-Owp">
                                                     <rect key="frame" x="8" y="9" width="90" height="52"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="฿1,268.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLI-kG-eCi">
+                                                    <rect key="frame" x="242" y="36" width="70" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="fLI-kG-eCi" firstAttribute="top" secondItem="22M-pz-n1h" secondAttribute="topMargin" constant="28" id="tWI-Tf-AJO"/>
@@ -2367,7 +2385,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="989 B." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4m-Lq-pd3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="฿989.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4m-Lq-pd3">
                                                     <rect key="frame" x="242" y="36" width="70" height="20"/>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2443,7 +2461,7 @@
                                     <segue destination="vjQ-Ei-cof" kind="embed" id="qhL-EC-cPz"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total:  1,268.00 B." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kiz-RZ-bAy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total:  1,268.00 B" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kiz-RZ-bAy">
                                 <rect key="frame" x="163" y="340" width="137" height="21"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2557,7 +2575,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Suggestion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ON-wo-gUZ">
                                 <rect key="frame" x="20" y="337" width="182" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Mco-Wx-P59"/>
+                                    <constraint firstAttribute="width" constant="182" id="Rxg-Rz-H9a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2567,7 +2585,7 @@
                                 <rect key="frame" x="20" y="359" width="280" height="90"/>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="eyx-A7-Xet" secondAttribute="height" multiplier="28:9" id="BbA-mz-kzT"/>
+                                    <constraint firstAttribute="height" constant="90" id="bIb-v3-W6X"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2583,63 +2601,76 @@
                                     <action selector="submitFeedbackMethod:" destination="CDs-Vl-RS4" eventType="touchUpInside" id="5g1-rM-x2O"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleAspectFit" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="Bkv-hS-UZp" customClass="RatingControl" customModule="QandOrderManagement" customModuleProvider="target">
-                                <rect key="frame" x="61" y="198" width="198" height="25"/>
+                            <view contentMode="scaleAspectFit" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="Bkv-hS-UZp" customClass="RatingControl" customModule="QandOrderManagement" customModuleProvider="target">
+                                <rect key="frame" x="45" y="200" width="230" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="OVp-vJ-H6c"/>
+                                    <constraint firstAttribute="width" constant="230" id="Upm-re-sZJ"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleAspectFit" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="lp7-Nj-A8T" customClass="RatingControl" customModule="QandOrderManagement" customModuleProvider="target">
-                                <rect key="frame" x="61" y="251" width="198" height="25"/>
+                            <view contentMode="scaleAspectFit" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="lp7-Nj-A8T" customClass="RatingControl" customModule="QandOrderManagement" customModuleProvider="target">
+                                <rect key="frame" x="45" y="251" width="230" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="IgP-h9-kCe"/>
+                                    <constraint firstAttribute="height" constant="25" id="efA-WH-c6t"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleAspectFit" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="D0q-Gd-AMi" customClass="RatingControl" customModule="QandOrderManagement" customModuleProvider="target">
-                                <rect key="frame" x="61" y="304" width="198" height="25"/>
+                            <view contentMode="scaleAspectFit" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="D0q-Gd-AMi" customClass="RatingControl" customModule="QandOrderManagement" customModuleProvider="target">
+                                <rect key="frame" x="45" y="304" width="230" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="8Pi-FR-YgW"/>
+                                    <constraint firstAttribute="height" constant="25" id="RMG-mC-Gez"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleAspectFit" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="hw5-lx-hby" customClass="RatingControl" customModule="QandOrderManagement" customModuleProvider="target">
-                                <rect key="frame" x="61" y="145" width="198" height="25"/>
+                            <view contentMode="scaleAspectFit" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="hw5-lx-hby" customClass="RatingControl" customModule="QandOrderManagement" customModuleProvider="target">
+                                <rect key="frame" x="45" y="147" width="230" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="fom-rX-QEy"/>
+                                    <constraint firstAttribute="height" constant="25" id="zs1-yu-LRZ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Bkv-hS-UZp" firstAttribute="leading" secondItem="1Wj-DV-g5I" secondAttribute="leadingMargin" constant="41" id="2fH-C8-BEP"/>
+                            <constraint firstItem="lp7-Nj-A8T" firstAttribute="width" secondItem="hw5-lx-hby" secondAttribute="width" id="3Iy-Jh-t8w"/>
                             <constraint firstAttribute="leadingMargin" secondItem="S78-b7-IvL" secondAttribute="leading" id="63e-oL-mhN"/>
-                            <constraint firstItem="hw5-lx-hby" firstAttribute="leading" secondItem="1Wj-DV-g5I" secondAttribute="leadingMargin" constant="41" id="6vU-DI-rKt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kdR-Ec-vpG" secondAttribute="trailing" constant="98" id="7K6-jT-d4U"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="eyx-A7-Xet" secondAttribute="leading" id="A2T-NT-Y6k"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eyx-A7-Xet" secondAttribute="trailing" id="AH6-Uw-e7t"/>
-                            <constraint firstItem="lp7-Nj-A8T" firstAttribute="leading" secondItem="1Wj-DV-g5I" secondAttribute="leadingMargin" constant="41" id="BRo-PQ-uqp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="D0q-Gd-AMi" secondAttribute="trailing" constant="41" id="Ch5-Sd-cuG"/>
+                            <constraint firstItem="Bkv-hS-UZp" firstAttribute="centerX" secondItem="1Wj-DV-g5I" secondAttribute="centerX" id="9ka-eb-Ch2"/>
+                            <constraint firstItem="aJe-DA-fHg" firstAttribute="top" secondItem="hw5-lx-hby" secondAttribute="bottom" constant="6" id="AlJ-nq-Zi0"/>
+                            <constraint firstItem="3ON-wo-gUZ" firstAttribute="top" secondItem="D0q-Gd-AMi" secondAttribute="bottom" constant="8" id="Ctu-ox-6uf"/>
                             <constraint firstAttribute="leadingMargin" secondItem="UGh-Ut-anD" secondAttribute="leading" id="DhE-cs-Nmh"/>
-                            <constraint firstItem="7dt-LW-J7t" firstAttribute="top" secondItem="eyx-A7-Xet" secondAttribute="bottom" constant="11" id="EcO-O5-pEz"/>
-                            <constraint firstItem="D0q-Gd-AMi" firstAttribute="top" secondItem="o9X-tB-NQ3" secondAttribute="bottom" constant="-1" id="EyU-VW-p7Y"/>
-                            <constraint firstItem="Bkv-hS-UZp" firstAttribute="height" secondItem="hw5-lx-hby" secondAttribute="height" id="FB6-D6-Phr"/>
+                            <constraint firstItem="Bkv-hS-UZp" firstAttribute="top" secondItem="aJe-DA-fHg" secondAttribute="bottom" constant="1" id="DhJ-Ww-4Gj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aJe-DA-fHg" secondAttribute="trailing" constant="98" id="Ftr-0c-44j"/>
                             <constraint firstAttribute="leadingMargin" secondItem="kdR-Ec-vpG" secondAttribute="leading" id="GAu-NX-B83"/>
-                            <constraint firstItem="hw5-lx-hby" firstAttribute="top" secondItem="kdR-Ec-vpG" secondAttribute="bottom" constant="-1" id="HYy-L5-CRK"/>
-                            <constraint firstItem="3ON-wo-gUZ" firstAttribute="top" secondItem="D0q-Gd-AMi" secondAttribute="bottom" constant="8" id="HhA-8t-fYP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3ON-wo-gUZ" secondAttribute="leading" id="Hgt-hp-dGj"/>
+                            <constraint firstItem="lp7-Nj-A8T" firstAttribute="top" secondItem="UGh-Ut-anD" secondAttribute="bottom" constant="-1" id="Hib-6S-kbq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o9X-tB-NQ3" secondAttribute="trailing" constant="98" id="J33-i7-EF5"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="3ON-wo-gUZ" secondAttribute="leading" id="Jze-ft-9sr"/>
+                            <constraint firstItem="o9X-tB-NQ3" firstAttribute="top" secondItem="lp7-Nj-A8T" secondAttribute="bottom" constant="8" id="LQW-FG-Ljh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UGh-Ut-anD" secondAttribute="trailing" constant="98" id="LYZ-0x-Hcb"/>
-                            <constraint firstItem="D0q-Gd-AMi" firstAttribute="height" secondItem="hw5-lx-hby" secondAttribute="height" id="Lce-Q0-BQs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bkv-hS-UZp" secondAttribute="trailing" constant="41" id="NfB-Gx-E7I"/>
-                            <constraint firstItem="aJe-DA-fHg" firstAttribute="top" secondItem="hw5-lx-hby" secondAttribute="bottom" constant="8" id="Pcq-RB-pPL"/>
-                            <constraint firstItem="eyx-A7-Xet" firstAttribute="top" secondItem="3ON-wo-gUZ" secondAttribute="bottom" constant="1" id="QLC-t9-je7"/>
-                            <constraint firstItem="lp7-Nj-A8T" firstAttribute="height" secondItem="hw5-lx-hby" secondAttribute="height" id="Tp0-Sb-fOg"/>
-                            <constraint firstItem="lp7-Nj-A8T" firstAttribute="top" secondItem="UGh-Ut-anD" secondAttribute="bottom" constant="-1" id="UFX-8c-8Cl"/>
+                            <constraint firstItem="Bkv-hS-UZp" firstAttribute="height" secondItem="hw5-lx-hby" secondAttribute="height" id="Osd-87-ENf"/>
+                            <constraint firstItem="D0q-Gd-AMi" firstAttribute="width" secondItem="hw5-lx-hby" secondAttribute="width" id="QI3-GP-kOT"/>
+                            <constraint firstItem="eyx-A7-Xet" firstAttribute="top" secondItem="3ON-wo-gUZ" secondAttribute="bottom" constant="1" id="QLJ-h5-AgY"/>
+                            <constraint firstItem="hw5-lx-hby" firstAttribute="top" secondItem="kdR-Ec-vpG" secondAttribute="bottom" constant="1" id="UQY-lS-xLu"/>
+                            <constraint firstItem="UGh-Ut-anD" firstAttribute="top" secondItem="Bkv-hS-UZp" secondAttribute="bottom" constant="6" id="UZy-FG-7Qj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7dt-LW-J7t" secondAttribute="trailing" constant="67" id="Uir-iI-INf"/>
                             <constraint firstItem="7dt-LW-J7t" firstAttribute="leading" secondItem="1Wj-DV-g5I" secondAttribute="leadingMargin" constant="68" id="WTd-4C-L58"/>
+                            <constraint firstItem="D0q-Gd-AMi" firstAttribute="height" secondItem="hw5-lx-hby" secondAttribute="height" id="XY7-9g-qyJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Kbu-fV-aXm" secondAttribute="leading" id="dXc-Io-BHm"/>
+                            <constraint firstItem="lp7-Nj-A8T" firstAttribute="centerX" secondItem="1Wj-DV-g5I" secondAttribute="centerX" id="dxb-WR-VFU"/>
                             <constraint firstItem="kdR-Ec-vpG" firstAttribute="top" secondItem="S78-b7-IvL" secondAttribute="bottom" constant="3" id="epO-tS-BOG"/>
-                            <constraint firstItem="OAT-b3-pib" firstAttribute="top" secondItem="7dt-LW-J7t" secondAttribute="bottom" constant="68" id="hXu-Mc-GvK"/>
-                            <constraint firstItem="D0q-Gd-AMi" firstAttribute="leading" secondItem="1Wj-DV-g5I" secondAttribute="leadingMargin" constant="41" id="kc2-C5-KXz"/>
-                            <constraint firstItem="Bkv-hS-UZp" firstAttribute="top" secondItem="aJe-DA-fHg" secondAttribute="bottom" constant="-1" id="kzn-lN-NdV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="eyx-A7-Xet" secondAttribute="leading" id="fdv-QI-a19"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eyx-A7-Xet" secondAttribute="trailing" id="gMC-Ci-zAD"/>
+                            <constraint firstItem="OAT-b3-pib" firstAttribute="top" secondItem="7dt-LW-J7t" secondAttribute="bottom" constant="19" id="hXu-Mc-GvK"/>
                             <constraint firstItem="S78-b7-IvL" firstAttribute="top" secondItem="Kbu-fV-aXm" secondAttribute="bottom" constant="-2" id="lRa-zI-1Pm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lp7-Nj-A8T" secondAttribute="trailing" constant="41" id="nxU-MF-fwT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hw5-lx-hby" secondAttribute="trailing" constant="41" id="rDG-7L-dXJ"/>
+                            <constraint firstItem="Bkv-hS-UZp" firstAttribute="width" secondItem="hw5-lx-hby" secondAttribute="width" id="nds-wJ-tqr"/>
+                            <constraint firstItem="lp7-Nj-A8T" firstAttribute="height" secondItem="hw5-lx-hby" secondAttribute="height" id="nvK-11-8fL"/>
+                            <constraint firstItem="hw5-lx-hby" firstAttribute="centerX" secondItem="1Wj-DV-g5I" secondAttribute="centerX" id="oCA-fw-las"/>
                             <constraint firstAttribute="leadingMargin" secondItem="aJe-DA-fHg" secondAttribute="leading" id="rk7-7v-uRG"/>
+                            <constraint firstItem="D0q-Gd-AMi" firstAttribute="centerX" secondItem="1Wj-DV-g5I" secondAttribute="centerX" id="tDx-vF-whw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S78-b7-IvL" secondAttribute="trailing" id="tlL-MU-Lc0"/>
-                            <constraint firstItem="o9X-tB-NQ3" firstAttribute="top" secondItem="lp7-Nj-A8T" secondAttribute="bottom" constant="8" id="u2B-E3-5HX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3ON-wo-gUZ" secondAttribute="trailing" constant="98" id="uAI-sO-0pb"/>
                             <constraint firstItem="Kbu-fV-aXm" firstAttribute="top" secondItem="qVE-ls-GfE" secondAttribute="bottom" constant="18" id="uct-gq-joV"/>
+                            <constraint firstItem="D0q-Gd-AMi" firstAttribute="top" secondItem="o9X-tB-NQ3" secondAttribute="bottom" constant="-1" id="vHG-Yc-UZN"/>
                             <constraint firstAttribute="leadingMargin" secondItem="o9X-tB-NQ3" secondAttribute="leading" id="wjq-iB-w3x"/>
-                            <constraint firstItem="UGh-Ut-anD" firstAttribute="top" secondItem="Bkv-hS-UZp" secondAttribute="bottom" constant="8" id="yN7-BP-Gs1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kbu-fV-aXm" secondAttribute="trailing" constant="-1" id="zHP-V2-kQc"/>
                         </constraints>
                     </view>
@@ -2674,8 +2705,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="399 B" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNH-Hj-PCc">
-                                                    <rect key="frame" x="225" y="8" width="50" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="฿399.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNH-Hj-PCc">
+                                                    <rect key="frame" x="218" y="8" width="57" height="20"/>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -2710,8 +2741,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="869 B" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWW-LQ-2ug">
-                                                    <rect key="frame" x="225" y="8" width="50" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="฿869.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWW-LQ-2ug">
+                                                    <rect key="frame" x="218" y="8" width="57" height="20"/>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -2869,12 +2900,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KiA-vn-ywn">
-                                <rect key="frame" x="20" y="93" width="280" height="149"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="149" id="rBF-bv-3n3"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gl-1a-2eU">
                                 <rect key="frame" x="67" y="274" width="185" height="40"/>
                                 <constraints>
@@ -2911,6 +2936,12 @@
                                     <segue destination="zJV-ht-WGB" kind="push" id="xi4-GE-XPd"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_splashpage.png" translatesAutoresizingMaskIntoConstraints="NO" id="KiA-vn-ywn">
+                                <rect key="frame" x="0.0" y="88" width="321" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="rBF-bv-3n3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2922,14 +2953,14 @@
                             <constraint firstItem="TNy-CC-Qfv" firstAttribute="height" secondItem="4gl-1a-2eU" secondAttribute="height" id="Kvh-Kc-dH5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TNy-CC-Qfv" secondAttribute="trailing" constant="48" id="KzL-D1-sNy"/>
                             <constraint firstItem="4q4-q6-AXm" firstAttribute="width" secondItem="4gl-1a-2eU" secondAttribute="width" id="cYa-Nu-YWL"/>
-                            <constraint firstItem="4gl-1a-2eU" firstAttribute="top" secondItem="KiA-vn-ywn" secondAttribute="bottom" constant="32" id="dMn-pZ-v6g"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="KiA-vn-ywn" secondAttribute="leading" id="jdE-H5-H0x"/>
-                            <constraint firstItem="KiA-vn-ywn" firstAttribute="top" secondItem="oE5-Up-oVj" secondAttribute="bottom" constant="29" id="l1G-8Y-2BA"/>
+                            <constraint firstItem="4gl-1a-2eU" firstAttribute="top" secondItem="KiA-vn-ywn" secondAttribute="bottom" constant="16" id="dMn-pZ-v6g"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="KiA-vn-ywn" secondAttribute="leading" constant="20" id="jdE-H5-H0x"/>
+                            <constraint firstItem="KiA-vn-ywn" firstAttribute="top" secondItem="oE5-Up-oVj" secondAttribute="bottom" constant="24" id="l1G-8Y-2BA"/>
                             <constraint firstItem="TNy-CC-Qfv" firstAttribute="top" secondItem="4gl-1a-2eU" secondAttribute="bottom" constant="43" id="nvH-ks-tPO"/>
                             <constraint firstItem="4q4-q6-AXm" firstAttribute="height" secondItem="4gl-1a-2eU" secondAttribute="height" id="pFi-BH-Aoe"/>
                             <constraint firstItem="4q4-q6-AXm" firstAttribute="leading" secondItem="ftN-hr-VEt" secondAttribute="leadingMargin" constant="47" id="q1y-O6-LU3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4gl-1a-2eU" secondAttribute="trailing" constant="48" id="sUF-oB-WpQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KiA-vn-ywn" secondAttribute="trailing" id="ynM-6c-L6j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KiA-vn-ywn" secondAttribute="trailing" constant="-21" id="ynM-6c-L6j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="H8r-ys-8Fj"/>
@@ -3084,15 +3115,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pu8-Hf-tq0">
-                                <rect key="frame" x="180" y="381" width="110" height="110"/>
-                                <state key="normal" title="Button" image="Button_Signout_2.png"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJl-CW-jzv">
                                 <rect key="frame" x="30" y="91" width="110" height="110"/>
                                 <state key="normal" title="Button" image="Button_Account_2.png"/>
                                 <connections>
                                     <segue destination="ng4-PX-iuo" kind="push" id="Ijd-Fy-zpv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pu8-Hf-tq0">
+                                <rect key="frame" x="180" y="381" width="110" height="110"/>
+                                <state key="normal" title="Button" image="Button_Signout_2.png"/>
+                                <connections>
+                                    <segue destination="ar1-SO-fEh" kind="push" id="vU5-Z0-PZP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3196,7 +3230,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftcard_swensen_50_2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YeJ-la-UCo">
                                                     <rect key="frame" x="12" y="9" width="90" height="52"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swensens Gift Card 50 B." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq9-24-xF7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swensens Gift Card ฿50." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq9-24-xF7">
                                                     <rect key="frame" x="107" y="13" width="162" height="21"/>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -3239,7 +3273,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftcard_swensen_100_2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EhC-KB-LI8">
                                                     <rect key="frame" x="12" y="9" width="90" height="52"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swensens Gift Card 100 B." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cey-4x-NTD">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swensens Gift Card ฿100." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cey-4x-NTD">
                                                     <rect key="frame" x="107" y="13" width="162" height="21"/>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -3308,7 +3342,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftcard_swensen_50_2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dWn-fx-nsK">
                                                     <rect key="frame" x="12" y="9" width="107" height="52"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swensens Gift Card 50 B." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ov0-Vx-VB3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swensens Gift Card ฿50." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ov0-Vx-VB3">
                                                     <rect key="frame" x="125" y="14" width="156" height="21"/>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -3337,15 +3371,15 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftcard_swensen_50_2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="o7A-oM-iqP">
                                                     <rect key="frame" x="12" y="9" width="107" height="52"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swensens Gift Card 50 B." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRz-TC-UPZ">
-                                                    <rect key="frame" x="125" y="14" width="156" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="13"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expire Date: 30 Nov 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoK-Xa-KcS">
                                                     <rect key="frame" x="125" y="36" width="156" height="21"/>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swensens Gift Card ฿50." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRz-TC-UPZ">
+                                                    <rect key="frame" x="125" y="14" width="156" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -3387,17 +3421,17 @@
                                     <constraint firstAttribute="width" secondItem="7eQ-yl-f8j" secondAttribute="height" multiplier="270:149" id="3KY-6r-WOl"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Coupon No:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPB-qy-g1h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Coupon No:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPB-qy-g1h">
                                 <rect key="frame" x="20" y="230" width="110" height="21"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7o-Qn-Kol">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7o-Qn-Kol">
                                 <rect key="frame" x="20" y="255" width="110" height="21"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Expired Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXm-P7-dgd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Expired Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXm-P7-dgd">
                                 <rect key="frame" x="20" y="280" width="110" height="21"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                 <nil key="highlightedColor"/>
@@ -3415,18 +3449,19 @@
                                     <action selector="applyVoucherMethod:" destination="1Cq-gI-BW3" eventType="touchUpInside" id="Fpw-Oh-7hg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SW201511000113" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xan-6k-P01">
-                                <rect key="frame" x="170" y="230" width="130" height="21"/>
-                                <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="50 B." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXi-YP-307">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="฿50.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXi-YP-307">
                                 <rect key="frame" x="170" y="255" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Srj-qu-17A"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="15 Dec 2015" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNV-EQ-FrE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="15 Dec 2015" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNV-EQ-FrE">
                                 <rect key="frame" x="170" y="280" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Jdq-v1-PlI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -3437,6 +3472,14 @@
                                     <constraint firstAttribute="width" constant="148" id="Na6-Sa-H1S"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SW201511000113" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xan-6k-P01">
+                                <rect key="frame" x="170" y="230" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="ZC6-GX-mF9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3491,11 +3534,11 @@
                         <sections>
                             <tableViewSection id="vf6-a7-w7f">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="70" id="b0k-oZ-2oJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="b0k-oZ-2oJ">
                                         <rect key="frame" x="0.0" y="64" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b0k-oZ-2oJ" id="n8X-Ub-Brj">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20 Nov 2015/ 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF5-gG-8un">
@@ -3510,7 +3553,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sizzler_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kgf-LN-xy2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sizzler_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kgf-LN-xy2">
                                                     <rect key="frame" x="15" y="9" width="90" height="52"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="people.png" translatesAutoresizingMaskIntoConstraints="NO" id="q0L-IV-tfp">
@@ -3535,7 +3578,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizza_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="rr7-6I-0W1">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizza_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="rr7-6I-0W1">
                                                     <rect key="frame" x="15" y="9" width="90" height="52"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20 Nov 2015/ 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voy-mu-XSz">
@@ -3569,7 +3612,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sizzler_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="3G2-Kr-2dh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sizzler_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="3G2-Kr-2dh">
                                                     <rect key="frame" x="15" y="9" width="90" height="52"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="people.png" translatesAutoresizingMaskIntoConstraints="NO" id="CdR-Wr-mtc">
@@ -3604,14 +3647,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Sizzler_Logo_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="YaG-HB-7rm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Sizzler_Logo_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="YaG-HB-7rm">
                                 <rect key="frame" x="7" y="77" width="130" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="cgG-cZ-kEw"/>
                                     <constraint firstAttribute="width" constant="130" id="kqv-vg-kol"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siam Center [A012]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVp-6j-fQI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siam Center [A009]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVp-6j-fQI">
                                 <rect key="frame" x="142" y="91" width="155" height="20"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -3641,7 +3684,7 @@
                                     <segue destination="Mj5-HZ-GBE" kind="embed" id="0tB-pZ-FBN"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total:  1,268.00 B." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLz-7p-84d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total:  ฿1,268.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLz-7p-84d">
                                 <rect key="frame" x="163" y="340" width="137" height="21"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -4042,8 +4085,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="399 B" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhd-GW-HZx">
-                                                    <rect key="frame" x="225" y="8" width="50" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="฿399.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhd-GW-HZx">
+                                                    <rect key="frame" x="218" y="8" width="57" height="20"/>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -4078,8 +4121,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="869 B" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPs-bI-crC">
-                                                    <rect key="frame" x="225" y="8" width="50" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="฿869.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPs-bI-crC">
+                                                    <rect key="frame" x="210" y="8" width="65" height="20"/>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -4209,6 +4252,7 @@
         <image name="header_Seafood.jpg" width="367" height="159"/>
         <image name="hoisin_banner.png" width="283" height="83"/>
         <image name="home.png" width="25" height="25"/>
+        <image name="icon_splashpage.png" width="2048" height="2048"/>
         <image name="lock3.png" width="179" height="162"/>
         <image name="password_icon.png" width="33" height="36"/>
         <image name="people.png" width="800" height="800"/>
@@ -4231,11 +4275,12 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Rri-Qb-Nue"/>
+        <segue reference="d9B-03-t8d"/>
+        <segue reference="gh0-4n-3KS"/>
+        <segue reference="rSP-Jd-XeI"/>
         <segue reference="H7f-Ae-rEH"/>
         <segue reference="pgn-Dw-udU"/>
-        <segue reference="37K-yQ-AsI"/>
         <segue reference="eDy-Rb-Duf"/>
-        <segue reference="rSP-Jd-XeI"/>
-        <segue reference="gh0-4n-3KS"/>
+        <segue reference="37K-yQ-AsI"/>
     </inferredMetricsTieBreakers>
 </document>

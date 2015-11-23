@@ -33,7 +33,6 @@ class LogInAccountViewController: UIViewController {
        
     }
     
-    
 
     /*
     // MARK: - Navigation
