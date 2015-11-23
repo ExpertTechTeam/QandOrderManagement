@@ -42,7 +42,7 @@ class PopOverDetailMapViewController: UIViewController {
     }
     
     @IBAction func onSelectedDetail(sender: AnyObject) {
-        print("on select detail")
+        self.dismissViewControllerAnimated(true, completion: nil)
         delegate?.tappedViewButton(restaurant)
     }
     /*

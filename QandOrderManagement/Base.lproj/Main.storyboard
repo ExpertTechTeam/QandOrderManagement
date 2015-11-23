@@ -229,7 +229,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WsZ-JA-qZR">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WsZ-JA-qZR">
                                 <rect key="frame" x="0.0" y="245" width="320" height="28"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="section_background3.png" translatesAutoresizingMaskIntoConstraints="NO" id="LsX-YR-eON">
@@ -242,11 +242,8 @@
                                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="0hr-be-3Q2"/>
-                                </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-gU-jbk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-gU-jbk">
                                 <rect key="frame" x="0.0" y="272" width="320" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -293,15 +290,6 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="7PJ-Id-Eeb" firstAttribute="top" secondItem="K2m-gU-jbk" secondAttribute="bottom" id="BhC-o6-sqY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WsZ-JA-qZR" secondAttribute="trailing" constant="-20" id="apf-Rd-v7b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="K2m-gU-jbk" secondAttribute="trailing" constant="-20" id="bHT-pY-KES"/>
-                            <constraint firstItem="WsZ-JA-qZR" firstAttribute="top" secondItem="RCM-zF-Pgo" secondAttribute="bottom" constant="181" id="d67-n6-WhQ"/>
-                            <constraint firstItem="K2m-gU-jbk" firstAttribute="leading" secondItem="P3X-uU-hfe" secondAttribute="leadingMargin" constant="-20" id="e1K-HV-kAV"/>
-                            <constraint firstItem="WsZ-JA-qZR" firstAttribute="leading" secondItem="P3X-uU-hfe" secondAttribute="leadingMargin" constant="-20" id="efs-gO-wuK"/>
-                            <constraint firstItem="K2m-gU-jbk" firstAttribute="top" secondItem="WsZ-JA-qZR" secondAttribute="bottom" constant="-1" id="xRT-cK-XKA"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="12U-lU-4OP"/>
                     <connections>
@@ -1387,12 +1375,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siam Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hY9-nI-3Oa">
-                                <rect key="frame" x="55" y="11" width="140" height="21"/>
-                                <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sizzler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsS-ZQ-Whm">
                                 <rect key="frame" x="9" y="11" width="45" height="21"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="12"/>
@@ -1421,6 +1403,12 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Siam Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hY9-nI-3Oa">
+                                <rect key="frame" x="49" y="11" width="146" height="21"/>
+                                <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
