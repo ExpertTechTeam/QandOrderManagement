@@ -197,11 +197,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scanQRcode.png" translatesAutoresizingMaskIntoConstraints="NO" id="jfG-ZB-dTq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="scanQRcode.png" translatesAutoresizingMaskIntoConstraints="NO" id="jfG-ZB-dTq">
                                 <rect key="frame" x="8" y="124" width="304" height="294"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jfG-ZB-dTq" secondAttribute="height" multiplier="152:147" id="jO5-Oa-Pht"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jfG-ZB-dTq" firstAttribute="leading" secondItem="0Vi-HX-IkY" secondAttribute="leadingMargin" constant="-12" id="3Ke-vZ-QBd"/>
+                            <constraint firstItem="jfG-ZB-dTq" firstAttribute="top" secondItem="dC6-zH-Kkj" secondAttribute="bottom" constant="60" id="BU1-Xy-7wt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jfG-ZB-dTq" secondAttribute="trailing" constant="-12" id="dHi-IP-zXl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="QR Code" id="6Rk-Ku-SBB"/>
                 </viewController>
@@ -221,7 +229,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WsZ-JA-qZR">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WsZ-JA-qZR">
                                 <rect key="frame" x="0.0" y="245" width="320" height="28"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="section_background3.png" translatesAutoresizingMaskIntoConstraints="NO" id="LsX-YR-eON">
@@ -234,8 +242,11 @@
                                         <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="0hr-be-3Q2"/>
+                                </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-gU-jbk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-gU-jbk">
                                 <rect key="frame" x="0.0" y="272" width="320" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -282,6 +293,15 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7PJ-Id-Eeb" firstAttribute="top" secondItem="K2m-gU-jbk" secondAttribute="bottom" id="BhC-o6-sqY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WsZ-JA-qZR" secondAttribute="trailing" constant="-20" id="apf-Rd-v7b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K2m-gU-jbk" secondAttribute="trailing" constant="-20" id="bHT-pY-KES"/>
+                            <constraint firstItem="WsZ-JA-qZR" firstAttribute="top" secondItem="RCM-zF-Pgo" secondAttribute="bottom" constant="181" id="d67-n6-WhQ"/>
+                            <constraint firstItem="K2m-gU-jbk" firstAttribute="leading" secondItem="P3X-uU-hfe" secondAttribute="leadingMargin" constant="-20" id="e1K-HV-kAV"/>
+                            <constraint firstItem="WsZ-JA-qZR" firstAttribute="leading" secondItem="P3X-uU-hfe" secondAttribute="leadingMargin" constant="-20" id="efs-gO-wuK"/>
+                            <constraint firstItem="K2m-gU-jbk" firstAttribute="top" secondItem="WsZ-JA-qZR" secondAttribute="bottom" constant="-1" id="xRT-cK-XKA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="12U-lU-4OP"/>
                     <connections>
@@ -1663,8 +1683,67 @@
                                     <constraint firstAttribute="width" constant="147" id="ndI-RN-16s"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Siam Center [A009]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8L-a3-Wb3">
+                                <rect key="frame" x="155" y="82" width="155" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="snH-Tq-YWM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Table:  -  / 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvI-VL-9sd">
+                                <rect key="frame" x="155" y="128" width="75" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="NM3-D2-5Ei"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date: 20 Nov 2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6d-Hn-wzA">
+                                <rect key="frame" x="155" y="106" width="161" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="hkW-b7-uce"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="people.png" translatesAutoresizingMaskIntoConstraints="NO" id="fRO-Dv-Reb">
+                                <rect key="frame" x="224" y="127" width="23" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="D1T-TC-Gjd"/>
+                                    <constraint firstAttribute="width" constant="23" id="vBB-yV-aD4"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LnD-XY-dYm">
+                                <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="฿ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4Y-wN-SRy">
+                                        <rect key="frame" x="222" y="11" width="85" height="21"/>
+                                        <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skK-Ng-uV0">
+                                        <rect key="frame" x="166" y="10" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.6705882352941176" green="0.82745098039215681" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="v4Y-wN-SRy" firstAttribute="top" secondItem="LnD-XY-dYm" secondAttribute="top" constant="11" id="750-NJ-nyp"/>
+                                    <constraint firstAttribute="trailing" secondItem="v4Y-wN-SRy" secondAttribute="trailing" constant="13" id="8Lx-sF-R6B"/>
+                                    <constraint firstItem="skK-Ng-uV0" firstAttribute="top" secondItem="LnD-XY-dYm" secondAttribute="top" constant="10" id="ijg-4c-TU0"/>
+                                    <constraint firstAttribute="height" constant="44" id="mtG-3M-9Fq"/>
+                                    <constraint firstItem="v4Y-wN-SRy" firstAttribute="leading" secondItem="skK-Ng-uV0" secondAttribute="trailing" constant="14" id="p0E-7C-TdP"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="63" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="KKW-Dd-ZkF">
-                                <rect key="frame" x="0.0" y="157" width="320" height="320"/>
+                                <rect key="frame" x="0.0" y="165" width="320" height="312"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -1740,65 +1819,6 @@
                                     <outlet property="delegate" destination="yEM-bM-B14" id="L7w-IY-UDQ"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Siam Center [A009]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8L-a3-Wb3">
-                                <rect key="frame" x="155" y="82" width="155" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="snH-Tq-YWM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Table:  -  / 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvI-VL-9sd">
-                                <rect key="frame" x="155" y="128" width="75" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="NM3-D2-5Ei"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date: 20 Nov 2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6d-Hn-wzA">
-                                <rect key="frame" x="155" y="106" width="161" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="hkW-b7-uce"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LnD-XY-dYm">
-                                <rect key="frame" x="0.0" y="475" width="320" height="44"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="฿ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4Y-wN-SRy">
-                                        <rect key="frame" x="222" y="11" width="85" height="21"/>
-                                        <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="16"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skK-Ng-uV0">
-                                        <rect key="frame" x="166" y="10" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="16"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.6705882352941176" green="0.82745098039215681" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="v4Y-wN-SRy" firstAttribute="top" secondItem="LnD-XY-dYm" secondAttribute="top" constant="11" id="750-NJ-nyp"/>
-                                    <constraint firstAttribute="trailing" secondItem="v4Y-wN-SRy" secondAttribute="trailing" constant="13" id="8Lx-sF-R6B"/>
-                                    <constraint firstItem="skK-Ng-uV0" firstAttribute="top" secondItem="LnD-XY-dYm" secondAttribute="top" constant="10" id="ijg-4c-TU0"/>
-                                    <constraint firstAttribute="height" constant="44" id="mtG-3M-9Fq"/>
-                                    <constraint firstItem="v4Y-wN-SRy" firstAttribute="leading" secondItem="skK-Ng-uV0" secondAttribute="trailing" constant="14" id="p0E-7C-TdP"/>
-                                </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="people.png" translatesAutoresizingMaskIntoConstraints="NO" id="fRO-Dv-Reb">
-                                <rect key="frame" x="224" y="127" width="23" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="D1T-TC-Gjd"/>
-                                    <constraint firstAttribute="width" constant="23" id="vBB-yV-aD4"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -4294,10 +4314,10 @@
         <segue reference="Rri-Qb-Nue"/>
         <segue reference="d9B-03-t8d"/>
         <segue reference="gh0-4n-3KS"/>
+        <segue reference="qbE-Oc-yNF"/>
         <segue reference="rSP-Jd-XeI"/>
-        <segue reference="H7f-Ae-rEH"/>
-        <segue reference="pgn-Dw-udU"/>
         <segue reference="eDy-Rb-Duf"/>
         <segue reference="37K-yQ-AsI"/>
+        <segue reference="H7f-Ae-rEH"/>
     </inferredMetricsTieBreakers>
 </document>

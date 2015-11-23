@@ -17,19 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blur_background1.png" translatesAutoresizingMaskIntoConstraints="NO" id="qnl-L0-Hea">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blur_background1.png" translatesAutoresizingMaskIntoConstraints="NO" id="qnl-L0-Hea">
                                 <rect key="frame" x="0.0" y="-7" width="320" height="575"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_splashpage.png" translatesAutoresizingMaskIntoConstraints="NO" id="ANg-r1-RUi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_splashpage.png" translatesAutoresizingMaskIntoConstraints="NO" id="ANg-r1-RUi">
                                 <rect key="frame" x="40" y="92" width="240" height="233"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="233" id="1XL-oe-uW7"/>
+                                    <constraint firstAttribute="width" constant="240" id="otL-nM-vqy"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
                         <constraints>
-                            <constraint firstItem="ANg-r1-RUi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="20" id="PuT-Jf-pwJ"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ANg-r1-RUi" secondAttribute="bottom" constant="168" id="iab-gv-PEW"/>
-                            <constraint firstItem="ANg-r1-RUi" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="147" id="qae-m8-5N9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ANg-r1-RUi" secondAttribute="trailing" constant="20" id="ytl-9t-dVO"/>
+                            <constraint firstItem="qnl-L0-Hea" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="2k4-wZ-YmL"/>
+                            <constraint firstItem="ANg-r1-RUi" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="72" id="3Hi-T0-LVK"/>
+                            <constraint firstItem="ANg-r1-RUi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QtP-mx-egm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qnl-L0-Hea" secondAttribute="trailing" constant="-20" id="UUV-Kb-1DX"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="qnl-L0-Hea" secondAttribute="bottom" id="X98-7v-VtY"/>
+                            <constraint firstItem="qnl-L0-Hea" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-27" id="it8-Op-eDF"/>
                         </constraints>
                     </view>
                 </viewController>
