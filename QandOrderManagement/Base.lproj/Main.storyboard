@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="v4m-BW-ODp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="v4m-BW-ODp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="ravenna-serial-light-regular.ttf">
-            <string>Ravenna-Serial-Light-Regular</string>
-            <string>Ravenna-Serial-Light-Regular</string>
-            <string>Ravenna-Serial-Light-Regular</string>
-            <string>Ravenna-Serial-Light-Regular</string>
-            <string>Ravenna-Serial-Light-Regular</string>
-            <string>Ravenna-Serial-Light-Regular</string>
             <string>Ravenna-Serial-Light-Regular</string>
             <string>Ravenna-Serial-Light-Regular</string>
             <string>Ravenna-Serial-Light-Regular</string>
@@ -466,12 +460,42 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Twitter_Logo_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="bv1-af-S7P">
                                 <rect key="frame" x="148" y="150" width="25" height="32"/>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-LQ-qiy">
-                                <rect key="frame" x="20" y="300" width="280" height="194"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="udy-mI-KPu">
+                                <rect key="frame" x="20" y="299" width="280" height="176"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" id="ZF5-CE-l0x" customClass="CurrentQueueTableViewCell" customModule="QandOrderManagement" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZF5-CE-l0x" id="pfN-Zu-eme">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nah-2f-maL">
+                                                    <rect key="frame" x="172" y="11" width="51" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1-4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Max-DA-JPa">
+                                                    <rect key="frame" x="29" y="11" width="75" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tableType" destination="Max-DA-JPa" id="p0b-rl-u06"/>
+                                            <outlet property="waitingQueue" destination="Nah-2f-maL" id="SN8-Tf-kG6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <segue destination="bR1-lD-Fxe" kind="embed" id="Aso-GS-yzU"/>
+                                    <outlet property="dataSource" destination="cuT-gH-Zzq" id="KYI-YA-Ttg"/>
+                                    <outlet property="delegate" destination="cuT-gH-Zzq" id="E4y-Ec-pId"/>
                                 </connections>
-                            </containerView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -480,124 +504,13 @@
                         <outlet property="branchLocation" destination="7JM-D5-w3E" id="ZyE-wT-rfT"/>
                         <outlet property="branchName" destination="42t-rp-K5R" id="bHL-1H-IX2"/>
                         <outlet property="branchServiceTimeContact" destination="nXb-GE-wUh" id="pnP-RA-VGD"/>
+                        <outlet property="tbvCurrentQueue" destination="udy-mI-KPu" id="57n-Cg-wBQ"/>
                         <segue destination="5Wj-BS-Sg6" kind="push" identifier="reserveQueue" id="2Ee-Pf-YM7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wio-Nx-KBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2003" y="666"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="F63-Cw-EUR">
-            <objects>
-                <tableViewController id="bR1-lD-Fxe" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hH5-S3-d3h">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="194"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="AXF-2J-DJc">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vlr-1e-0FS">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vlr-1e-0FS" id="epq-Fd-eYh">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plm-1X-Vfr">
-                                                    <rect key="frame" x="194" y="14" width="41" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1-4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gR-bg-t2e">
-                                                    <rect key="frame" x="54" y="14" width="37" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OhT-is-xZP">
-                                        <rect key="frame" x="0.0" y="44" width="280" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OhT-is-xZP" id="FAG-Jq-7hh">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqd-Il-86a">
-                                                    <rect key="frame" x="194" y="8" width="41" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5-8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyE-Ir-UA8">
-                                                    <rect key="frame" x="54" y="8" width="41" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="x0r-oV-eFf">
-                                        <rect key="frame" x="0.0" y="88" width="280" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x0r-oV-eFf" id="zeU-ad-Ez3">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auc-yL-4nG">
-                                                    <rect key="frame" x="194" y="8" width="41" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9-12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BU-q3-T2F">
-                                                    <rect key="frame" x="52" y="8" width="57" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Qt8-ab-KXm">
-                                        <rect key="frame" x="0.0" y="132" width="280" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qt8-ab-KXm" id="0CU-np-fpV">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13-20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wN6-C4-rGb">
-                                                    <rect key="frame" x="49" y="11" width="66" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-Ov-XbB">
-                                                    <rect key="frame" x="194" y="11" width="41" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="bR1-lD-Fxe" id="RwU-cv-ygE"/>
-                            <outlet property="delegate" destination="bR1-lD-Fxe" id="cR2-EG-qgi"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="grt-hC-bji" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2003" y="1218"/>
         </scene>
         <!--Reserve Queue View Controller-->
         <scene sceneID="6Mg-ko-D7q">

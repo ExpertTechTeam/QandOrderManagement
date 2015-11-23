@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A2F18281BFA02A200367FA2 /* QueueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F18271BFA02A200367FA2 /* QueueModel.swift */; };
 		3A2F182A1BFA02AA00367FA2 /* ContactList2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */; };
+		3A3110651C02FF6B0049B049 /* CurrentQueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3110641C02FF6B0049B049 /* CurrentQueueTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		3A3332561BFE44930092BF82 /* MyQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3332551BFE44930092BF82 /* MyQTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		3A4960861C01CD4200EF6E38 /* SizzlerPromotion9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4960841C01CD4200EF6E38 /* SizzlerPromotion9.png */; settings = {ASSET_TAGS = (); }; };
 		3A4960891C01CEC000EF6E38 /* PizzaPromotion.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4960881C01CEC000EF6E38 /* PizzaPromotion.png */; settings = {ASSET_TAGS = (); }; };
@@ -401,6 +402,7 @@
 /* Begin PBXFileReference section */
 		3A2F18271BFA02A200367FA2 /* QueueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueModel.swift; sourceTree = "<group>"; };
 		3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactList2TableViewController.swift; sourceTree = "<group>"; };
+		3A3110641C02FF6B0049B049 /* CurrentQueueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentQueueTableViewCell.swift; sourceTree = "<group>"; };
 		3A3332551BFE44930092BF82 /* MyQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQTableViewCell.swift; sourceTree = "<group>"; };
 		3A4960841C01CD4200EF6E38 /* SizzlerPromotion9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SizzlerPromotion9.png; sourceTree = "<group>"; };
 		3A4960881C01CEC000EF6E38 /* PizzaPromotion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PizzaPromotion.png; sourceTree = "<group>"; };
@@ -1219,6 +1221,7 @@
 				3A6E5B3A1BEE52A50078A941 /* BranchListViewController.swift */,
 				3A6E5B8B1BF1F6C40078A941 /* BranchTableViewCell.swift */,
 				3A6E5B461BEF36510078A941 /* CurrentQueueViewController.swift */,
+				3A3110641C02FF6B0049B049 /* CurrentQueueTableViewCell.swift */,
 				3A6E5BAB1BF328390078A941 /* ReserveQueueViewController.swift */,
 				3A6E5BC51BF4A3B50078A941 /* ContactListTableViewController.swift */,
 				3A4FBDC61BF87D9C00B37E11 /* ConfirmQueueViewController.swift */,
@@ -1837,6 +1840,7 @@
 				A1FA26011BF9D4AD00F6B0B9 /* MapViewController.swift in Sources */,
 				3A6E5B801BF1F4540078A941 /* FMDatabaseAdditions.m in Sources */,
 				A1FA24B31BF9D17D00F6B0B9 /* MenuModel.swift in Sources */,
+				3A3110651C02FF6B0049B049 /* CurrentQueueTableViewCell.swift in Sources */,
 				3A6E5BAC1BF328390078A941 /* ReserveQueueViewController.swift in Sources */,
 				3A2F18281BFA02A200367FA2 /* QueueModel.swift in Sources */,
 				A1FA25F41BF9D41A00F6B0B9 /* OrderListViewController.swift in Sources */,
