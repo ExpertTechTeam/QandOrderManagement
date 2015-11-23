@@ -82,9 +82,6 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
 
         }
     }
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return nil
-    }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat.min
@@ -95,9 +92,6 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
         return CGFloat.min
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return nil
-    }
 
     func reCalculate(){
         print("recalculate")
