@@ -101,7 +101,7 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
             self.friendList.text = "-"
         }
         
-        self.scrollView.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height)
+        self.scrollView.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height + 120)
         
     }
     
