@@ -12,5 +12,6 @@ struct MyVariables {
     static var countCart : Int = 0
     static var activeQueueList:[QueueModel] = []
     static var tempQueueList:[QueueModel] = []
+    static var minimumWaitingQAlert : Int = 20
     
 }

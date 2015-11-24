@@ -22,6 +22,7 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
     var tableTypeArray : [String] = ["1-4", "5-8", "9-12", "13-20"]
     var defaultWaitingQ : [Int] = [7,4,0,0]
     var recommendWaitingQ : [Int] = [18,6,1,0]
+    var totalWaitingQ : Int = 0
     
     let navigationFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
     let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
@@ -44,7 +45,6 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
         continueItem.tintColor = UIColor.whiteColor()
         self.navigationItem.rightBarButtonItem = continueItem
         
-        
         self.branchName!.text = self.selectedBranch.res_branch_name
         self.branchLocation!.text = self.selectedBranch.res_address
         self.branchServiceTimeContact!.text = "Open 10:00 - 21:30 "+"Tel. "+self.selectedBranch.res_contact
@@ -61,7 +61,16 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func continueBtnTapped(){
-        self.performSegueWithIdentifier("reserveQueue", sender: self)
+        print("Total Queue : \(self.totalWaitingQ)")
+//        self.performSegueWithIdentifier("recommendOther", sender: self)
+//        if(self.totalWaitingQ > MyVariables.minimumWaitingQAlert){
+//            //display recommend alert
+//            print("Alert Popup")
+//            self.performSegueWithIdentifier("recommendOther", sender: self)
+//            
+//        }else{
+            self.performSegueWithIdentifier("reserveQueue", sender: self)
+//        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -81,10 +90,12 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
         if(self.selectedBranch.res_branch_name.containsString("Central World Plaza")){
             //Assign RecommendWaitingQ
             cell.waitingQueue.text = String(self.recommendWaitingQ[indexPath.row])
+            self.totalWaitingQ = self.totalWaitingQ + self.recommendWaitingQ[indexPath.row]
             
         }else{
             //Assign WaitingQ
             cell.waitingQueue.text = String(self.defaultWaitingQ[indexPath.row])
+            self.totalWaitingQ = self.totalWaitingQ + self.defaultWaitingQ[indexPath.row]
             
         }
         return cell
@@ -101,6 +112,10 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
             let reserveQueueViewController = segue.destinationViewController as! ReserveQueueViewController
             reserveQueueViewController.selectedBranch = self.selectedBranch
             reserveQueueViewController.selectedRestaurant = self.selectedRestaurant
+        }else if(segue.identifier == "recommendOther"){
+            let recommendViewController = segue.destinationViewController as! RecommendViewController
+            recommendViewController.msg = "Message Test"
+            
         }
         
     }

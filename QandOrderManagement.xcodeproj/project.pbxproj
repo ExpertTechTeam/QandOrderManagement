@@ -10,6 +10,7 @@
 		3A2F18281BFA02A200367FA2 /* QueueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F18271BFA02A200367FA2 /* QueueModel.swift */; };
 		3A2F182A1BFA02AA00367FA2 /* ContactList2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */; };
 		3A3110651C02FF6B0049B049 /* CurrentQueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3110641C02FF6B0049B049 /* CurrentQueueTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		3A3110671C0305340049B049 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3110661C0305340049B049 /* RecommendViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3A3332561BFE44930092BF82 /* MyQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3332551BFE44930092BF82 /* MyQTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		3A4960861C01CD4200EF6E38 /* SizzlerPromotion9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4960841C01CD4200EF6E38 /* SizzlerPromotion9.png */; settings = {ASSET_TAGS = (); }; };
 		3A4960891C01CEC000EF6E38 /* PizzaPromotion.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4960881C01CEC000EF6E38 /* PizzaPromotion.png */; settings = {ASSET_TAGS = (); }; };
@@ -403,6 +404,7 @@
 		3A2F18271BFA02A200367FA2 /* QueueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueModel.swift; sourceTree = "<group>"; };
 		3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactList2TableViewController.swift; sourceTree = "<group>"; };
 		3A3110641C02FF6B0049B049 /* CurrentQueueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentQueueTableViewCell.swift; sourceTree = "<group>"; };
+		3A3110661C0305340049B049 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		3A3332551BFE44930092BF82 /* MyQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQTableViewCell.swift; sourceTree = "<group>"; };
 		3A4960841C01CD4200EF6E38 /* SizzlerPromotion9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SizzlerPromotion9.png; sourceTree = "<group>"; };
 		3A4960881C01CEC000EF6E38 /* PizzaPromotion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PizzaPromotion.png; sourceTree = "<group>"; };
@@ -1229,6 +1231,7 @@
 				3AD5F4C91BFB30F300AA64DA /* ViewQrViewController.swift */,
 				3AD5F4CB1BFB33DE00AA64DA /* MyQTableViewController.swift */,
 				3A3332551BFE44930092BF82 /* MyQTableViewCell.swift */,
+				3A3110661C0305340049B049 /* RecommendViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1834,6 +1837,7 @@
 				A1FA25DA1BF9D3A300F6B0B9 /* Order.swift in Sources */,
 				A1FA25F21BF9D41A00F6B0B9 /* MenuLevel2TableViewCell.swift in Sources */,
 				A1FA25EF1BF9D41A00F6B0B9 /* MenuLevel1ViewController.swift in Sources */,
+				3A3110671C0305340049B049 /* RecommendViewController.swift in Sources */,
 				A1FA25E61BF9D40300F6B0B9 /* MenuLevel1Section1TableViewCell.swift in Sources */,
 				3A6E5B3B1BEE52A50078A941 /* BranchListViewController.swift in Sources */,
 				A1A25CAD1BFC8174001012DA /* ProfileEditViewController.swift in Sources */,

@@ -510,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wio-Nx-KBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2003" y="666"/>
+            <point key="canvasLocation" x="2003" y="645"/>
         </scene>
         <!--Reserve Queue View Controller-->
         <scene sceneID="6Mg-ko-D7q">
@@ -652,7 +652,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEs-2e-iQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2586" y="621"/>
+            <point key="canvasLocation" x="2745" y="672"/>
         </scene>
         <!--Confirm Queue View Controller-->
         <scene sceneID="kP8-Wb-P4E">
@@ -1572,7 +1572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAe-hs-md4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2525" y="-956"/>
+            <point key="canvasLocation" x="2715" y="-948"/>
         </scene>
         <!--Order-->
         <scene sceneID="Ta7-Fh-D2b">
@@ -1771,7 +1771,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djU-DD-GKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3010" y="-126"/>
+            <point key="canvasLocation" x="3170" y="-126"/>
         </scene>
         <!--Sizzler-->
         <scene sceneID="kat-V3-usZ">
@@ -2083,7 +2083,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0S-2q-nkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3010" y="-950"/>
+            <point key="canvasLocation" x="3170" y="-948"/>
         </scene>
         <!--Sizzler-->
         <scene sceneID="7uY-Xc-jt1">
@@ -2202,7 +2202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tP7-oO-2wB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2530" y="-126"/>
+            <point key="canvasLocation" x="2715" y="-126"/>
         </scene>
         <!--QR Code-->
         <scene sceneID="CIH-bw-PNx">
@@ -4221,13 +4221,13 @@
         <image name="view_qr_2.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="H7f-Ae-rEH"/>
         <segue reference="2Ee-Pf-YM7"/>
         <segue reference="rSP-Jd-XeI"/>
         <segue reference="d9B-03-t8d"/>
         <segue reference="gh0-4n-3KS"/>
         <segue reference="qbE-Oc-yNF"/>
-        <segue reference="eDy-Rb-Duf"/>
         <segue reference="37K-yQ-AsI"/>
-        <segue reference="H7f-Ae-rEH"/>
+        <segue reference="FDC-6k-oKv"/>
     </inferredMetricsTieBreakers>
 </document>
