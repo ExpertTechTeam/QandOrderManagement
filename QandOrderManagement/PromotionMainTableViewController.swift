@@ -39,19 +39,20 @@ class PromotionMainTableViewController: UITableViewController {
         let row = indexPath.row
         let cell = tableView.dequeueReusableCellWithIdentifier("promotionCell", forIndexPath: indexPath) as! PromotionMainTableViewCell
         cell.txtPromotionInfo.text = promotionArray[row].pro_info
+        cell.txtPromotionInfo.font =  UIFont(name: "ravenna-serial-light-regular", size: 13)
         cell.lblPromotionDate.text = "\(promotionArray[row].pro_start_date) - \(promotionArray[row].pro_end_date)"
         cell.imgPromotionMain.image = UIImage(named: promotionArray[row].pro_pic_banner)
         // Configure the cell...
 
         return cell
     }
-    /*
+    
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
+        return CGFloat.min
     }
-*/
+
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 170
+        return 190
     }
 
     /*

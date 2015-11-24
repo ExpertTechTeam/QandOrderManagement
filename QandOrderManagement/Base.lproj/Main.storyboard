@@ -285,7 +285,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="12U-lU-4OP"/>
+                    <navigationItem key="navigationItem" id="12U-lU-4OP">
+                        <barButtonItem key="backBarButtonItem" title="back" id="aGL-rM-8Sp"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="pcPromotion" destination="f85-81-UZC" id="sHe-AK-nIB"/>
                         <outlet property="scvPromotion" destination="MTA-ck-yDe" id="YvE-kW-RGX"/>
@@ -364,6 +366,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bLm-L2-piW">
+                        <barButtonItem key="backBarButtonItem" title="back" id="7Mu-2A-8N1"/>
                         <rightBarButtonItems>
                             <barButtonItem title="Item" style="plain" id="98L-uX-7A0">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="a2m-Ka-uv0">
@@ -1110,33 +1113,33 @@
         <scene sceneID="Rm5-k6-FmP">
             <objects>
                 <tableViewController id="tSb-CD-SKM" customClass="PromotionMainTableViewController" customModule="QandOrderManagement" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zpr-2Z-YWZ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="zpr-2Z-YWZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="promotionCell" rowHeight="170" id="ML9-od-VOq" customClass="PromotionMainTableViewCell" customModule="QandOrderManagement" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="170"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="promotionCell" rowHeight="190" id="ML9-od-VOq" customClass="PromotionMainTableViewCell" customModule="QandOrderManagement" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="93.5" width="320" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ML9-od-VOq" id="BZ4-ix-5Cp">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="189.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FpI-cm-uMT">
-                                            <rect key="frame" x="8" y="7" width="304" height="153.5"/>
+                                            <rect key="frame" x="8" y="7" width="304" height="173.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hoisin_banner.png" translatesAutoresizingMaskIntoConstraints="NO" id="cYh-2J-Jey">
-                                                    <rect key="frame" x="8" y="8" width="288" height="83"/>
+                                                    <rect key="frame" x="8" y="8" width="288" height="100"/>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Djd-iZ-idJ">
-                                                    <rect key="frame" x="8" y="89" width="289" height="45.5"/>
+                                                    <rect key="frame" x="8" y="110" width="289" height="45.5"/>
                                                     <string key="text">เอาใจคนชอบทานผักกับสลัดบาร์หลากหลาย พร้อมเมนูอื่นๆอีกมากมายในราคาสุดคุ้มกับโปรโมชั่นใหม่ล่าสุด! Sizzler Lunch Special ชุดสุดคุ้มเริ่มต้นแค่ 175 บาท</string>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" text="Date : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RG-jJ-Lao">
-                                                    <rect key="frame" x="13" y="127" width="284" height="21"/>
+                                                    <rect key="frame" x="13" y="149" width="281" height="21"/>
                                                     <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1145,16 +1148,16 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Djd-iZ-idJ" secondAttribute="trailing" constant="7" id="3Ck-wa-in7"/>
-                                                <constraint firstAttribute="bottom" secondItem="5RG-jJ-Lao" secondAttribute="bottom" constant="5.5" id="91Y-HX-9R4"/>
-                                                <constraint firstAttribute="bottom" secondItem="cYh-2J-Jey" secondAttribute="bottom" constant="62.5" id="FyP-bA-Vyi"/>
-                                                <constraint firstItem="Djd-iZ-idJ" firstAttribute="top" secondItem="FpI-cm-uMT" secondAttribute="top" constant="89" id="GaY-PJ-FCW"/>
+                                                <constraint firstAttribute="bottom" secondItem="5RG-jJ-Lao" secondAttribute="bottom" constant="3.5" id="91Y-HX-9R4"/>
+                                                <constraint firstAttribute="bottom" secondItem="cYh-2J-Jey" secondAttribute="bottom" constant="65.5" id="FyP-bA-Vyi"/>
+                                                <constraint firstItem="Djd-iZ-idJ" firstAttribute="top" secondItem="FpI-cm-uMT" secondAttribute="top" constant="110" id="GaY-PJ-FCW"/>
                                                 <constraint firstItem="cYh-2J-Jey" firstAttribute="top" secondItem="FpI-cm-uMT" secondAttribute="top" constant="8" id="PNn-fK-yyL"/>
                                                 <constraint firstItem="Djd-iZ-idJ" firstAttribute="leading" secondItem="FpI-cm-uMT" secondAttribute="leading" constant="8" id="TYq-lD-g4n"/>
                                                 <constraint firstItem="cYh-2J-Jey" firstAttribute="leading" secondItem="FpI-cm-uMT" secondAttribute="leading" constant="8" id="hTd-Hy-F88"/>
-                                                <constraint firstAttribute="trailing" secondItem="5RG-jJ-Lao" secondAttribute="trailing" constant="7" id="mGa-56-8Lu"/>
-                                                <constraint firstAttribute="bottom" secondItem="Djd-iZ-idJ" secondAttribute="bottom" constant="19" id="szs-yh-yAa"/>
+                                                <constraint firstAttribute="trailing" secondItem="5RG-jJ-Lao" secondAttribute="trailing" constant="10" id="mGa-56-8Lu"/>
+                                                <constraint firstAttribute="bottom" secondItem="Djd-iZ-idJ" secondAttribute="bottom" constant="18" id="szs-yh-yAa"/>
                                                 <constraint firstItem="5RG-jJ-Lao" firstAttribute="leading" secondItem="FpI-cm-uMT" secondAttribute="leading" constant="13" id="uVn-6I-M0n"/>
-                                                <constraint firstItem="5RG-jJ-Lao" firstAttribute="top" secondItem="Djd-iZ-idJ" secondAttribute="bottom" constant="-7.5" id="vCa-ly-goU"/>
+                                                <constraint firstItem="5RG-jJ-Lao" firstAttribute="top" secondItem="Djd-iZ-idJ" secondAttribute="bottom" constant="-6.5" id="vCa-ly-goU"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -1180,7 +1183,9 @@
                             <outlet property="delegate" destination="tSb-CD-SKM" id="hce-0O-ESc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Promotion" id="RKZ-O2-2S7"/>
+                    <navigationItem key="navigationItem" title="Promotion" id="RKZ-O2-2S7">
+                        <barButtonItem key="backBarButtonItem" title="back" id="Ndc-bI-BwQ"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="og3-yr-C3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2181,7 +2186,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0078431372550000003" green="0.46666666670000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.0078431372550000003" green="0.46666666670000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                         <color key="barTintColor" red="0.0078431372550000003" green="0.46666666670000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
@@ -2375,7 +2380,7 @@
                                     <segue destination="vjQ-Ei-cof" kind="embed" id="qhL-EC-cPz"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total:  1,268.00 B" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kiz-RZ-bAy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total:  ฿1,268.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kiz-RZ-bAy">
                                 <rect key="frame" x="163" y="340" width="137" height="21"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -4339,12 +4344,12 @@
         <image name="view_qr_2.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="qbE-Oc-yNF"/>
         <segue reference="rSP-Jd-XeI"/>
-        <segue reference="2Ee-Pf-YM7"/>
-        <segue reference="CAd-t5-nNn"/>
-        <segue reference="pgn-Dw-udU"/>
         <segue reference="vMy-ol-8q2"/>
         <segue reference="wYk-x6-eC4"/>
+        <segue reference="2Ee-Pf-YM7"/>
+        <segue reference="CAd-t5-nNn"/>
         <segue reference="d9B-03-t8d"/>
         <segue reference="gh0-4n-3KS"/>
     </inferredMetricsTieBreakers>

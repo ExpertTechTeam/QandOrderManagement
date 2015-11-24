@@ -26,7 +26,7 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         
         self.tbvBranch.rowHeight = 35.0
-        
+        self.title = "Sizzler"
         //Get BranchList
         self.branchArray = RestaurantController().getAllRestaurant()
         self.branchFavouriteArray.append(branchArray[4])
