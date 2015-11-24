@@ -3697,7 +3697,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kl-zB-fI8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="facebook_profile.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4Kl-zB-fI8">
                                 <rect key="frame" x="95" y="95" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4Kl-zB-fI8" secondAttribute="height" multiplier="1:1" id="K8n-Xf-hEQ"/>
@@ -3760,7 +3760,7 @@
                             <constraint firstItem="mhx-YI-vgK" firstAttribute="leading" secondItem="23J-JE-X2p" secondAttribute="leadingMargin" constant="-2" id="01c-Ea-DZE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2B1-VR-rsD" secondAttribute="trailing" id="3iA-ig-Bfp"/>
                             <constraint firstItem="4Kl-zB-fI8" firstAttribute="leading" secondItem="23J-JE-X2p" secondAttribute="leadingMargin" constant="75" id="6J6-VM-Z0q"/>
-                            <constraint firstItem="4Kl-zB-fI8" firstAttribute="top" secondItem="Fdq-18-0Re" secondAttribute="bottom" constant="31" id="7ya-eZ-1NB"/>
+                            <constraint firstItem="4Kl-zB-fI8" firstAttribute="top" secondItem="Fdq-18-0Re" secondAttribute="bottom" constant="51" id="7ya-eZ-1NB"/>
                             <constraint firstItem="XLK-a3-1qQ" firstAttribute="leading" secondItem="23J-JE-X2p" secondAttribute="leadingMargin" constant="-2" id="9mx-Xk-8jF"/>
                             <constraint firstItem="XLK-a3-1qQ" firstAttribute="top" secondItem="66B-OG-gaE" secondAttribute="bottom" constant="14" id="AE6-MO-qsk"/>
                             <constraint firstItem="xqS-TZ-7bX" firstAttribute="top" secondItem="hBk-zw-SW2" secondAttribute="bottom" constant="14" id="BEu-hC-en3"/>
@@ -3870,6 +3870,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pannray" textAlignment="right" minimumFontSize="17" background="Textbox-Blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="csA-qx-ChR">
                                 <rect key="frame" x="140" y="235" width="160" height="21"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="YkC-8T-7a6"/>
                                     <constraint firstAttribute="height" constant="21" id="y1r-SL-AtZ"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -3880,6 +3881,7 @@
                                 <rect key="frame" x="140" y="270" width="160" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="9Fo-fn-yvd"/>
+                                    <constraint firstAttribute="width" constant="160" id="VDK-FM-Hpm"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
@@ -3888,6 +3890,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="088-888-8888" textAlignment="right" minimumFontSize="17" background="Textbox-Blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="YzE-SC-PHF">
                                 <rect key="frame" x="140" y="305" width="160" height="21"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Ros-Qg-lk2"/>
                                     <constraint firstAttribute="height" constant="21" id="xXw-uO-fOD"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -3897,6 +3900,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="myemail@email.com" textAlignment="right" minimumFontSize="17" background="Textbox-Blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="9bc-g5-y3E">
                                 <rect key="frame" x="140" y="375" width="160" height="21"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="RGh-iO-nhP"/>
                                     <constraint firstAttribute="height" constant="21" id="U1F-mq-px6"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -3906,6 +3910,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="*********" textAlignment="right" minimumFontSize="17" background="Textbox-Blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="k5R-VV-HxK">
                                 <rect key="frame" x="140" y="410" width="160" height="21"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Oay-Zk-ARa"/>
                                     <constraint firstAttribute="height" constant="21" id="xTd-jy-hqT"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -3916,6 +3921,7 @@
                                 <rect key="frame" x="140" y="340" width="160" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="1Tu-BA-6bP"/>
+                                    <constraint firstAttribute="width" constant="160" id="Hf8-Fg-9ko"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -3930,7 +3936,7 @@
                                     <action selector="selectBirthdate:" destination="eNc-On-TPd" eventType="valueChanged" id="dMI-dA-84a"/>
                                 </connections>
                             </datePicker>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syt-hM-eY0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_profile.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="syt-hM-eY0">
                                 <rect key="frame" x="95" y="95" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="4zy-9Y-NrW"/>
@@ -3944,7 +3950,7 @@
                             <constraint firstItem="y4W-j3-gKy" firstAttribute="leading" secondItem="MVn-Qa-mJI" secondAttribute="leadingMargin" constant="-2" id="0SW-Gj-Jy2"/>
                             <constraint firstItem="y4W-j3-gKy" firstAttribute="top" secondItem="1Ms-Bz-9Db" secondAttribute="bottom" constant="14" id="4L8-KZ-cnl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="k5R-VV-HxK" secondAttribute="trailing" id="7Ui-Lz-nNz"/>
-                            <constraint firstItem="5br-Q5-ZY8" firstAttribute="top" secondItem="syt-hM-eY0" secondAttribute="bottom" constant="30" id="8Si-Bv-ZXA"/>
+                            <constraint firstItem="5br-Q5-ZY8" firstAttribute="top" secondItem="syt-hM-eY0" secondAttribute="bottom" constant="10" id="8Si-Bv-ZXA"/>
                             <constraint firstItem="k5R-VV-HxK" firstAttribute="top" secondItem="9bc-g5-y3E" secondAttribute="bottom" constant="14" id="8bT-ek-jU1"/>
                             <constraint firstItem="NgW-6C-CdG" firstAttribute="leading" secondItem="MVn-Qa-mJI" secondAttribute="leadingMargin" constant="-6" id="Blf-7h-Hrm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9bc-g5-y3E" secondAttribute="trailing" id="FJV-S5-Ml2"/>
@@ -3955,7 +3961,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="eqZ-WR-sG9" secondAttribute="trailing" id="QIH-yz-8gd"/>
                             <constraint firstItem="J7j-q4-7uJ" firstAttribute="leading" secondItem="MVn-Qa-mJI" secondAttribute="leadingMargin" constant="-2" id="RHp-be-dPy"/>
                             <constraint firstItem="9bc-g5-y3E" firstAttribute="top" secondItem="eqZ-WR-sG9" secondAttribute="bottom" constant="14" id="Rch-ya-rap"/>
-                            <constraint firstItem="syt-hM-eY0" firstAttribute="top" secondItem="ouT-wb-kRM" secondAttribute="bottom" constant="31" id="RfI-lO-lyc"/>
+                            <constraint firstItem="syt-hM-eY0" firstAttribute="top" secondItem="ouT-wb-kRM" secondAttribute="bottom" constant="51" id="RfI-lO-lyc"/>
                             <constraint firstItem="gHh-4u-hDm" firstAttribute="leading" secondItem="MVn-Qa-mJI" secondAttribute="leadingMargin" constant="-2" id="WHw-GH-Ati"/>
                             <constraint firstItem="Auh-0v-q57" firstAttribute="top" secondItem="csA-qx-ChR" secondAttribute="bottom" constant="14" id="XRQ-il-GiB"/>
                             <constraint firstItem="FC8-LY-GKN" firstAttribute="leading" secondItem="MVn-Qa-mJI" secondAttribute="leadingMargin" constant="-2" id="atp-ES-cEX"/>
@@ -3965,7 +3971,7 @@
                             <constraint firstItem="eqZ-WR-sG9" firstAttribute="top" secondItem="YzE-SC-PHF" secondAttribute="bottom" constant="14" id="dqx-dg-A8b"/>
                             <constraint firstItem="gHh-4u-hDm" firstAttribute="top" secondItem="FC8-LY-GKN" secondAttribute="bottom" constant="14" id="gCh-N4-ocH"/>
                             <constraint firstItem="FC8-LY-GKN" firstAttribute="top" secondItem="5br-Q5-ZY8" secondAttribute="bottom" constant="14" id="iwl-pZ-99d"/>
-                            <constraint firstItem="csA-qx-ChR" firstAttribute="top" secondItem="syt-hM-eY0" secondAttribute="bottom" constant="30" id="jqt-Gn-8ua"/>
+                            <constraint firstItem="csA-qx-ChR" firstAttribute="top" secondItem="syt-hM-eY0" secondAttribute="bottom" constant="10" id="jqt-Gn-8ua"/>
                             <constraint firstItem="YzE-SC-PHF" firstAttribute="top" secondItem="Auh-0v-q57" secondAttribute="bottom" constant="14" id="m7q-lR-vPT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YzE-SC-PHF" secondAttribute="trailing" id="uze-0x-OZ2"/>
                             <constraint firstItem="5br-Q5-ZY8" firstAttribute="leading" secondItem="MVn-Qa-mJI" secondAttribute="leadingMargin" constant="-2" id="vaD-wD-e36"/>
@@ -4299,6 +4305,7 @@
         <image name="chef_hat5.png" width="512" height="512"/>
         <image name="dining_room1.png" width="100" height="100"/>
         <image name="edit.png" width="25" height="25"/>
+        <image name="facebook_profile.jpg" width="981" height="983"/>
         <image name="fb_login_normal.png" width="361" height="74"/>
         <image name="geo_fence.png" width="100" height="100"/>
         <image name="giftbox_blue.png" width="1126" height="863"/>
