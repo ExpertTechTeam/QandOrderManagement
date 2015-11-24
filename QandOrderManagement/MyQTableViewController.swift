@@ -20,11 +20,9 @@ class MyQTableViewController: UITableViewController {
     override func viewDidLoad() {
         print("MyQTableViewController viewDidLoad")
         super.viewDidLoad()
-        
+        self.tableView.backgroundColor = UIColor.whiteColor()
         //Setup Navigation
         self.navigationItem.title = "My Queue"
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         let branchForActiveQueue1 = RestaurantModel()
         branchForActiveQueue1.res_branch_name = "Central World"
@@ -76,7 +74,14 @@ class MyQTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 2

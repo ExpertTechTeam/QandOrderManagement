@@ -32,11 +32,6 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
         
         //Setup Nav
         self.navigationItem.title = self.selectedRestaurant
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
-        
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
         
         var continueItem = UIBarButtonItem(title: "Continue", style: .Plain, target: self, action: "continueBtnTapped")
         

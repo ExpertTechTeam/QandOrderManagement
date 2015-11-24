@@ -21,8 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSFontAttributeName: UIFont(name: "ravenna-serial-medium-regular", size: 15)!,
             NSForegroundColorAttributeName : UIColor.whiteColor()
         ]
-        let barAppearace = UIBarButtonItem.appearance()
-        barAppearace.setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics:UIBarMetrics.Default)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        let customFont = UIFont(name: "ravenna-serial-medium-regular", size: 13.0)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: customFont!], forState: UIControlState.Normal)
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics:UIBarMetrics.Default)
         return true
     }
 

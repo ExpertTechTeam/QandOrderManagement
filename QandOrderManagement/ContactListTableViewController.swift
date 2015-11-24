@@ -30,9 +30,7 @@ class ContactListTableViewController: UITableViewController {
         
         //Setup Navigation
         self.navigationItem.title = "Contacts"
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
+
         var doneItem = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "back")
         
         if let font = customFont {

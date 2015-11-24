@@ -18,14 +18,7 @@ class VoucherTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        //Setup Navigation
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        //Setup Barbutton Item
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        let customFont = UIFont(name: "ravenna-serial-medium-regular", size: 13.0)
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: customFont!], forState: UIControlState.Normal)
-        self.navigationItem.backBarButtonItem?.title
+
     
     }
 

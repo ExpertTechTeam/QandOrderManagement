@@ -45,9 +45,6 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         
         //Setup Nav
         self.navigationItem.title = self.selectedRestaurant
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationItem.hidesBackButton = self.hidebackitem
         
         var resImage : UIImage!
@@ -104,7 +101,7 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
             self.friendList.text = "-"
         }
         
-        self.scrollView.contentSize = CGSizeMake(self.view.frame.width, 551)
+        self.scrollView.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height)
         
     }
     
