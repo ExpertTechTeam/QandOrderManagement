@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		3A2F18281BFA02A200367FA2 /* QueueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F18271BFA02A200367FA2 /* QueueModel.swift */; };
 		3A2F182A1BFA02AA00367FA2 /* ContactList2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */; };
-		3A3110651C02FF6B0049B049 /* CurrentQueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3110641C02FF6B0049B049 /* CurrentQueueTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		3A3110671C0305340049B049 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3110661C0305340049B049 /* RecommendViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3A3332561BFE44930092BF82 /* MyQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3332551BFE44930092BF82 /* MyQTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		3A4960861C01CD4200EF6E38 /* SizzlerPromotion9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4960841C01CD4200EF6E38 /* SizzlerPromotion9.png */; settings = {ASSET_TAGS = (); }; };
-		3A4960891C01CEC000EF6E38 /* PizzaPromotion.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4960881C01CEC000EF6E38 /* PizzaPromotion.png */; settings = {ASSET_TAGS = (); }; };
+		3A3110651C02FF6B0049B049 /* CurrentQueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3110641C02FF6B0049B049 /* CurrentQueueTableViewCell.swift */; };
+		3A3110671C0305340049B049 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3110661C0305340049B049 /* RecommendViewController.swift */; };
+		3A3332561BFE44930092BF82 /* MyQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3332551BFE44930092BF82 /* MyQTableViewCell.swift */; };
+		3A4960861C01CD4200EF6E38 /* SizzlerPromotion9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4960841C01CD4200EF6E38 /* SizzlerPromotion9.png */; };
+		3A4960891C01CEC000EF6E38 /* PizzaPromotion.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4960881C01CEC000EF6E38 /* PizzaPromotion.png */; };
 		3A4FBDC71BF87D9C00B37E11 /* ConfirmQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4FBDC61BF87D9C00B37E11 /* ConfirmQueueViewController.swift */; };
 		3A4FBDD71BF8962E00B37E11 /* chef_hat5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4FBDD61BF8962E00B37E11 /* chef_hat5.png */; };
 		3A4FBDDA1BF897E400B37E11 /* view_qr_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4FBDD81BF897E400B37E11 /* view_qr_2.png */; };
@@ -85,18 +85,18 @@
 		3A6E5BCA1BF4E86E0078A941 /* tick_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A6E5BC81BF4E86E0078A941 /* tick_2.jpg */; };
 		3AD5F4CA1BFB30F300AA64DA /* ViewQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5F4C91BFB30F300AA64DA /* ViewQrViewController.swift */; };
 		3AD5F4CC1BFB33DE00AA64DA /* MyQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5F4CB1BFB33DE00AA64DA /* MyQTableViewController.swift */; };
-		3AD5F4D81BFCEE4300AA64DA /* res_sizzler.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4D11BFCEE4300AA64DA /* res_sizzler.png */; settings = {ASSET_TAGS = (); }; };
-		3AD5F4D91BFCEE4300AA64DA /* res_sizzler2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4D21BFCEE4300AA64DA /* res_sizzler2.png */; settings = {ASSET_TAGS = (); }; };
-		3AD5F4DA1BFCEE4300AA64DA /* res_swensen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4D31BFCEE4300AA64DA /* res_swensen.jpg */; settings = {ASSET_TAGS = (); }; };
-		3AD5F4E41BFD7FF700AA64DA /* res_dairyqueen1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4E11BFD7FF700AA64DA /* res_dairyqueen1.png */; settings = {ASSET_TAGS = (); }; };
-		3AD5F4E51BFD7FF700AA64DA /* res_pizzacompany1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4E21BFD7FF700AA64DA /* res_pizzacompany1.png */; settings = {ASSET_TAGS = (); }; };
-		3AD5F4E91BFD814400AA64DA /* res_burgerking5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4E81BFD814400AA64DA /* res_burgerking5.png */; settings = {ASSET_TAGS = (); }; };
-		3AD5F5031BFDB69700AA64DA /* blur_background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F5021BFDB69700AA64DA /* blur_background1.png */; settings = {ASSET_TAGS = (); }; };
-		3AD5F5091BFDC17A00AA64DA /* section_background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F5081BFDC17A00AA64DA /* section_background3.png */; settings = {ASSET_TAGS = (); }; };
-		3AD5F5101BFDC95200AA64DA /* myq.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50D1BFDC95200AA64DA /* myq.png */; settings = {ASSET_TAGS = (); }; };
-		3AD5F5111BFDC95200AA64DA /* outline_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50E1BFDC95200AA64DA /* outline_white.png */; settings = {ASSET_TAGS = (); }; };
-		3AD5F5121BFDC95200AA64DA /* outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50F1BFDC95200AA64DA /* outline.png */; settings = {ASSET_TAGS = (); }; };
-		3AD5F5141BFDD1ED00AA64DA /* myq_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F5131BFDD1ED00AA64DA /* myq_white.png */; settings = {ASSET_TAGS = (); }; };
+		3AD5F4D81BFCEE4300AA64DA /* res_sizzler.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4D11BFCEE4300AA64DA /* res_sizzler.png */; };
+		3AD5F4D91BFCEE4300AA64DA /* res_sizzler2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4D21BFCEE4300AA64DA /* res_sizzler2.png */; };
+		3AD5F4DA1BFCEE4300AA64DA /* res_swensen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4D31BFCEE4300AA64DA /* res_swensen.jpg */; };
+		3AD5F4E41BFD7FF700AA64DA /* res_dairyqueen1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4E11BFD7FF700AA64DA /* res_dairyqueen1.png */; };
+		3AD5F4E51BFD7FF700AA64DA /* res_pizzacompany1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4E21BFD7FF700AA64DA /* res_pizzacompany1.png */; };
+		3AD5F4E91BFD814400AA64DA /* res_burgerking5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4E81BFD814400AA64DA /* res_burgerking5.png */; };
+		3AD5F5031BFDB69700AA64DA /* blur_background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F5021BFDB69700AA64DA /* blur_background1.png */; };
+		3AD5F5091BFDC17A00AA64DA /* section_background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F5081BFDC17A00AA64DA /* section_background3.png */; };
+		3AD5F5101BFDC95200AA64DA /* myq.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50D1BFDC95200AA64DA /* myq.png */; };
+		3AD5F5111BFDC95200AA64DA /* outline_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50E1BFDC95200AA64DA /* outline_white.png */; };
+		3AD5F5121BFDC95200AA64DA /* outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50F1BFDC95200AA64DA /* outline.png */; };
+		3AD5F5141BFDD1ED00AA64DA /* myq_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F5131BFDD1ED00AA64DA /* myq_white.png */; };
 		A1A25B991BFC5F66001012DA /* icon_splashpage.png in Resources */ = {isa = PBXBuildFile; fileRef = A1A25B981BFC5F66001012DA /* icon_splashpage.png */; };
 		A1A25BD81BFC7EAA001012DA /* giftbox_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = A1A25B9A1BFC7EA9001012DA /* giftbox_blue.png */; };
 		A1A25BD91BFC7EAA001012DA /* giftbox_red.png in Resources */ = {isa = PBXBuildFile; fileRef = A1A25B9B1BFC7EA9001012DA /* giftbox_red.png */; };
@@ -225,6 +225,13 @@
 		A1A25CB11BFC8174001012DA /* RewardDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A25CA41BFC8174001012DA /* RewardDetailTableViewController.swift */; };
 		A1A25CB21BFC8174001012DA /* VoucherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A25CA51BFC8174001012DA /* VoucherTableViewController.swift */; };
 		A1A25CB31BFC8174001012DA /* VoucherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A25CA61BFC8174001012DA /* VoucherDetailViewController.swift */; };
+		A1B131171C04BD420058BBCC /* ScrollPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B131161C04BD420058BBCC /* ScrollPager.swift */; };
+		A1B131191C04BD5F0058BBCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B131181C04BD5F0058BBCC /* ViewController.swift */; };
+		A1B1311F1C04BDF20058BBCC /* purchase_order_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B1311A1C04BDF20058BBCC /* purchase_order_gray.png */; };
+		A1B131201C04BDF20058BBCC /* myspace_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B1311B1C04BDF20058BBCC /* myspace_gray.png */; };
+		A1B131211C04BDF20058BBCC /* qr_code_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B1311C1C04BDF20058BBCC /* qr_code_gray.png */; };
+		A1B131221C04BDF20058BBCC /* exterior_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B1311D1C04BDF20058BBCC /* exterior_gray.png */; };
+		A1B131231C04BDF20058BBCC /* settings_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = A1B1311E1C04BDF20058BBCC /* settings_gray.png */; };
 		A1FA24AB1BF9D0AA00F6B0B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FA24AA1BF9D0AA00F6B0B9 /* libsqlite3.0.tbd */; };
 		A1FA24AD1BF9D0C700F6B0B9 /* DatabaseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA24AC1BF9D0C700F6B0B9 /* DatabaseUtil.swift */; };
 		A1FA24AF1BF9D13000F6B0B9 /* ExtensionFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA24AE1BF9D13000F6B0B9 /* ExtensionFormat.swift */; };
@@ -631,6 +638,13 @@
 		A1A25CA41BFC8174001012DA /* RewardDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardDetailTableViewController.swift; sourceTree = "<group>"; };
 		A1A25CA51BFC8174001012DA /* VoucherTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherTableViewController.swift; sourceTree = "<group>"; };
 		A1A25CA61BFC8174001012DA /* VoucherDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherDetailViewController.swift; sourceTree = "<group>"; };
+		A1B131161C04BD420058BBCC /* ScrollPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollPager.swift; sourceTree = "<group>"; };
+		A1B131181C04BD5F0058BBCC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A1B1311A1C04BDF20058BBCC /* purchase_order_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purchase_order_gray.png; sourceTree = "<group>"; };
+		A1B1311B1C04BDF20058BBCC /* myspace_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myspace_gray.png; sourceTree = "<group>"; };
+		A1B1311C1C04BDF20058BBCC /* qr_code_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qr_code_gray.png; sourceTree = "<group>"; };
+		A1B1311D1C04BDF20058BBCC /* exterior_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exterior_gray.png; sourceTree = "<group>"; };
+		A1B1311E1C04BDF20058BBCC /* settings_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_gray.png; sourceTree = "<group>"; };
 		A1FA24AA1BF9D0AA00F6B0B9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		A1FA24AC1BF9D0C700F6B0B9 /* DatabaseUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseUtil.swift; sourceTree = "<group>"; };
 		A1FA24AE1BF9D13000F6B0B9 /* ExtensionFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFormat.swift; sourceTree = "<group>"; };
@@ -977,6 +991,7 @@
 		3A6E5B1E1BEC9D6F0078A941 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A1B131181C04BD5F0058BBCC /* ViewController.swift */,
 				A1A25CB41BFC86FA001012DA /* Home */,
 				A1A25C991BFC8150001012DA /* Setting */,
 				A1A25C901BFC813E001012DA /* Bill */,
@@ -1053,6 +1068,7 @@
 		3A6E5B6D1BF1F41C0078A941 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A1B131161C04BD420058BBCC /* ScrollPager.swift */,
 				A1FA25D71BF9D33C00F6B0B9 /* GlobalVariable.swift */,
 				A1FA24AE1BF9D13000F6B0B9 /* ExtensionFormat.swift */,
 				A1FA24AC1BF9D0C700F6B0B9 /* DatabaseUtil.swift */,
@@ -1101,6 +1117,11 @@
 		3AD5F50C1BFDC94400AA64DA /* appicon */ = {
 			isa = PBXGroup;
 			children = (
+				A1B1311A1C04BDF20058BBCC /* purchase_order_gray.png */,
+				A1B1311B1C04BDF20058BBCC /* myspace_gray.png */,
+				A1B1311C1C04BDF20058BBCC /* qr_code_gray.png */,
+				A1B1311D1C04BDF20058BBCC /* exterior_gray.png */,
+				A1B1311E1C04BDF20058BBCC /* settings_gray.png */,
 				3AD5F50D1BFDC95200AA64DA /* myq.png */,
 				3AD5F5131BFDD1ED00AA64DA /* myq_white.png */,
 				3AD5F50E1BFDC95200AA64DA /* outline_white.png */,
@@ -1653,10 +1674,12 @@
 				A1A25BE01BFC7EAA001012DA /* edit.png in Resources */,
 				A1FA25C81BF9D31B00F6B0B9 /* ais_inner.jpg in Resources */,
 				A1A25C5F1BFC7EEA001012DA /* giftbox.png in Resources */,
+				A1B131201C04BDF20058BBCC /* myspace_gray.png in Resources */,
 				A1A25C021BFC7EAA001012DA /* wednesdaynight_inner.jpg in Resources */,
 				A1FA25621BF9D30300F6B0B9 /* comb_beefloin_spicygrillchic.jpg in Resources */,
 				A1A25C691BFC7EEA001012DA /* login2.ico in Resources */,
 				A1FA254A1BF9D30300F6B0B9 /* beef_mediumwell.png in Resources */,
+				A1B131221C04BDF20058BBCC /* exterior_gray.png in Resources */,
 				A1FA25A21BF9D30300F6B0B9 /* sea_grillsalmon.jpg in Resources */,
 				A1FA25CE1BF9D31B00F6B0B9 /* ktc_banner.png in Resources */,
 				A1FA25541BF9D30300F6B0B9 /* beef_well.png in Resources */,
@@ -1737,6 +1760,7 @@
 				3A6E5B111BEC96B80078A941 /* barcode_scanner.png in Resources */,
 				A1FA255A1BF9D30300F6B0B9 /* burg_teriyaki_mushroom.jpg in Resources */,
 				A1A25C561BFC7EEA001012DA /* Button_Gift_2.png in Resources */,
+				A1B1311F1C04BDF20058BBCC /* purchase_order_gray.png in Resources */,
 				A1FA25501BF9D30300F6B0B9 /* beef_rare1_selected.png in Resources */,
 				A1A25C631BFC7EEA001012DA /* Button_History_1.png in Resources */,
 				A1A25BFD1BFC7EAA001012DA /* ktc_inner.jpg in Resources */,
@@ -1755,8 +1779,10 @@
 				3A6E5B5D1BF08FB50078A941 /* fonts101.txt in Resources */,
 				A1A25C141BFC7EAA001012DA /* wheelchair.png in Resources */,
 				A1A25C891BFC7EEA001012DA /* profile2.png in Resources */,
+				A1B131231C04BDF20058BBCC /* settings_gray.png in Resources */,
 				A1FA25511BF9D30300F6B0B9 /* beef_rare1.png in Resources */,
 				A1A25C5A1BFC7EEA001012DA /* lock1.png in Resources */,
+				A1B131211C04BDF20058BBCC /* qr_code_gray.png in Resources */,
 				3A6E5BB21BF3443C0078A941 /* minor_db.sqlite in Resources */,
 				A1FA254D1BF9D30300F6B0B9 /* beef_newyork.jpg in Resources */,
 				3A6E5BC41BF4980D0078A941 /* Images.xcassets in Resources */,
@@ -1832,6 +1858,7 @@
 				3A6E5B471BEF36510078A941 /* CurrentQueueViewController.swift in Sources */,
 				3A6E5BC01BF497760078A941 /* KWStepper.swift in Sources */,
 				3A6E5B6A1BF1F3D20078A941 /* PromotionModel.swift in Sources */,
+				A1B131191C04BD5F0058BBCC /* ViewController.swift in Sources */,
 				A1A25C971BFC814B001012DA /* FeedbackViewController.swift in Sources */,
 				3A6E5B221BECBDB70078A941 /* HomePageViewController.swift in Sources */,
 				A1FA25DA1BF9D3A300F6B0B9 /* Order.swift in Sources */,
@@ -1890,6 +1917,7 @@
 				3AD5F4CA1BFB30F300AA64DA /* ViewQrViewController.swift in Sources */,
 				A1FA24AF1BF9D13000F6B0B9 /* ExtensionFormat.swift in Sources */,
 				3A6E5B901BF211CE0078A941 /* RestaurantController.swift in Sources */,
+				A1B131171C04BD420058BBCC /* ScrollPager.swift in Sources */,
 				A1FA25D81BF9D33C00F6B0B9 /* GlobalVariable.swift in Sources */,
 				A1A25CA71BFC8174001012DA /* LogInViewController.swift in Sources */,
 				A1FA25E31BF9D3F900F6B0B9 /* MenuLevel1NoQueueViewController.swift in Sources */,
