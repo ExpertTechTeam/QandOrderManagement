@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, backToCurrentQProtocol {
     
     @IBOutlet weak var restaurantImage : UIImage!
     @IBOutlet weak var branchName : UILabel!
@@ -16,13 +16,14 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var branchServiceTimeContact : UILabel!
     @IBOutlet weak var tbvCurrentQueue : UITableView!
     
-    
     var selectedRestaurant : String = ""
     var selectedBranch : RestaurantModel = RestaurantModel()
     var tableTypeArray : [String] = ["1-4", "5-8", "9-12", "13-20"]
     var defaultWaitingQ : [Int] = [7,4,0,0]
     var recommendWaitingQ : [Int] = [18,6,1,0]
     var totalWaitingQ : Int = 0
+    
+    var popViewController : RecommendPopUpViewControllerSwift!
     
     let navigationFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
     let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
@@ -32,8 +33,13 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
         
         //Setup Nav
         self.navigationItem.title = self.selectedRestaurant
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
         
-        var continueItem = UIBarButtonItem(title: "Continue", style: .Plain, target: self, action: "continueBtnTapped")
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        
+        let continueItem = UIBarButtonItem(title: "Continue", style: .Plain, target: self, action: "continueBtnTapped")
         
         if let font = customFont {
             continueItem.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)}
@@ -44,10 +50,6 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
         self.branchLocation!.text = self.selectedBranch.res_address
         self.branchServiceTimeContact!.text = "Open 10:00 - 21:30 "+"Tel. "+self.selectedBranch.res_contact
         
-        // Do any additional setup after loading the view.
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,15 +59,14 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
     
     func continueBtnTapped(){
         print("Total Queue : \(self.totalWaitingQ)")
-//        self.performSegueWithIdentifier("recommendOther", sender: self)
-//        if(self.totalWaitingQ > MyVariables.minimumWaitingQAlert){
-//            //display recommend alert
-//            print("Alert Popup")
-//            self.performSegueWithIdentifier("recommendOther", sender: self)
-//            
-//        }else{
+        if(self.totalWaitingQ > MyVariables.minimumWaitingQAlert){
+            //display recommend alert
+            print("Alert Popup")
+            self.showPopUp()
+            
+        }else{
             self.performSegueWithIdentifier("reserveQueue", sender: self)
-//        }
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -79,7 +80,7 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell1") as! CurrentQueueTableViewCell!
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell1") as! CurrentQueueTableViewCell!
         
         cell.tableType.text = self.tableTypeArray[indexPath.row]
         if(self.selectedBranch.res_branch_name.containsString("Central World Plaza")){
@@ -96,21 +97,66 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    func showPopUp() {
+        print("show popup")
+        
+        let bundle = NSBundle(forClass: RecommendPopUpViewControllerSwift.self)
+        self.popViewController = RecommendPopUpViewControllerSwift(nibName: "RecommendPopUpViewController", bundle: bundle)
+        self.popViewController.selectedRestaurant = self.selectedRestaurant
+        self.popViewController.selectedBranch = self.selectedBranch
+        self.popViewController.nav = self.navigationController
+        self.popViewController.delegate = self
+        self.popViewController.title = "This is a popup view"
+        self.popViewController.showInView(self.view, withImage: UIImage(named: "typpzDemo"), withMessage: "There are more than 20 waiting queue for \(self.selectedRestaurant). Could you prefre the other branch below?", animated: true)
+        
+    }
+    
+    func closePopup(){
+        self.performSegueWithIdentifier("reserveQueue", sender: nil)
+    }
+    
+    
+    func selectedBr1() {
+        self.selectedBranch = RestaurantController().getRestaurantById(10021)
+        self.totalWaitingQ = 0
+        self.viewDidLoad()
+        self.tbvCurrentQueue.reloadData()
+    }
+    
+    func selectedBr2() {
+        self.selectedBranch = RestaurantController().getRestaurantById(10020)
+        self.totalWaitingQ = 0
+        self.viewDidLoad()
+        self.tbvCurrentQueue.reloadData()
+    }
+    
+    func selectedBr3() {
+        self.selectedBranch = RestaurantController().getRestaurantById(10016)
+        self.totalWaitingQ = 0
+        self.viewDidLoad()
+        self.tbvCurrentQueue.reloadData()
+    }
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
+        print("perform segue")
         if(segue.identifier == "reserveQueue"){
+            print("reserveQueue")
             let reserveQueueViewController = segue.destinationViewController as! ReserveQueueViewController
             reserveQueueViewController.selectedBranch = self.selectedBranch
             reserveQueueViewController.selectedRestaurant = self.selectedRestaurant
-        }else if(segue.identifier == "recommendOther"){
-            let recommendViewController = segue.destinationViewController as! RecommendViewController
-            recommendViewController.msg = "Message Test"
-            
         }
         
     }

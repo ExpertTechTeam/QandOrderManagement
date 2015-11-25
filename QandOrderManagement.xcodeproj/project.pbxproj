@@ -10,7 +10,6 @@
 		3A2F18281BFA02A200367FA2 /* QueueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F18271BFA02A200367FA2 /* QueueModel.swift */; };
 		3A2F182A1BFA02AA00367FA2 /* ContactList2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */; };
 		3A3110651C02FF6B0049B049 /* CurrentQueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3110641C02FF6B0049B049 /* CurrentQueueTableViewCell.swift */; };
-		3A3110671C0305340049B049 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3110661C0305340049B049 /* RecommendViewController.swift */; };
 		3A3332561BFE44930092BF82 /* MyQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3332551BFE44930092BF82 /* MyQTableViewCell.swift */; };
 		3A4960861C01CD4200EF6E38 /* SizzlerPromotion9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4960841C01CD4200EF6E38 /* SizzlerPromotion9.png */; };
 		3A4960891C01CEC000EF6E38 /* PizzaPromotion.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A4960881C01CEC000EF6E38 /* PizzaPromotion.png */; };
@@ -95,6 +94,9 @@
 		3AD5F5091BFDC17A00AA64DA /* section_background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F5081BFDC17A00AA64DA /* section_background3.png */; };
 		3AD5F5111BFDC95200AA64DA /* outline_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50E1BFDC95200AA64DA /* outline_white.png */; };
 		3AD5F5121BFDC95200AA64DA /* outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50F1BFDC95200AA64DA /* outline.png */; };
+		A10213161C05C5780085FE13 /* RecommendPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10213141C05C5780085FE13 /* RecommendPopUpViewController.xib */; };
+		A10213171C05C5780085FE13 /* RecommendPopUpViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10213151C05C5780085FE13 /* RecommendPopUpViewControllerSwift.swift */; };
+		A10213191C05C6010085FE13 /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = A10213181C05C6010085FE13 /* Close.png */; };
 		A1A25B991BFC5F66001012DA /* icon_splashpage.png in Resources */ = {isa = PBXBuildFile; fileRef = A1A25B981BFC5F66001012DA /* icon_splashpage.png */; };
 		A1A25BD81BFC7EAA001012DA /* giftbox_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = A1A25B9A1BFC7EA9001012DA /* giftbox_blue.png */; };
 		A1A25BD91BFC7EAA001012DA /* giftbox_red.png in Resources */ = {isa = PBXBuildFile; fileRef = A1A25B9B1BFC7EA9001012DA /* giftbox_red.png */; };
@@ -410,7 +412,6 @@
 		3A2F18271BFA02A200367FA2 /* QueueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueModel.swift; sourceTree = "<group>"; };
 		3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactList2TableViewController.swift; sourceTree = "<group>"; };
 		3A3110641C02FF6B0049B049 /* CurrentQueueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentQueueTableViewCell.swift; sourceTree = "<group>"; };
-		3A3110661C0305340049B049 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		3A3332551BFE44930092BF82 /* MyQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQTableViewCell.swift; sourceTree = "<group>"; };
 		3A4960841C01CD4200EF6E38 /* SizzlerPromotion9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SizzlerPromotion9.png; sourceTree = "<group>"; };
 		3A4960881C01CEC000EF6E38 /* PizzaPromotion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PizzaPromotion.png; sourceTree = "<group>"; };
@@ -507,6 +508,9 @@
 		3AD5F5081BFDC17A00AA64DA /* section_background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = section_background3.png; sourceTree = "<group>"; };
 		3AD5F50E1BFDC95200AA64DA /* outline_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outline_white.png; sourceTree = "<group>"; };
 		3AD5F50F1BFDC95200AA64DA /* outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outline.png; sourceTree = "<group>"; };
+		A10213141C05C5780085FE13 /* RecommendPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendPopUpViewController.xib; sourceTree = "<group>"; };
+		A10213151C05C5780085FE13 /* RecommendPopUpViewControllerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendPopUpViewControllerSwift.swift; sourceTree = "<group>"; };
+		A10213181C05C6010085FE13 /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
 		A1A25B981BFC5F66001012DA /* icon_splashpage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_splashpage.png; sourceTree = "<group>"; };
 		A1A25B9A1BFC7EA9001012DA /* giftbox_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = giftbox_blue.png; path = Images/giftbox_blue.png; sourceTree = "<group>"; };
 		A1A25B9B1BFC7EA9001012DA /* giftbox_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = giftbox_red.png; path = Images/giftbox_red.png; sourceTree = "<group>"; };
@@ -929,6 +933,7 @@
 				A1FA26081BF9E82A00F6B0B9 /* dining_room1.png */,
 				A1FA26061BF9E71E00F6B0B9 /* dining_room.png */,
 				A1FA26041BF9E2F200F6B0B9 /* geo_fence.png */,
+				A10213181C05C6010085FE13 /* Close.png */,
 				3A6E5B251BEDCC4E0078A941 /* promotion_scroll */,
 				A1FA25B61BF9D30700F6B0B9 /* promotion_sizzler */,
 				A1FA24C31BF9D2ED00F6B0B9 /* menu_sizzler */,
@@ -1249,7 +1254,8 @@
 				3AD5F4C91BFB30F300AA64DA /* ViewQrViewController.swift */,
 				3AD5F4CB1BFB33DE00AA64DA /* MyQTableViewController.swift */,
 				3A3332551BFE44930092BF82 /* MyQTableViewCell.swift */,
-				3A3110661C0305340049B049 /* RecommendViewController.swift */,
+				A10213141C05C5780085FE13 /* RecommendPopUpViewController.xib */,
+				A10213151C05C5780085FE13 /* RecommendPopUpViewControllerSwift.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1563,8 +1569,10 @@
 				3A4FBDD71BF8962E00B37E11 /* chef_hat5.png in Resources */,
 				A1FA25991BF9D30300F6B0B9 /* saladbar.jpg in Resources */,
 				A1A25C011BFC7EAA001012DA /* beef_inner.jpg in Resources */,
+				A10213191C05C6010085FE13 /* Close.png in Resources */,
 				3A6E5BA01BF26CEC0078A941 /* Map_pin_Logo_1.jpg in Resources */,
 				A1A25C6D1BFC7EEA001012DA /* inside-logout-icon.png in Resources */,
+				A10213161C05C5780085FE13 /* RecommendPopUpViewController.xib in Resources */,
 				3AD5F5031BFDB69700AA64DA /* blur_background1.png in Resources */,
 				A1A25C6B1BFC7EEA001012DA /* logout1.png in Resources */,
 				A1FA25471BF9D30300F6B0B9 /* beef_mediumrare1_selected.png in Resources */,
@@ -1860,7 +1868,6 @@
 				A1FA25DA1BF9D3A300F6B0B9 /* Order.swift in Sources */,
 				A1FA25F21BF9D41A00F6B0B9 /* MenuLevel2TableViewCell.swift in Sources */,
 				A1FA25EF1BF9D41A00F6B0B9 /* MenuLevel1ViewController.swift in Sources */,
-				3A3110671C0305340049B049 /* RecommendViewController.swift in Sources */,
 				A1FA25E61BF9D40300F6B0B9 /* MenuLevel1Section1TableViewCell.swift in Sources */,
 				3A6E5B3B1BEE52A50078A941 /* BranchListViewController.swift in Sources */,
 				A1A25CAD1BFC8174001012DA /* ProfileEditViewController.swift in Sources */,
@@ -1880,6 +1887,7 @@
 				A1FA24B81BF9D1EF00F6B0B9 /* UIExpandableTableView.swift in Sources */,
 				A1FA24B21BF9D17D00F6B0B9 /* MenuController.swift in Sources */,
 				A1FA25E21BF9D3F900F6B0B9 /* MenuDetailViewController.swift in Sources */,
+				A10213171C05C5780085FE13 /* RecommendPopUpViewControllerSwift.swift in Sources */,
 				A1A25CB21BFC8174001012DA /* VoucherTableViewController.swift in Sources */,
 				3A2F182A1BFA02AA00367FA2 /* ContactList2TableViewController.swift in Sources */,
 				A1FA25E01BF9D3F900F6B0B9 /* BeefButton.swift in Sources */,
@@ -2032,6 +2040,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
 				INFOPLIST_FILE = QandOrderManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2053,6 +2062,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
 				INFOPLIST_FILE = QandOrderManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

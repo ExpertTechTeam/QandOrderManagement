@@ -96,13 +96,19 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
             for i in 0..<self.tempQueueModel.friendList.count {
                 friendString = friendString + self.tempQueueModel.friendList[i] + "\r\n"
             }
-        
+            
             self.friendList.text = friendString
             self.specialRequest.font = subTitleFont
             self.friendList.font = subTitleFont
             configureStepper(Int(self.tempQueueModel.noOfPerson)!)
         }
         
+        //Setup Nav
+        self.navigationItem.title = self.selectedRestaurant
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         
         if let font = customFont {
@@ -142,7 +148,7 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         
         //Remove TempQueue from List and Append to Active Queue
         for i in 0..<MyVariables.tempQueueList.count {
-            var temp = MyVariables.tempQueueList[i]
+            let temp = MyVariables.tempQueueList[i]
             if(tempQueueModel.queueNo == temp.queueNo){
                 //get index
                 MyVariables.tempQueueList.removeAtIndex(i)

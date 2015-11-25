@@ -16,7 +16,7 @@ class MyQTableViewController: UITableViewController {
     
     var activeQueue : [QueueModel] = []
     var tempQueue : [QueueModel] = []
-    
+    var refreshControl1:UIRefreshControl!
     override func viewDidLoad() {
         print("MyQTableViewController viewDidLoad")
         super.viewDidLoad()
@@ -56,7 +56,23 @@ class MyQTableViewController: UITableViewController {
         self.tempQueue = MyVariables.tempQueueList
         
         self.tableView.rowHeight = 70
+        self.refreshControl1 = UIRefreshControl()
+        self.refreshControl1.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl1.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl1)
+    }
+    
+    func refresh(refresh:UIRefreshControl)
+    {
+        self.activeQueue = MyVariables.activeQueueList
+        self.tempQueue = MyVariables.tempQueueList
         
+        self.tableView.reloadData()
+        /*
+        self.activeQueue = MyVariables.activeQueueList
+        self.tempQueue = MyVariables.tempQueueList*/
+        print("refresh")
+        self.refreshControl1.endRefreshing()
     }
     
     override func viewDidAppear(animated: Bool) {
