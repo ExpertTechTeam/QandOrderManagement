@@ -3395,7 +3395,7 @@
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="QR_Code.png" translatesAutoresizingMaskIntoConstraints="NO" id="sr3-Zc-9J0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="QR_Code1.png" translatesAutoresizingMaskIntoConstraints="NO" id="sr3-Zc-9J0">
                                 <rect key="frame" x="86" y="317" width="148" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="134" id="2pw-el-Qis"/>
@@ -4293,7 +4293,7 @@
         <image name="Minus-Fill" width="50" height="50"/>
         <image name="Plus" width="40" height="40"/>
         <image name="Plus-Fill" width="50" height="50"/>
-        <image name="QR_Code.png" width="225" height="225"/>
+        <image name="QR_Code1.png" width="225" height="225"/>
         <image name="QR_code.png" width="25" height="25"/>
         <image name="Sizzler_Logo_3.png" width="715" height="511"/>
         <image name="Textbox-Blue.png" width="500" height="50"/>
