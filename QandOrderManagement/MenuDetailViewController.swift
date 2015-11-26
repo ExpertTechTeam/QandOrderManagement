@@ -127,7 +127,7 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, KWStepper
         self.view.addConstraints(addtocart_constraint_width)
         
         // Vertical
-        let constraint_position_v:Array = NSLayoutConstraint.constraintsWithVisualFormat("V:|-60-[vMain]-0-[vLine2]-0-[vSideDisk]-0-[vLine3]-orderSpacing-[btnAddToCart]", options: NSLayoutFormatOptions(rawValue: 0), metrics: viewMetrics, views: viewsDict)
+        let constraint_position_v:Array = NSLayoutConstraint.constraintsWithVisualFormat("V:|-80-[vMain]-0-[vLine2]-0-[vSideDisk]-0-[vLine3]-orderSpacing-[btnAddToCart]", options: NSLayoutFormatOptions(rawValue: 0), metrics: viewMetrics, views: viewsDict)
         
         self.view.addConstraints(constraint_position_v)
         

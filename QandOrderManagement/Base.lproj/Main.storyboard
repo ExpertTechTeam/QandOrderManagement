@@ -303,7 +303,7 @@
                         <outlet property="tbvRestaurant" destination="K2m-gU-jbk" id="pA5-dY-0Us"/>
                         <segue destination="b16-RU-lO1" kind="push" identifier="selectedrestaurant" id="TeU-fY-N2x"/>
                         <segue destination="tSb-CD-SKM" kind="push" identifier="promotionSegue" id="oMD-gT-4Rl"/>
-                        <segue destination="bfx-An-qGl" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="gV5-Hb-qoc"/>
+                        <segue destination="bfx-An-qGl" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="gV5-Hb-qoc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRD-d3-gt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -407,7 +407,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tbvBranch" destination="ikN-3Y-6p2" id="n0L-KI-mM3"/>
-                        <segue destination="BWK-B0-WqH" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="Mps-Yi-hIW"/>
+                        <segue destination="BWK-B0-WqH" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="Mps-Yi-hIW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htu-mD-Us9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -522,7 +522,7 @@
                         <outlet property="branchServiceTimeContact" destination="nXb-GE-wUh" id="pnP-RA-VGD"/>
                         <outlet property="tbvCurrentQueue" destination="udy-mI-KPu" id="57n-Cg-wBQ"/>
                         <segue destination="5Wj-BS-Sg6" kind="push" identifier="reserveQueue" id="2Ee-Pf-YM7"/>
-                        <segue destination="eaw-KB-BqX" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="N9V-I2-MLs"/>
+                        <segue destination="eaw-KB-BqX" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="N9V-I2-MLs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wio-Nx-KBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -669,8 +669,8 @@
                         <segue destination="VVX-R9-Swe" kind="push" identifier="addfriend" id="gjA-SO-2eB"/>
                         <segue destination="YBg-yC-c33" kind="push" identifier="continueBtnTapped" id="Fei-ii-dyT"/>
                         <segue destination="YBg-yC-c33" kind="push" identifier="confirmBtnTapped" id="H7f-Ae-rEH"/>
-                        <segue destination="Uyf-oT-kxl" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="8u6-qF-bC1"/>
-                        <segue destination="Uyf-oT-kxl" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="Slf-s4-JGX"/>
+                        <segue destination="Uyf-oT-kxl" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="8u6-qF-bC1"/>
+                        <segue destination="Uyf-oT-kxl" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="Slf-s4-JGX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEs-2e-iQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -889,8 +889,8 @@
                         <outlet property="viewBookingBtn" destination="REb-5p-gpM" id="hu4-GN-uTy"/>
                         <segue destination="5br-Gr-jba" kind="push" identifier="viewqrcode" id="852-NL-UTM"/>
                         <segue destination="Im4-0W-Wo9" kind="push" identifier="addfriend2" id="JBD-Sd-oHJ"/>
-                        <segue destination="TTN-pF-ncZ" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="GEd-dr-TU0"/>
-                        <segue destination="TTN-pF-ncZ" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="BA9-Zo-Unv"/>
+                        <segue destination="TTN-pF-ncZ" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="GEd-dr-TU0"/>
+                        <segue destination="TTN-pF-ncZ" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="BA9-Zo-Unv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAv-eI-yzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -952,8 +952,8 @@
                         <outlet property="branchLocation" destination="6ot-DE-UwJ" id="xB8-Xg-1up"/>
                         <outlet property="branchName" destination="mUi-xs-Nbz" id="Pc8-0q-FLc"/>
                         <outlet property="branchServiceTimeContact" destination="dlF-6w-aAa" id="Muc-Rj-cGr"/>
-                        <segue destination="V1A-Ll-5iY" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="xqL-Wh-Ku2"/>
-                        <segue destination="V1A-Ll-5iY" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="0U0-7G-fmR"/>
+                        <segue destination="V1A-Ll-5iY" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="xqL-Wh-Ku2"/>
+                        <segue destination="V1A-Ll-5iY" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="0U0-7G-fmR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDs-Qr-WW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -986,8 +986,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="ATA-Mu-WGf"/>
                     <connections>
-                        <segue destination="nxV-ng-TSd" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="qeQ-o9-v0L"/>
-                        <segue destination="nxV-ng-TSd" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="dS6-4i-ZaY"/>
+                        <segue destination="nxV-ng-TSd" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="qeQ-o9-v0L"/>
+                        <segue destination="nxV-ng-TSd" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="dS6-4i-ZaY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhT-6d-FHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1068,7 +1068,7 @@
                     <connections>
                         <segue destination="5Wj-BS-Sg6" kind="push" identifier="viewtempqueue" id="Rri-Qb-Nue"/>
                         <segue destination="YBg-yC-c33" kind="push" identifier="viewactivequeue" id="CAd-t5-nNn"/>
-                        <segue destination="1y1-mQ-mwp" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="NfG-gf-1pG"/>
+                        <segue destination="1y1-mQ-mwp" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="NfG-gf-1pG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obv-Wf-Knw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1134,7 +1134,7 @@
                     <connections>
                         <outlet property="vMapView" destination="Tqx-dI-FyJ" id="tAI-N6-IMl"/>
                         <segue destination="cuT-gH-Zzq" kind="push" identifier="viewFromMapSegue" id="ZJm-sn-grv"/>
-                        <segue destination="KWg-o4-64S" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="GrO-Mf-9uQ"/>
+                        <segue destination="KWg-o4-64S" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="GrO-Mf-9uQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXK-w5-yZu" sceneMemberID="firstResponder"/>
@@ -1220,7 +1220,7 @@
                         <barButtonItem key="backBarButtonItem" title="back" id="Ndc-bI-BwQ"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="1zt-UB-hGD" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="EfV-CC-Ji5"/>
+                        <segue destination="1zt-UB-hGD" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="EfV-CC-Ji5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="og3-yr-C3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1468,8 +1468,8 @@
                         <outlet property="menuLevelTableView" destination="ccb-6N-FKx" id="DLx-GN-2IX"/>
                         <segue destination="23I-gD-Afp" kind="push" identifier="drinkSegue" id="uTP-Eu-W54"/>
                         <segue destination="Mrd-iY-RDY" kind="push" identifier="categorySegue" id="37K-yQ-AsI"/>
-                        <segue destination="Iy3-M6-YV6" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="LfJ-ZO-TmB"/>
-                        <segue destination="Iy3-M6-YV6" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="VtJ-dr-51m"/>
+                        <segue destination="Iy3-M6-YV6" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="LfJ-ZO-TmB"/>
+                        <segue destination="Iy3-M6-YV6" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="VtJ-dr-51m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwL-Fb-9PV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1583,8 +1583,8 @@
                     <connections>
                         <outlet property="btnCart" destination="TFw-pL-xii" id="84E-lf-D5S"/>
                         <outlet property="tableView" destination="cjl-iW-Uhj" id="EzG-ga-dxi"/>
-                        <segue destination="vUU-nV-g74" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="zwe-6A-9KK"/>
-                        <segue destination="vUU-nV-g74" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="rbE-tQ-gKx"/>
+                        <segue destination="vUU-nV-g74" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="zwe-6A-9KK"/>
+                        <segue destination="vUU-nV-g74" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="rbE-tQ-gKx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAe-hs-md4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1758,7 +1758,6 @@
                             <constraint firstItem="z8L-a3-Wb3" firstAttribute="leading" secondItem="7Az-zb-TOr" secondAttribute="trailing" constant="2" id="M1L-lo-U8Y"/>
                             <constraint firstAttribute="leadingMargin" secondItem="7Az-zb-TOr" secondAttribute="leading" constant="14" id="Pdp-NM-HZm"/>
                             <constraint firstItem="LnD-XY-dYm" firstAttribute="leading" secondItem="Z28-Sr-h7Z" secondAttribute="leading" id="SPD-hg-vDk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KvI-VL-9sd" secondAttribute="trailing" constant="70" id="Z4O-3C-dUE"/>
                             <constraint firstItem="KvI-VL-9sd" firstAttribute="top" secondItem="k6d-Hn-wzA" secondAttribute="bottom" constant="2" id="aLC-gn-aEH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="k6d-Hn-wzA" secondAttribute="trailing" constant="-16" id="bGF-Pi-NZ9"/>
                             <constraint firstItem="KvI-VL-9sd" firstAttribute="leading" secondItem="7Az-zb-TOr" secondAttribute="trailing" constant="2" id="fpU-cn-DDC"/>
@@ -1782,8 +1781,8 @@
                         <outlet property="btnCart" destination="z2m-f4-Taz" id="AN9-9J-u5Q"/>
                         <outlet property="lblTotalPrice" destination="v4Y-wN-SRy" id="90G-re-rBh"/>
                         <outlet property="orderListTableView" destination="KKW-Dd-ZkF" id="cjd-B2-W8T"/>
-                        <segue destination="Y9H-eq-vJ0" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="gPm-ow-q93"/>
-                        <segue destination="Y9H-eq-vJ0" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="jo4-H5-MTY"/>
+                        <segue destination="Y9H-eq-vJ0" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="gPm-ow-q93"/>
+                        <segue destination="Y9H-eq-vJ0" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="jo4-H5-MTY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djU-DD-GKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1803,7 +1802,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zn1-OE-fPv">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zn1-OE-fPv">
                                 <rect key="frame" x="0.0" y="64" width="320" height="236"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="289.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcj-gQ-EWV">
@@ -1855,7 +1854,7 @@
                                     <constraint firstAttribute="width" constant="320" id="WuI-Jy-c7H"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bx4-ye-tmp">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bx4-ye-tmp">
                                 <rect key="frame" x="0.0" y="385" width="320" height="91"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Side Dish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg9-Eg-xTK">
@@ -1922,7 +1921,7 @@
                                     <constraint firstAttribute="height" constant="91" id="kxV-ho-aEO"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUS-8S-cep">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUS-8S-cep">
                                 <rect key="frame" x="64" y="482" width="190" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7nL-SC-ONc"/>
@@ -1957,7 +1956,7 @@
                                     <constraint firstAttribute="height" constant="1" id="v28-Bn-kBW"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Myv-OI-O1m">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myv-OI-O1m">
                                 <rect key="frame" x="0.0" y="300" width="320" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cooking Steak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rV-eS-mLt">
@@ -2053,7 +2052,7 @@
                             <constraint firstItem="bx4-ye-tmp" firstAttribute="centerX" secondItem="I2o-KF-8FD" secondAttribute="centerX" id="MXH-Iv-rfg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HMX-Bg-EfX" secondAttribute="trailing" constant="-20" id="ROV-Cl-sAq"/>
                             <constraint firstItem="bx4-ye-tmp" firstAttribute="top" secondItem="Zn1-OE-fPv" secondAttribute="bottom" constant="85" id="bp2-f0-VKK"/>
-                            <constraint firstItem="Zn1-OE-fPv" firstAttribute="top" secondItem="vdh-1D-lqX" secondAttribute="bottom" id="kIg-e6-hjb"/>
+                            <constraint firstItem="Zn1-OE-fPv" firstAttribute="top" secondItem="vdh-1D-lqX" secondAttribute="bottom" constant="20" id="kIg-e6-hjb"/>
                             <constraint firstItem="HMX-Bg-EfX" firstAttribute="leading" secondItem="I2o-KF-8FD" secondAttribute="leadingMargin" constant="-20" id="nvL-ja-LBF"/>
                             <constraint firstItem="ma1-Fx-kIu" firstAttribute="top" secondItem="Zn1-OE-fPv" secondAttribute="bottom" constant="87" id="wbc-fO-oHm"/>
                             <constraint firstItem="ma1-Fx-kIu" firstAttribute="leading" secondItem="I2o-KF-8FD" secondAttribute="leadingMargin" constant="-20" id="wxp-oz-OZ1"/>
@@ -2097,8 +2096,8 @@
                         <outlet property="vMain" destination="Zn1-OE-fPv" id="hNf-dW-LCJ"/>
                         <outlet property="vSideDisk" destination="bx4-ye-tmp" id="JKv-1e-Ubn"/>
                         <outlet property="vStar" destination="ahR-Ig-ytL" id="F1t-al-dfJ"/>
-                        <segue destination="fER-c2-HtO" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="PZ9-aD-bbI"/>
-                        <segue destination="fER-c2-HtO" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="phj-B4-aOj"/>
+                        <segue destination="fER-c2-HtO" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="PZ9-aD-bbI"/>
+                        <segue destination="fER-c2-HtO" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="phj-B4-aOj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0S-2q-nkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2219,8 +2218,8 @@
                     <connections>
                         <outlet property="btnCart" destination="ZWt-EN-Eh8" id="2aY-Xe-pZN"/>
                         <outlet property="tableView" destination="PdR-Ns-0jZ" id="ovD-XS-IcE"/>
-                        <segue destination="Eeh-SK-etL" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="MNy-zR-kKy"/>
-                        <segue destination="Eeh-SK-etL" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="hbF-Km-evN"/>
+                        <segue destination="Eeh-SK-etL" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="MNy-zR-kKy"/>
+                        <segue destination="Eeh-SK-etL" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="hbF-Km-evN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tP7-oO-2wB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2279,8 +2278,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Zcy-HY-FRc"/>
                     <connections>
-                        <segue destination="XAe-U5-63g" kind="unwind" identifier="exitToMainPage1Segue" unwindAction="exitFromMainPage1:" id="mZt-Rd-CBk"/>
-                        <segue destination="XAe-U5-63g" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="usd-MI-e62"/>
+                        <segue destination="XAe-U5-63g" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="mZt-Rd-CBk"/>
+                        <segue destination="XAe-U5-63g" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="usd-MI-e62"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ii9-S1-yMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2384,7 +2383,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Bill" id="lyA-8A-mVt"/>
                     <connections>
-                        <segue destination="a4i-B2-ulL" kind="unwind" identifier="exitToMainPage4Segue" unwindAction="exitFromMainPage4:" id="sXZ-xE-qkg"/>
+                        <segue destination="a4i-B2-ulL" kind="unwind" identifier="exitToMainPage4Segue" animates="NO" unwindAction="exitFromMainPage4:" id="sXZ-xE-qkg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pO7-pC-Fy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2482,7 +2481,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bill Detail" id="6Ya-Ue-ngm"/>
                     <connections>
-                        <segue destination="tlP-U5-VCg" kind="unwind" identifier="exitToMainPage4Segue" unwindAction="exitFromMainPage4:" id="wtz-yg-Kwf"/>
+                        <segue destination="tlP-U5-VCg" kind="unwind" identifier="exitToMainPage4Segue" animates="NO" unwindAction="exitFromMainPage4:" id="wtz-yg-Kwf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPj-a6-s74" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2665,7 +2664,7 @@
                         <outlet property="ratingFood" destination="Bkv-hS-UZp" id="WL4-td-hgq"/>
                         <outlet property="ratingService" destination="lp7-Nj-A8T" id="lwW-5L-oGh"/>
                         <outlet property="txtSuggestion" destination="eyx-A7-Xet" id="6hx-WM-Vys"/>
-                        <segue destination="VZs-Hd-xxm" kind="unwind" identifier="exitToMainPage4Segue" unwindAction="exitFromMainPage4:" id="Tpi-Fk-MBY"/>
+                        <segue destination="VZs-Hd-xxm" kind="unwind" identifier="exitToMainPage4Segue" animates="NO" unwindAction="exitFromMainPage4:" id="Tpi-Fk-MBY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRJ-qz-pLd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2868,7 +2867,7 @@
                     <connections>
                         <outlet property="txtPassword" destination="IyC-EQ-maG" id="k8v-um-nDq"/>
                         <outlet property="txtUsername" destination="6Qh-hl-MVQ" id="1fu-et-dox"/>
-                        <segue destination="pKC-mk-eQE" kind="unwind" identifier="exitToMainPage5Segue" unwindAction="exitFromMainPage5:" id="apF-3Y-bii"/>
+                        <segue destination="pKC-mk-eQE" kind="unwind" identifier="exitToMainPage5Segue" animates="NO" unwindAction="exitFromMainPage5:" id="apF-3Y-bii"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gr-fe-Kty" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2953,7 +2952,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="H8r-ys-8Fj"/>
                     <connections>
-                        <segue destination="pfh-G8-whn" kind="unwind" identifier="exitToMainPage5Segue" unwindAction="exitFromMainPage5:" id="Q1D-Wx-36U"/>
+                        <segue destination="pfh-G8-whn" kind="unwind" identifier="exitToMainPage5Segue" animates="NO" unwindAction="exitFromMainPage5:" id="Q1D-Wx-36U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMX-Gc-lBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3055,7 +3054,7 @@
                         <outlet property="txtLastname" destination="uTB-9S-gSf" id="1uP-Fo-wRb"/>
                         <outlet property="txtMobileNo" destination="HBp-1T-OFG" id="4je-MF-Rbw"/>
                         <outlet property="txtPassword" destination="uW7-UR-FEy" id="WGN-0q-VzW"/>
-                        <segue destination="3ZO-4X-2fH" kind="unwind" identifier="exitToMainPage5Segue" unwindAction="exitFromMainPage5:" id="g1R-BL-Kbj"/>
+                        <segue destination="3ZO-4X-2fH" kind="unwind" identifier="exitToMainPage5Segue" animates="NO" unwindAction="exitFromMainPage5:" id="g1R-BL-Kbj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71m-AT-AdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3168,7 +3167,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Setting" id="aZg-pN-n3q"/>
                     <connections>
-                        <segue destination="8NO-eW-KnY" kind="unwind" identifier="exitToMainPage5Segue" unwindAction="exitFromMainPage5:" id="ZQM-3C-K3x"/>
+                        <segue destination="8NO-eW-KnY" kind="unwind" identifier="exitToMainPage5Segue" animates="NO" unwindAction="exitFromMainPage5:" id="ZQM-3C-K3x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egM-eE-kam" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3214,7 +3213,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Reward" id="k1v-B9-MkB"/>
                     <connections>
-                        <segue destination="rdh-X2-Zqc" kind="unwind" identifier="exitToMainPage5Segue" unwindAction="exitFromMainPage5:" id="Viy-uQ-b0p"/>
+                        <segue destination="rdh-X2-Zqc" kind="unwind" identifier="exitToMainPage5Segue" animates="NO" unwindAction="exitFromMainPage5:" id="Viy-uQ-b0p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scx-oN-vI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3412,7 +3411,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Coupon" id="In2-3q-jHN"/>
                     <connections>
-                        <segue destination="Kee-Oe-Rkh" kind="unwind" identifier="exitToMainPage5Segue" unwindAction="exitFromMainPage5:" id="BEs-48-hgK"/>
+                        <segue destination="Kee-Oe-Rkh" kind="unwind" identifier="exitToMainPage5Segue" animates="NO" unwindAction="exitFromMainPage5:" id="BEs-48-hgK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Kr-6N-6GZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3534,7 +3533,7 @@
                     <navigationItem key="navigationItem" title="Coupon Detail" id="6VV-5c-lbR"/>
                     <connections>
                         <outlet property="imgQRcode" destination="sr3-Zc-9J0" id="y31-lH-Dly"/>
-                        <segue destination="O2r-Fr-W07" kind="unwind" identifier="exitToMainPage5Segue" unwindAction="exitFromMainPage5:" id="4Sj-Qd-eo3"/>
+                        <segue destination="O2r-Fr-W07" kind="unwind" identifier="exitToMainPage5Segue" animates="NO" unwindAction="exitFromMainPage5:" id="4Sj-Qd-eo3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRO-FU-7y8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3650,7 +3649,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="History" id="TB8-08-jat"/>
                     <connections>
-                        <segue destination="p2A-5U-2gk" kind="unwind" identifier="exitToMainPage5Segue" unwindAction="exitFromMainPage5:" id="98V-19-3Uo"/>
+                        <segue destination="p2A-5U-2gk" kind="unwind" identifier="exitToMainPage5Segue" animates="NO" unwindAction="exitFromMainPage5:" id="98V-19-3Uo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ik-s0-oHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3728,7 +3727,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="History Detail" id="tyj-P5-Eez"/>
                     <connections>
-                        <segue destination="fKg-VV-8bl" kind="unwind" identifier="exitToMainPage5Segue" unwindAction="exitFromMainPage5:" id="f4q-oS-w8p"/>
+                        <segue destination="fKg-VV-8bl" kind="unwind" identifier="exitToMainPage5Segue" animates="NO" unwindAction="exitFromMainPage5:" id="f4q-oS-w8p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyZ-ac-J0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3903,7 +3902,7 @@
                         <outlet property="labelLastname" destination="hFh-U8-Yvd" id="VHr-rX-IPA"/>
                         <outlet property="labelMobileNo" destination="oVD-lv-8Bq" id="b86-nO-H5b"/>
                         <outlet property="labelPassword" destination="dbd-WO-6Bz" id="3s5-p2-Amj"/>
-                        <segue destination="j3D-V9-Jtc" kind="unwind" identifier="exitToMainPage5Segue" unwindAction="exitFromMainPage5:" id="UcO-Oh-zbY"/>
+                        <segue destination="j3D-V9-Jtc" kind="unwind" identifier="exitToMainPage5Segue" animates="NO" unwindAction="exitFromMainPage5:" id="UcO-Oh-zbY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIi-9c-kvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4096,7 +4095,7 @@
                         <outlet property="txtLastname" destination="Auh-0v-q57" id="U5q-Pi-0K6"/>
                         <outlet property="txtMobileNo" destination="YzE-SC-PHF" id="Lfs-Tj-EP0"/>
                         <outlet property="txtPassword" destination="k5R-VV-HxK" id="UbQ-Op-8Q2"/>
-                        <segue destination="nM3-tC-Kd6" kind="unwind" identifier="exitToMainPage5Segue" unwindAction="exitFromMainPage5:" id="Fld-Wu-q7p"/>
+                        <segue destination="nM3-tC-Kd6" kind="unwind" identifier="exitToMainPage5Segue" animates="NO" unwindAction="exitFromMainPage5:" id="Fld-Wu-q7p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9l-T8-v3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4264,7 +4263,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j8G-V6-3eQ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j8G-V6-3eQ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YZ3-Ft-let" userLabel="Home View">
@@ -4340,7 +4339,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="j8G-V6-3eQ" firstAttribute="leading" secondItem="Zpb-kZ-yAi" secondAttribute="leading" id="AJC-DD-zMF"/>
+                            <constraint firstItem="H9d-jD-yab" firstAttribute="top" secondItem="j8G-V6-3eQ" secondAttribute="bottom" id="EuL-Xi-qtd"/>
                             <constraint firstItem="H9d-jD-yab" firstAttribute="top" secondItem="61p-Gp-SGk" secondAttribute="bottom" id="JBp-Mu-7Y3"/>
+                            <constraint firstItem="j8G-V6-3eQ" firstAttribute="top" secondItem="Zpb-kZ-yAi" secondAttribute="top" id="JTx-gl-6eP"/>
+                            <constraint firstAttribute="trailing" secondItem="j8G-V6-3eQ" secondAttribute="trailing" id="SQO-HL-LHC"/>
                             <constraint firstItem="61p-Gp-SGk" firstAttribute="leading" secondItem="Zpb-kZ-yAi" secondAttribute="leading" id="cmB-SF-My5"/>
                             <constraint firstAttribute="trailing" secondItem="61p-Gp-SGk" secondAttribute="trailing" id="lEt-jX-wGF"/>
                         </constraints>
@@ -4349,9 +4352,9 @@
                                 <exclude reference="61p-Gp-SGk"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="JBp-Mu-7Y3"/>
                                 <exclude reference="cmB-SF-My5"/>
                                 <exclude reference="lEt-jX-wGF"/>
+                                <exclude reference="JBp-Mu-7Y3"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -4359,9 +4362,9 @@
                                 <include reference="61p-Gp-SGk"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="JBp-Mu-7Y3"/>
                                 <include reference="cmB-SF-My5"/>
                                 <include reference="lEt-jX-wGF"/>
+                                <include reference="JBp-Mu-7Y3"/>
                             </mask>
                         </variation>
                     </view>
@@ -4445,13 +4448,13 @@
         <image name="view_qr_2.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d9B-03-t8d"/>
-        <segue reference="gh0-4n-3KS"/>
-        <segue reference="ah4-Jn-OxO"/>
+        <segue reference="Rri-Qb-Nue"/>
+        <segue reference="CAd-t5-nNn"/>
         <segue reference="pgn-Dw-udU"/>
         <segue reference="vMy-ol-8q2"/>
-        <segue reference="FDC-6k-oKv"/>
+        <segue reference="0Fr-sh-Vjk"/>
+        <segue reference="d9B-03-t8d"/>
+        <segue reference="gh0-4n-3KS"/>
         <segue reference="ZJm-sn-grv"/>
-        <segue reference="Rri-Qb-Nue"/>
     </inferredMetricsTieBreakers>
 </document>

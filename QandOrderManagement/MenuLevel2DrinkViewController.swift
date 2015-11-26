@@ -212,12 +212,12 @@ class MenuLevel2DrinkViewController:UIViewController, UITableViewDataSource, UIT
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "orderSegue" {
             
-        }else {
+        }/*else if {
             let controller = segue.destinationViewController as! MenuDetailViewController
             let selectedPath = self.tableView.indexPathForSelectedRow!
             let menuList = menuListBySection[selectedPath.section]!
             controller.menu = menuList[selectedPath.row]
-        }
+        }*/
         
     }
     
