@@ -94,6 +94,7 @@
 		3AD5F5091BFDC17A00AA64DA /* section_background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F5081BFDC17A00AA64DA /* section_background3.png */; };
 		3AD5F5111BFDC95200AA64DA /* outline_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50E1BFDC95200AA64DA /* outline_white.png */; };
 		3AD5F5121BFDC95200AA64DA /* outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50F1BFDC95200AA64DA /* outline.png */; };
+		3AE939411C05C9C800CCE50B /* TakeQrPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE939401C05C9C800CCE50B /* TakeQrPhotoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A10213161C05C5780085FE13 /* RecommendPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10213141C05C5780085FE13 /* RecommendPopUpViewController.xib */; };
 		A10213171C05C5780085FE13 /* RecommendPopUpViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10213151C05C5780085FE13 /* RecommendPopUpViewControllerSwift.swift */; };
 		A10213191C05C6010085FE13 /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = A10213181C05C6010085FE13 /* Close.png */; };
@@ -508,6 +509,7 @@
 		3AD5F5081BFDC17A00AA64DA /* section_background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = section_background3.png; sourceTree = "<group>"; };
 		3AD5F50E1BFDC95200AA64DA /* outline_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outline_white.png; sourceTree = "<group>"; };
 		3AD5F50F1BFDC95200AA64DA /* outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outline.png; sourceTree = "<group>"; };
+		3AE939401C05C9C800CCE50B /* TakeQrPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeQrPhotoViewController.swift; sourceTree = "<group>"; };
 		A10213141C05C5780085FE13 /* RecommendPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendPopUpViewController.xib; sourceTree = "<group>"; };
 		A10213151C05C5780085FE13 /* RecommendPopUpViewControllerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendPopUpViewControllerSwift.swift; sourceTree = "<group>"; };
 		A10213181C05C6010085FE13 /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
@@ -1252,6 +1254,7 @@
 				3A4FBDC61BF87D9C00B37E11 /* ConfirmQueueViewController.swift */,
 				3A2F18291BFA02AA00367FA2 /* ContactList2TableViewController.swift */,
 				3AD5F4C91BFB30F300AA64DA /* ViewQrViewController.swift */,
+				3AE939401C05C9C800CCE50B /* TakeQrPhotoViewController.swift */,
 				3AD5F4CB1BFB33DE00AA64DA /* MyQTableViewController.swift */,
 				3A3332551BFE44930092BF82 /* MyQTableViewCell.swift */,
 				A10213141C05C5780085FE13 /* RecommendPopUpViewController.xib */,
@@ -1909,6 +1912,7 @@
 				A1FA25FB1BF9D48000F6B0B9 /* PromotionMainTableViewCell.swift in Sources */,
 				A1FA26031BF9D4AD00F6B0B9 /* PopOverDetailMapViewController.swift in Sources */,
 				A1A25CB31BFC8174001012DA /* VoucherDetailViewController.swift in Sources */,
+				3AE939411C05C9C800CCE50B /* TakeQrPhotoViewController.swift in Sources */,
 				3A6E5BC21BF497870078A941 /* CountLabel.swift in Sources */,
 				3A6E5AC31BEB3E9A0078A941 /* AppDelegate.swift in Sources */,
 				A1A25CB01BFC8174001012DA /* RewardViewController.swift in Sources */,
