@@ -21,7 +21,7 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
     let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
     let navigationFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
     
-    
+    var common : CommonController!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,9 +32,13 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         self.branchFavouriteArray.append(branchArray[4])
         self.branchFavouriteArray.append(branchArray[20])
         
-        // Do any additional setup after loading the view.
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
     }
-
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,7 +64,7 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
             return "Nearby"
         }
     }
-
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("cell1") as! BranchTableViewCell!
@@ -127,13 +131,13 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         header.textLabel!.textAlignment = NSTextAlignment.Left
         var sectionImgView = UIImageView(image: UIImage(named: "section_background3.png"))
         header.backgroundView = sectionImgView
-
+        
         //        header.backgroundView?.backgroundColor = UIColor(red: 121/255, green: 183/255, blue: 224/255, alpha: 1.0)
         
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
@@ -157,5 +161,5 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-
+    
 }

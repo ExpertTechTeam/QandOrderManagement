@@ -16,6 +16,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentatio
     let regionRadius: CLLocationDistance = 10
     var latitude:Double = 0.0
     var longitude:Double = 0.0
+    var common:CommonController!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,6 +24,12 @@ class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentatio
         self.centerMapOnLocation()
         self.pointMapOnLocation()
         
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
+    }
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
     }
     
     // MARK: - Pin and centerlize MapView
@@ -33,12 +40,12 @@ class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentatio
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestAlwaysAuthorization()
         self.locationManager.startUpdatingLocation()
-
+        
         self.vMapView.showsUserLocation = true
         
         /*
         if vMapView.annotations.count == 0 {
-            return
+        return
         }
         var topLeftCoord: CLLocationCoordinate2D = CLLocationCoordinate2D()
         topLeftCoord.latitude = -90
@@ -47,10 +54,10 @@ class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentatio
         bottomRightCoord.latitude = 90
         bottomRightCoord.longitude = -180
         for annotation: MKAnnotation in vMapView.annotations as [MKAnnotation]{
-            topLeftCoord.longitude = fmin(topLeftCoord.longitude, annotation.coordinate.longitude)
-            topLeftCoord.latitude = fmax(topLeftCoord.latitude, annotation.coordinate.latitude)
-            bottomRightCoord.longitude = fmax(bottomRightCoord.longitude, annotation.coordinate.longitude)
-            bottomRightCoord.latitude = fmin(bottomRightCoord.latitude, annotation.coordinate.latitude)
+        topLeftCoord.longitude = fmin(topLeftCoord.longitude, annotation.coordinate.longitude)
+        topLeftCoord.latitude = fmax(topLeftCoord.latitude, annotation.coordinate.latitude)
+        bottomRightCoord.longitude = fmax(bottomRightCoord.longitude, annotation.coordinate.longitude)
+        bottomRightCoord.latitude = fmin(bottomRightCoord.latitude, annotation.coordinate.latitude)
         }
         
         var region: MKCoordinateRegion = MKCoordinateRegion()
@@ -89,17 +96,17 @@ class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentatio
             controller.view.layer.borderColor = UIColor(red: 1.0/255.0, green: 78.0/255.0, blue: 44.0/255.0, alpha: 1.0).CGColor
             
             if let popover = controller.popoverPresentationController {
-
+                
                 popover.sourceView = view
-            
+                
                 // the position of the popover where it's showed
-                    popover.sourceRect = view.bounds
-            
+                popover.sourceRect = view.bounds
+                
                 // the size you want to display
                 controller.preferredContentSize = CGSizeMake(200,100)
                 popover.delegate = self
             }
-        
+            
             self.presentViewController(controller, animated: true, completion: nil)
         }
     }
@@ -115,7 +122,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentatio
             return nil
         }
     }
-
+    
     // Current Location
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -135,7 +142,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentatio
     func tappedViewButton(res:RestaurantModel?){
         performSegueWithIdentifier("viewFromMapSegue", sender: res)
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "viewFromMapSegue"{
             let res = sender as! RestaurantModel

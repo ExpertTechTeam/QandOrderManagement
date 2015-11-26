@@ -40,6 +40,8 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
     let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
     let subTitleFont = UIFont(name: "ravenna-serial-light-regular", size: 13.0)
     
+    var common : CommonController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -101,8 +103,13 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
             self.friendList.text = "-"
         }
         
-        self.scrollView.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height + 120)
-        
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
+        common.initializeTab3(self)
+    }
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
     }
     
     override func didReceiveMemoryWarning() {
@@ -129,7 +136,7 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
             //Hide view
             self.viewBookingBtn.setTitle("Show Booking Information", forState: UIControlState.Normal)
             self.scrollView.setContentOffset(CGPointMake(0, -64), animated: true)
-           
+            
         }
         
     }
@@ -153,7 +160,7 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         }
         self.friendList.font = subTitleFont
         self.friendList.text = friend
- 
+        
     }
     
     

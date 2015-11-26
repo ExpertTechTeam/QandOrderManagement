@@ -13,11 +13,20 @@ class MenuLevel1NoQueueViewController: UIViewController, UITableViewDelegate, UI
     @IBOutlet weak var btnCart:UIButton!
     var lblCartCount:UILabel!
     let category = ["Signature Selection", "Chicken", "Seafood","Pork","Beef",  "Burger","Combination", "Kids",  "Salad",  "Appetizer", "Beverage"]
+    var common : CommonController!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureCart()
         self.menuLevelTableView.delegate = self
         self.menuLevelTableView.contentInset = UIEdgeInsetsMake(-1.0, 0.0, 0.0, 0.0);
+        
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
+        common.initializeTab3(self)
+    }
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
     }
     func configureCart(){
         var amount = 0
@@ -42,7 +51,7 @@ class MenuLevel1NoQueueViewController: UIViewController, UITableViewDelegate, UI
     override func viewWillAppear(animated: Bool) {
         lblCartCount.text = "\(MyVariables.countCart)"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,8 +59,8 @@ class MenuLevel1NoQueueViewController: UIViewController, UITableViewDelegate, UI
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-                let menuSection1 = tableView.dequeueReusableCellWithIdentifier("favoriteCell") as! MenuLevel1Section1TableViewCell
-                return menuSection1
+            let menuSection1 = tableView.dequeueReusableCellWithIdentifier("favoriteCell") as! MenuLevel1Section1TableViewCell
+            return menuSection1
             
         }
         else{
@@ -108,7 +117,7 @@ class MenuLevel1NoQueueViewController: UIViewController, UITableViewDelegate, UI
     
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
@@ -151,9 +160,9 @@ class MenuLevel1NoQueueViewController: UIViewController, UITableViewDelegate, UI
             let sectionList = menuController.getMenuSection(category[selectedPath.row])
             controller.sectionList = sectionList
             controller.isFavorite = false
-
+            
         }
     }
     
-
+    
 }

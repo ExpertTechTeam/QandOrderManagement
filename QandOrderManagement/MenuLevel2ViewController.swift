@@ -16,6 +16,7 @@ class MenuLevel2ViewController: UIViewController, UITableViewDataSource, UITable
     var menuListBySection : [[MenuModel]?] = []
     var sectionList : [String] = []
     var isFavorite = false
+    var common:CommonController!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureCart()
@@ -39,6 +40,13 @@ class MenuLevel2ViewController: UIViewController, UITableViewDataSource, UITable
         
         tableView.menuListBySection = menuListBySection
         
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
+        common.initializeTab3(self)
+    }
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
     }
     override func viewDidAppear(animated: Bool) {
         lblCartCount.text = "\(MyVariables.countCart)"
@@ -142,8 +150,8 @@ class MenuLevel2ViewController: UIViewController, UITableViewDataSource, UITable
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "orderSegue" {
-        
-        }else {
+            
+        }else if segue.identifier == "menuDetailSegue" {
             let controller = segue.destinationViewController as! MenuDetailViewController
             let selectedPath = self.tableView.indexPathForSelectedRow!
             let menuList = menuListBySection[selectedPath.section]!
@@ -151,5 +159,5 @@ class MenuLevel2ViewController: UIViewController, UITableViewDataSource, UITable
         }
         
     }
-
+    
 }

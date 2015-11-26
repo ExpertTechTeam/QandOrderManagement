@@ -9,19 +9,21 @@
 import UIKit
 
 class VoucherDetailViewController: UIViewController {
-
     
     @IBOutlet weak var imgQRcode: UIImageView!
-    let navigationFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
+    var common:CommonController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-
-        
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab5(self)
     }
-
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,15 +45,15 @@ class VoucherDetailViewController: UIViewController {
         self.presentViewController(a, animated: true, completion: nil)
         
     }
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

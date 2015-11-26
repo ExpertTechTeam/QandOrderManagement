@@ -42,6 +42,8 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
     
     var continueItem = UIBarButtonItem()
     
+    var common : CommonController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -105,11 +107,6 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         
         //Setup Nav
         self.navigationItem.title = self.selectedRestaurant
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
-        
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
         
         if let font = customFont {
             continueItem.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)}
@@ -119,9 +116,13 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name:UIKeyboardWillHideNotification, object: nil);
         
-        
-        
-        // Do any additional setup after loading the view.
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
+        common.initializeTab3(self)
+    }
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

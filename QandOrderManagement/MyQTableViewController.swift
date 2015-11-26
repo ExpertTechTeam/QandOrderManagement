@@ -17,6 +17,9 @@ class MyQTableViewController: UITableViewController {
     var activeQueue : [QueueModel] = []
     var tempQueue : [QueueModel] = []
     var refreshControl1:UIRefreshControl!
+    
+    var common : CommonController!
+    
     override func viewDidLoad() {
         print("MyQTableViewController viewDidLoad")
         super.viewDidLoad()
@@ -40,14 +43,14 @@ class MyQTableViewController: UITableViewController {
         branchForTempQueue1.res_contact = "02-391-4040"
         
         let activeQueue1 = QueueModel(queueNo: "A009", restaurant : "The Pizza Company", branchModel: branchForActiveQueue1, noOfPerson: "3" ,babyFlag: true, wheelchairFlag: true, specialRequest: "", friendList: [], confirmCode: 492013, status: "Active")
-//        let queueActive2 = QueueModel(queueNo: "A34", restaurant : "Sizzler", branchModel: branchForActiveQueue2, noOfPerson: "4", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 492013, status: "Active")
+        //        let queueActive2 = QueueModel(queueNo: "A34", restaurant : "Sizzler", branchModel: branchForActiveQueue2, noOfPerson: "4", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 492013, status: "Active")
         
         let activeQueue3 = QueueModel(queueNo: "A028", restaurant : "Swensen", branchModel: branchForActiveQueue2, noOfPerson: "4", babyFlag: true, wheelchairFlag: false, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 31969, status: "Active")
         
         let tempQueue1 = QueueModel(queueNo: "-", restaurant : "The Pizza Company", branchModel: branchForTempQueue1, noOfPerson: "7", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 88710, status: "Draft")
         
         MyVariables.activeQueueList.append(activeQueue1)
-//        MyVariables.activeQueueList.append(queueActive2)
+        //        MyVariables.activeQueueList.append(queueActive2)
         MyVariables.activeQueueList.append(activeQueue3)
         
         MyVariables.tempQueueList.append(tempQueue1)
@@ -60,8 +63,16 @@ class MyQTableViewController: UITableViewController {
         self.refreshControl1.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl1.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl1)
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab3(self)
     }
-    
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
+    }
+    @IBAction func exitFromMainPage3(segue:UIStoryboardSegue){
+        print("Exit to main page")
+    }
     func refresh(refresh:UIRefreshControl)
     {
         self.activeQueue = MyVariables.activeQueueList
@@ -88,7 +99,7 @@ class MyQTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
@@ -102,7 +113,7 @@ class MyQTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 2
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if(section == 0){
@@ -138,10 +149,10 @@ class MyQTableViewController: UITableViewController {
         header.backgroundView = sectionImgView
         
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! MyQTableViewCell
-
+        
         if(indexPath.section == 0){
             //Active Q
             if(self.activeQueue[indexPath.row].restaurant == "Sizzler"){
@@ -212,7 +223,7 @@ class MyQTableViewController: UITableViewController {
             }
             
         }
-
+        
         return cell
     }
     
@@ -227,11 +238,11 @@ class MyQTableViewController: UITableViewController {
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    // Return false if you do not want the specified item to be editable.
+    return true
     }
     */
-
+    
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -246,7 +257,7 @@ class MyQTableViewController: UITableViewController {
                 if(indexPath.section == 0){
                     //remove from active
                     MyVariables.activeQueueList.removeAtIndex(indexPath.row)
-//                    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    //                    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
                     self.activeQueue.removeAtIndex(indexPath.row)
                     self.tableView.reloadData()
                     
@@ -265,28 +276,28 @@ class MyQTableViewController: UITableViewController {
             
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     
-
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    
     }
     */
-
+    
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    // Return false if you do not want the item to be re-orderable.
+    return true
     }
     */
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
@@ -313,7 +324,7 @@ class MyQTableViewController: UITableViewController {
             
             
         }
-
+        
         
     }
     

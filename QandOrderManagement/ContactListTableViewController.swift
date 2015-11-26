@@ -23,6 +23,8 @@ class ContactListTableViewController: UITableViewController {
     
     let navigationFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
     
+    var common : CommonController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 32
@@ -30,7 +32,7 @@ class ContactListTableViewController: UITableViewController {
         
         //Setup Navigation
         self.navigationItem.title = "Contacts"
-
+        
         var doneItem = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "back")
         
         if let font = customFont {
@@ -39,6 +41,13 @@ class ContactListTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = doneItem
         self.navigationItem.hidesBackButton = true
         
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
+        common.initializeTab3(self)
+    }
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
     }
     
     func back(){

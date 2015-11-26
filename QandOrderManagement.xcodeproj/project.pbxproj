@@ -94,10 +94,11 @@
 		3AD5F5091BFDC17A00AA64DA /* section_background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F5081BFDC17A00AA64DA /* section_background3.png */; };
 		3AD5F5111BFDC95200AA64DA /* outline_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50E1BFDC95200AA64DA /* outline_white.png */; };
 		3AD5F5121BFDC95200AA64DA /* outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F50F1BFDC95200AA64DA /* outline.png */; };
-		3AE939411C05C9C800CCE50B /* TakeQrPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE939401C05C9C800CCE50B /* TakeQrPhotoViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3AE939411C05C9C800CCE50B /* TakeQrPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE939401C05C9C800CCE50B /* TakeQrPhotoViewController.swift */; };
 		A10213161C05C5780085FE13 /* RecommendPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10213141C05C5780085FE13 /* RecommendPopUpViewController.xib */; };
 		A10213171C05C5780085FE13 /* RecommendPopUpViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10213151C05C5780085FE13 /* RecommendPopUpViewControllerSwift.swift */; };
 		A10213191C05C6010085FE13 /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = A10213181C05C6010085FE13 /* Close.png */; };
+		A13FC6311C0753E400D9CAD1 /* CommonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FC6301C0753E400D9CAD1 /* CommonController.swift */; };
 		A1A25B991BFC5F66001012DA /* icon_splashpage.png in Resources */ = {isa = PBXBuildFile; fileRef = A1A25B981BFC5F66001012DA /* icon_splashpage.png */; };
 		A1A25BD81BFC7EAA001012DA /* giftbox_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = A1A25B9A1BFC7EA9001012DA /* giftbox_blue.png */; };
 		A1A25BD91BFC7EAA001012DA /* giftbox_red.png in Resources */ = {isa = PBXBuildFile; fileRef = A1A25B9B1BFC7EA9001012DA /* giftbox_red.png */; };
@@ -386,12 +387,10 @@
 		A1FA25D81BF9D33C00F6B0B9 /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25D71BF9D33C00F6B0B9 /* GlobalVariable.swift */; };
 		A1FA25DA1BF9D3A300F6B0B9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25D91BF9D3A300F6B0B9 /* Order.swift */; };
 		A1FA25E01BF9D3F900F6B0B9 /* BeefButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25DC1BF9D3F900F6B0B9 /* BeefButton.swift */; };
-		A1FA25E11BF9D3F900F6B0B9 /* MenuDetailBeefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25DD1BF9D3F900F6B0B9 /* MenuDetailBeefViewController.swift */; };
 		A1FA25E21BF9D3F900F6B0B9 /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25DE1BF9D3F900F6B0B9 /* MenuDetailViewController.swift */; };
 		A1FA25E31BF9D3F900F6B0B9 /* MenuLevel1NoQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25DF1BF9D3F900F6B0B9 /* MenuLevel1NoQueueViewController.swift */; };
 		A1FA25E61BF9D40300F6B0B9 /* MenuLevel1Section1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25E41BF9D40300F6B0B9 /* MenuLevel1Section1TableViewCell.swift */; };
 		A1FA25E71BF9D40300F6B0B9 /* MenuLevel1Section2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25E51BF9D40300F6B0B9 /* MenuLevel1Section2TableViewCell.swift */; };
-		A1FA25EF1BF9D41A00F6B0B9 /* MenuLevel1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25E81BF9D41A00F6B0B9 /* MenuLevel1ViewController.swift */; };
 		A1FA25F01BF9D41A00F6B0B9 /* MenuLevel2DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25E91BF9D41A00F6B0B9 /* MenuLevel2DrinkTableViewCell.swift */; };
 		A1FA25F11BF9D41A00F6B0B9 /* MenuLevel2DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25EA1BF9D41A00F6B0B9 /* MenuLevel2DrinkViewController.swift */; };
 		A1FA25F21BF9D41A00F6B0B9 /* MenuLevel2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA25EB1BF9D41A00F6B0B9 /* MenuLevel2TableViewCell.swift */; };
@@ -513,6 +512,7 @@
 		A10213141C05C5780085FE13 /* RecommendPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendPopUpViewController.xib; sourceTree = "<group>"; };
 		A10213151C05C5780085FE13 /* RecommendPopUpViewControllerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendPopUpViewControllerSwift.swift; sourceTree = "<group>"; };
 		A10213181C05C6010085FE13 /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
+		A13FC6301C0753E400D9CAD1 /* CommonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonController.swift; sourceTree = "<group>"; };
 		A1A25B981BFC5F66001012DA /* icon_splashpage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_splashpage.png; sourceTree = "<group>"; };
 		A1A25B9A1BFC7EA9001012DA /* giftbox_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = giftbox_blue.png; path = Images/giftbox_blue.png; sourceTree = "<group>"; };
 		A1A25B9B1BFC7EA9001012DA /* giftbox_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = giftbox_red.png; path = Images/giftbox_red.png; sourceTree = "<group>"; };
@@ -801,12 +801,10 @@
 		A1FA25D71BF9D33C00F6B0B9 /* GlobalVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
 		A1FA25D91BF9D3A300F6B0B9 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A1FA25DC1BF9D3F900F6B0B9 /* BeefButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeefButton.swift; sourceTree = "<group>"; };
-		A1FA25DD1BF9D3F900F6B0B9 /* MenuDetailBeefViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDetailBeefViewController.swift; sourceTree = "<group>"; };
 		A1FA25DE1BF9D3F900F6B0B9 /* MenuDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuDetailViewController.swift; sourceTree = "<group>"; };
 		A1FA25DF1BF9D3F900F6B0B9 /* MenuLevel1NoQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLevel1NoQueueViewController.swift; sourceTree = "<group>"; };
 		A1FA25E41BF9D40300F6B0B9 /* MenuLevel1Section1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLevel1Section1TableViewCell.swift; sourceTree = "<group>"; };
 		A1FA25E51BF9D40300F6B0B9 /* MenuLevel1Section2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLevel1Section2TableViewCell.swift; sourceTree = "<group>"; };
-		A1FA25E81BF9D41A00F6B0B9 /* MenuLevel1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLevel1ViewController.swift; sourceTree = "<group>"; };
 		A1FA25E91BF9D41A00F6B0B9 /* MenuLevel2DrinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLevel2DrinkTableViewCell.swift; sourceTree = "<group>"; };
 		A1FA25EA1BF9D41A00F6B0B9 /* MenuLevel2DrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLevel2DrinkViewController.swift; sourceTree = "<group>"; };
 		A1FA25EB1BF9D41A00F6B0B9 /* MenuLevel2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLevel2TableViewCell.swift; sourceTree = "<group>"; };
@@ -997,6 +995,7 @@
 		3A6E5B1E1BEC9D6F0078A941 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A13FC6301C0753E400D9CAD1 /* CommonController.swift */,
 				A1B131181C04BD5F0058BBCC /* ViewController.swift */,
 				A1A25CB41BFC86FA001012DA /* Home */,
 				A1A25C991BFC8150001012DA /* Setting */,
@@ -1427,7 +1426,6 @@
 			isa = PBXGroup;
 			children = (
 				A1FA25DF1BF9D3F900F6B0B9 /* MenuLevel1NoQueueViewController.swift */,
-				A1FA25E81BF9D41A00F6B0B9 /* MenuLevel1ViewController.swift */,
 				A1FA25E41BF9D40300F6B0B9 /* MenuLevel1Section1TableViewCell.swift */,
 				A1FA25E51BF9D40300F6B0B9 /* MenuLevel1Section2TableViewCell.swift */,
 				A1FA25EC1BF9D41A00F6B0B9 /* MenuLevel2ViewController.swift */,
@@ -1436,7 +1434,6 @@
 				A1FA25EA1BF9D41A00F6B0B9 /* MenuLevel2DrinkViewController.swift */,
 				A1FA25ED1BF9D41A00F6B0B9 /* OrderListViewController.swift */,
 				A1FA25EE1BF9D41A00F6B0B9 /* OrderTableViewCell.swift */,
-				A1FA25DD1BF9D3F900F6B0B9 /* MenuDetailBeefViewController.swift */,
 				A1FA25DE1BF9D3F900F6B0B9 /* MenuDetailViewController.swift */,
 				A1FA25DC1BF9D3F900F6B0B9 /* BeefButton.swift */,
 			);
@@ -1870,7 +1867,6 @@
 				3A6E5B221BECBDB70078A941 /* HomePageViewController.swift in Sources */,
 				A1FA25DA1BF9D3A300F6B0B9 /* Order.swift in Sources */,
 				A1FA25F21BF9D41A00F6B0B9 /* MenuLevel2TableViewCell.swift in Sources */,
-				A1FA25EF1BF9D41A00F6B0B9 /* MenuLevel1ViewController.swift in Sources */,
 				A1FA25E61BF9D40300F6B0B9 /* MenuLevel1Section1TableViewCell.swift in Sources */,
 				3A6E5B3B1BEE52A50078A941 /* BranchListViewController.swift in Sources */,
 				A1A25CAD1BFC8174001012DA /* ProfileEditViewController.swift in Sources */,
@@ -1879,6 +1875,7 @@
 				A1FA24B31BF9D17D00F6B0B9 /* MenuModel.swift in Sources */,
 				3A3110651C02FF6B0049B049 /* CurrentQueueTableViewCell.swift in Sources */,
 				3A6E5BAC1BF328390078A941 /* ReserveQueueViewController.swift in Sources */,
+				A13FC6311C0753E400D9CAD1 /* CommonController.swift in Sources */,
 				3A2F18281BFA02A200367FA2 /* QueueModel.swift in Sources */,
 				A1FA25F41BF9D41A00F6B0B9 /* OrderListViewController.swift in Sources */,
 				A1FA25E71BF9D40300F6B0B9 /* MenuLevel1Section2TableViewCell.swift in Sources */,
@@ -1886,7 +1883,6 @@
 				A1FA26021BF9D4AD00F6B0B9 /* PinAnnotationView.swift in Sources */,
 				3A6E5B8C1BF1F6C40078A941 /* BranchTableViewCell.swift in Sources */,
 				A1A25C981BFC814B001012DA /* RatingControl.swift in Sources */,
-				A1FA25E11BF9D3F900F6B0B9 /* MenuDetailBeefViewController.swift in Sources */,
 				A1FA24B81BF9D1EF00F6B0B9 /* UIExpandableTableView.swift in Sources */,
 				A1FA24B21BF9D17D00F6B0B9 /* MenuController.swift in Sources */,
 				A1FA25E21BF9D3F900F6B0B9 /* MenuDetailViewController.swift in Sources */,

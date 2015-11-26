@@ -37,18 +37,18 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, KWStepper
     @IBOutlet weak var vLine3:UIView!
     @IBOutlet weak var vCookingSteak:UIView!
     @IBOutlet weak var vSideDisk:UIView!
-
+    var common : CommonController!
     override func viewDidLoad() {
         super.viewDidLoad()
         vStar.layer.cornerRadius = vStar.frame.size.width/2
         vStar.clipsToBounds = true
         vStar.layer.borderColor = UIColor.whiteColor().CGColor
         vStar.layer.borderWidth = 1.0
-       // self.autoLayout()
+        // self.autoLayout()
         if menu?.menu_beef_flag == "N" {
             self.vLine1.hidden = true
             self.vCookingSteak.hidden = true
-           // self.vCookingSteak = self.vSideDisk.copy() as! UIView
+            // self.vCookingSteak = self.vSideDisk.copy() as! UIView
             self.autoLayout()
         }
         self.configureCart()
@@ -57,15 +57,23 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, KWStepper
         self.configureBtnSideDisk()
         self.configureStepper()
         self.initialMenuDetail()
+        
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
+        common.initializeTab3(self)
+    }
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
     }
     override func viewDidAppear(animated: Bool) {
         lblCartCount.text = "\(MyVariables.countCart)"
     }
     func autoLayout(){
         self.vMain.translatesAutoresizingMaskIntoConstraints = false
-//        self.vCookingSteak.translatesAutoresizingMaskIntoConstraints = false
+        //        self.vCookingSteak.translatesAutoresizingMaskIntoConstraints = false
         self.vSideDisk.translatesAutoresizingMaskIntoConstraints = false
-//        self.vLine1.translatesAutoresizingMaskIntoConstraints = false
+        //        self.vLine1.translatesAutoresizingMaskIntoConstraints = false
         self.vLine2.translatesAutoresizingMaskIntoConstraints = false
         self.vLine3.translatesAutoresizingMaskIntoConstraints = false
         let viewsDict = ["vMain":self.vMain, "vCookingSteak":self.vCookingSteak, "vSideDisk":self.vSideDisk, "vLine1":self.vLine1, "vLine2":self.vLine2,"vLine3":self.vLine3,"btnAddToCart":self.btnAddToCart]
@@ -117,12 +125,12 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, KWStepper
         self.view.addConstraint(addtocart_horizontal_constraint)
         self.view.addConstraints(addtocart_constraint_height)
         self.view.addConstraints(addtocart_constraint_width)
-
+        
         // Vertical
         let constraint_position_v:Array = NSLayoutConstraint.constraintsWithVisualFormat("V:|-60-[vMain]-0-[vLine2]-0-[vSideDisk]-0-[vLine3]-orderSpacing-[btnAddToCart]", options: NSLayoutFormatOptions(rawValue: 0), metrics: viewMetrics, views: viewsDict)
         
         self.view.addConstraints(constraint_position_v)
-
+        
     }
     
     func configureCart(){
@@ -211,7 +219,7 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, KWStepper
         let stepper = self.stepper!
         let minValue = NSString(format: "%.f", stepper.minimumValue)
         let maxValue = NSString(format: "%.f", stepper.maximumValue)
-    
+        
     }
     
     // MARK: KWStepperDelegate Methods
@@ -233,8 +241,8 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, KWStepper
         print("Min value clamped")
         stepperDidClampValue()
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -388,29 +396,29 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, KWStepper
         addToCartPopupView.txtProductName.font = UIFont(name: "Century Gothic", size: 12)
         addToCartPopupView.lblQuantity.text = "\(self.amount.text!)"
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            // do your task
-            dispatch_async(dispatch_get_main_queue()) {
-                UIView.animateWithDuration(2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-                    self.addToCartPopupView.alpha = 1.0 }, completion: nil)
-                UIView.animateWithDuration(1, delay: 3.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                    self.addToCartPopupView.alpha = 0.0 }, completion: nil)
-                
-                
-            }
+        // do your task
+        dispatch_async(dispatch_get_main_queue()) {
+        UIView.animateWithDuration(2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+        self.addToCartPopupView.alpha = 1.0 }, completion: nil)
+        UIView.animateWithDuration(1, delay: 3.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+        self.addToCartPopupView.alpha = 0.0 }, completion: nil)
+        
+        
+        }
         }
         */
         
     }
-
+    
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

@@ -28,16 +28,13 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
     let navigationFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
     let customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
     
+    var common : CommonController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Setup Nav
         self.navigationItem.title = self.selectedRestaurant
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: (41/255.0), green: (108/255.0), blue: (163/255.0), alpha: 1.0)
-        
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationFont!, NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
         
         let continueItem = UIBarButtonItem(title: "Continue", style: .Plain, target: self, action: "continueBtnTapped")
         
@@ -50,6 +47,12 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
         self.branchLocation!.text = self.selectedBranch.res_address
         self.branchServiceTimeContact!.text = "Open 10:00 - 21:30 "+"Tel. "+self.selectedBranch.res_contact
         
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
+    }
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
     }
     
     override func didReceiveMemoryWarning() {

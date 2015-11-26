@@ -14,6 +14,7 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var lblTotalPrice: UILabel!
     @IBOutlet weak var btnCart:UIButton!
     var lblCartCount:UILabel!
+    var common:CommonController!
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.orderListTableView.contentOffset = CGPointMake(0, 10)
@@ -21,7 +22,24 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
         self.configureCart()
         self.reCalculate()
         // Do any additional setup after loading the view.
+        
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
+        common.initializeTab3(self)
     }
+    
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
+        var quantity = 0
+        for order in MyVariables.orderList {
+            quantity += order.orderQuantity
+        }
+        print("Quantity : \(quantity)")
+        MyVariables.countCart = quantity
+    }
+    
+    
     override func viewDidAppear(animated: Bool) {
         lblCartCount.text = "\(MyVariables.countCart)"
     }
@@ -44,7 +62,7 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
         circleView.addSubview(lblCartCount)
         btnCart.addSubview(circleView)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -79,7 +97,7 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Top)
             tableView.endUpdates()
             self.reCalculate()
-
+            
         }
     }
     
@@ -92,7 +110,7 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
         return CGFloat.min
     }
     
-
+    
     func reCalculate(){
         print("recalculate")
         var grandTotal:NSDecimalNumber = 0
@@ -109,23 +127,15 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
         self.lblCartCount.text = "\(MyVariables.countCart)"
     }
     
-    override func viewDidDisappear(animated: Bool) {
-        var quantity = 0
-        for order in MyVariables.orderList {
-            quantity += order.orderQuantity
-        }
-        print("Quantity : \(quantity)")
-        MyVariables.countCart = quantity
-    }
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
