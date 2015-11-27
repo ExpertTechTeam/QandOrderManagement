@@ -22,7 +22,7 @@ class ContactLis2tTableViewController: UITableViewController {
     var lastSelectedIndexPath = NSIndexPath(forRow: -1, inSection: 0)
     var selectedRow : [String] = []
     var delegate:contact2Delegate?
-    
+    var common:CommonController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,14 @@ class ContactLis2tTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = doneItem
         self.navigationItem.hidesBackButton = true
         
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
+        common.initializeTab2(self)
+        common.initializeTab3(self)
+    }
+    override func viewDidDisappear(animated: Bool) {
+        common.deinitNotification()
     }
     
     func back(){

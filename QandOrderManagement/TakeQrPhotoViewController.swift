@@ -32,6 +32,9 @@ class TakeQrPhotoViewController: UIViewController {
     @IBAction func tappedQR(){
         self.performSegueWithIdentifier("displayQueue", sender: self)
     }
+    @IBAction func exitFromMainPage2(segue:UIStoryboardSegue){
+        print("Exit to main page")
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

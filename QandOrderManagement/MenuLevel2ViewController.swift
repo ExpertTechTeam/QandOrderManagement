@@ -43,6 +43,7 @@ class MenuLevel2ViewController: UIViewController, UITableViewDataSource, UITable
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)
+        common.initializeTab2(self)
         common.initializeTab3(self)
     }
     override func viewDidDisappear(animated: Bool) {

@@ -26,6 +26,7 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)
+        common.initializeTab2(self)
         common.initializeTab3(self)
     }
     

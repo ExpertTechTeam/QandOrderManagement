@@ -670,13 +670,14 @@
                         <segue destination="YBg-yC-c33" kind="push" identifier="continueBtnTapped" id="Fei-ii-dyT"/>
                         <segue destination="YBg-yC-c33" kind="push" identifier="confirmBtnTapped" id="H7f-Ae-rEH"/>
                         <segue destination="Uyf-oT-kxl" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="8u6-qF-bC1"/>
-                        <segue destination="Uyf-oT-kxl" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="Slf-s4-JGX"/>
+                        <segue destination="Uyf-oT-kxl" kind="unwind" identifier="exitToMainPage2Segue" animates="NO" unwindAction="exitFromMainPage2:" id="Slf-s4-JGX"/>
+                        <segue destination="Uyf-oT-kxl" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="IjN-XH-Ca2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEs-2e-iQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Uyf-oT-kxl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2745" y="672"/>
+            <point key="canvasLocation" x="2009" y="1760"/>
         </scene>
         <!--Confirm Queue View Controller-->
         <scene sceneID="kP8-Wb-P4E">
@@ -891,12 +892,13 @@
                         <segue destination="Im4-0W-Wo9" kind="push" identifier="addfriend2" id="JBD-Sd-oHJ"/>
                         <segue destination="TTN-pF-ncZ" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="GEd-dr-TU0"/>
                         <segue destination="TTN-pF-ncZ" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="BA9-Zo-Unv"/>
+                        <segue destination="TTN-pF-ncZ" kind="unwind" identifier="exitToMainPage2Segue" unwindAction="exitFromMainPage2:" id="vYL-LK-kwA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAv-eI-yzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="TTN-pF-ncZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3374" y="672"/>
+            <point key="canvasLocation" x="2638" y="1760"/>
         </scene>
         <!--View Qr View Controller-->
         <scene sceneID="sbp-U4-hmO">
@@ -954,12 +956,13 @@
                         <outlet property="branchServiceTimeContact" destination="dlF-6w-aAa" id="Muc-Rj-cGr"/>
                         <segue destination="V1A-Ll-5iY" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="xqL-Wh-Ku2"/>
                         <segue destination="V1A-Ll-5iY" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="0U0-7G-fmR"/>
+                        <segue destination="V1A-Ll-5iY" kind="unwind" identifier="exitToMainPage2Segue" unwindAction="exitFromMainPage2:" id="wlt-HG-NgW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDs-Qr-WW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="V1A-Ll-5iY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4215" y="1118"/>
+            <point key="canvasLocation" x="2638" y="2702"/>
         </scene>
         <!--Contact List Table View Controller-->
         <scene sceneID="7hv-eW-M6o">
@@ -987,13 +990,14 @@
                     <navigationItem key="navigationItem" id="ATA-Mu-WGf"/>
                     <connections>
                         <segue destination="nxV-ng-TSd" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="qeQ-o9-v0L"/>
-                        <segue destination="nxV-ng-TSd" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="dS6-4i-ZaY"/>
+                        <segue destination="nxV-ng-TSd" kind="unwind" identifier="exitToMainPage2Segue" animates="NO" unwindAction="exitFromMainPage2:" id="dS6-4i-ZaY"/>
+                        <segue destination="nxV-ng-TSd" kind="unwind" identifier="exitToMainPage3Segue" unwindAction="exitFromMainPage3:" id="W38-AX-FKa"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhT-6d-FHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nxV-ng-TSd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2745" y="1426"/>
+            <point key="canvasLocation" x="2009" y="2702"/>
         </scene>
         <!--MyQ Table View Controller-->
         <scene sceneID="GqU-bX-SYR">
@@ -1470,12 +1474,13 @@
                         <segue destination="Mrd-iY-RDY" kind="push" identifier="categorySegue" id="37K-yQ-AsI"/>
                         <segue destination="Iy3-M6-YV6" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="LfJ-ZO-TmB"/>
                         <segue destination="Iy3-M6-YV6" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="VtJ-dr-51m"/>
+                        <segue destination="Iy3-M6-YV6" kind="unwind" identifier="exitToMainPage2Segue" unwindAction="exitFromMainPage2:" id="xqD-2H-8lf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwL-Fb-9PV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Iy3-M6-YV6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3779" y="-844"/>
+            <point key="canvasLocation" x="3079" y="-126"/>
         </scene>
         <!--Sizzler-->
         <scene sceneID="GfY-f8-Pub">
@@ -1585,12 +1590,13 @@
                         <outlet property="tableView" destination="cjl-iW-Uhj" id="EzG-ga-dxi"/>
                         <segue destination="vUU-nV-g74" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="zwe-6A-9KK"/>
                         <segue destination="vUU-nV-g74" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="rbE-tQ-gKx"/>
+                        <segue destination="vUU-nV-g74" kind="unwind" identifier="exitToMainPage2Segue" unwindAction="exitFromMainPage2:" id="1Fc-9j-F9S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAe-hs-md4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="vUU-nV-g74" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4499" y="-836"/>
+            <point key="canvasLocation" x="3763" y="-126"/>
         </scene>
         <!--Order-->
         <scene sceneID="Ta7-Fh-D2b">
@@ -1783,12 +1789,13 @@
                         <outlet property="orderListTableView" destination="KKW-Dd-ZkF" id="cjd-B2-W8T"/>
                         <segue destination="Y9H-eq-vJ0" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="gPm-ow-q93"/>
                         <segue destination="Y9H-eq-vJ0" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="jo4-H5-MTY"/>
+                        <segue destination="Y9H-eq-vJ0" kind="unwind" identifier="exitToMainPage2Segue" unwindAction="exitFromMainPage2:" id="tRP-Lg-EXR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djU-DD-GKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Y9H-eq-vJ0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3170" y="-126"/>
+            <point key="canvasLocation" x="4218" y="584"/>
         </scene>
         <!--Sizzler-->
         <scene sceneID="kat-V3-usZ">
@@ -2098,12 +2105,13 @@
                         <outlet property="vStar" destination="ahR-Ig-ytL" id="F1t-al-dfJ"/>
                         <segue destination="fER-c2-HtO" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="PZ9-aD-bbI"/>
                         <segue destination="fER-c2-HtO" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="phj-B4-aOj"/>
+                        <segue destination="fER-c2-HtO" kind="unwind" identifier="exitToMainPage2Segue" unwindAction="exitFromMainPage2:" id="0Tv-Q9-rdf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0S-2q-nkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fER-c2-HtO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4954" y="-836"/>
+            <point key="canvasLocation" x="4218" y="-126"/>
         </scene>
         <!--Sizzler-->
         <scene sceneID="7uY-Xc-jt1">
@@ -2153,7 +2161,7 @@
                                                 </textView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zco-FE-y6S">
                                                     <rect key="frame" x="184" y="43" width="45" height="22"/>
-                                                    <color key="backgroundColor" red="0.16078431369999999" green="0.42352941179999998" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.0078431372550000003" green="0.46666666670000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="0Xs-f5-kSJ"/>
                                                         <constraint firstAttribute="width" constant="45" id="sU0-sP-bid"/>
@@ -2220,12 +2228,13 @@
                         <outlet property="tableView" destination="PdR-Ns-0jZ" id="ovD-XS-IcE"/>
                         <segue destination="Eeh-SK-etL" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="MNy-zR-kKy"/>
                         <segue destination="Eeh-SK-etL" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="hbF-Km-evN"/>
+                        <segue destination="Eeh-SK-etL" kind="unwind" identifier="exitToMainPage2Segue" unwindAction="exitFromMainPage2:" id="D01-8R-1iI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tP7-oO-2wB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Eeh-SK-etL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2715" y="-126"/>
+            <point key="canvasLocation" x="3763" y="584"/>
         </scene>
         <!--QR Code-->
         <scene sceneID="CIH-bw-PNx">
@@ -2280,12 +2289,13 @@
                     <connections>
                         <segue destination="XAe-U5-63g" kind="unwind" identifier="exitToMainPage1Segue" animates="NO" unwindAction="exitFromMainPage1:" id="mZt-Rd-CBk"/>
                         <segue destination="XAe-U5-63g" kind="unwind" identifier="exitToMainPage3Segue" animates="NO" unwindAction="exitFromMainPage3:" id="usd-MI-e62"/>
+                        <segue destination="XAe-U5-63g" kind="unwind" identifier="exitToMainPage2Segue" unwindAction="exitFromMainPage2:" id="kV7-fZ-2Ft"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ii9-S1-yMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="XAe-U5-63g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4215" y="397"/>
+            <point key="canvasLocation" x="3079" y="1763"/>
         </scene>
         <!--Bill-->
         <scene sceneID="R1L-y5-4K2">
@@ -3417,7 +3427,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Kr-6N-6GZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Kee-Oe-Rkh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1878" y="7103"/>
+            <point key="canvasLocation" x="1878" y="7094"/>
         </scene>
         <!--Coupon Detail-->
         <scene sceneID="iiT-Qs-1YA">
@@ -3539,7 +3549,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRO-FU-7y8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="O2r-Fr-W07" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2320" y="7103"/>
+            <point key="canvasLocation" x="2320" y="7094"/>
         </scene>
         <!--History-->
         <scene sceneID="0Bd-bv-fIc">
@@ -4352,9 +4362,9 @@
                                 <exclude reference="61p-Gp-SGk"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="JBp-Mu-7Y3"/>
                                 <exclude reference="cmB-SF-My5"/>
                                 <exclude reference="lEt-jX-wGF"/>
-                                <exclude reference="JBp-Mu-7Y3"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -4362,9 +4372,9 @@
                                 <include reference="61p-Gp-SGk"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="JBp-Mu-7Y3"/>
                                 <include reference="cmB-SF-My5"/>
                                 <include reference="lEt-jX-wGF"/>
-                                <include reference="JBp-Mu-7Y3"/>
                             </mask>
                         </variation>
                     </view>
@@ -4448,13 +4458,13 @@
         <image name="view_qr_2.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rri-Qb-Nue"/>
-        <segue reference="CAd-t5-nNn"/>
-        <segue reference="pgn-Dw-udU"/>
-        <segue reference="vMy-ol-8q2"/>
-        <segue reference="0Fr-sh-Vjk"/>
+        <segue reference="ZJm-sn-grv"/>
         <segue reference="d9B-03-t8d"/>
         <segue reference="gh0-4n-3KS"/>
-        <segue reference="ZJm-sn-grv"/>
+        <segue reference="Rri-Qb-Nue"/>
+        <segue reference="H7f-Ae-rEH"/>
+        <segue reference="pgn-Dw-udU"/>
+        <segue reference="Syd-tC-daW"/>
+        <segue reference="FDC-6k-oKv"/>
     </inferredMetricsTieBreakers>
 </document>
