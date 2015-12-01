@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="039-V9-dih">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="039-V9-dih">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -175,7 +175,6 @@
             <string>Ravenna-Serial-Medium-Regular</string>
             <string>Ravenna-Serial-Medium-Regular</string>
             <string>Ravenna-Serial-Medium-Regular</string>
-            <string>Ravenna-Serial-Medium-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -233,21 +232,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WsZ-JA-qZR">
-                                <rect key="frame" x="0.0" y="245" width="320" height="28"/>
+                                <rect key="frame" x="0.0" y="270" width="320" height="28"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="section_background3.png" translatesAutoresizingMaskIntoConstraints="NO" id="LsX-YR-eON">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="28"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ca2-2h-w7M">
-                                        <rect key="frame" x="8" y="3" width="111" height="21"/>
-                                        <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </label>
                                 </subviews>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTA-ck-yDe">
+                                <rect key="frame" x="0.0" y="64" width="320" height="185"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="f85-81-UZC">
+                                        <rect key="frame" x="141" y="143" width="39" height="37"/>
+                                    </pageControl>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="NZZ-vk-Ect" id="Chc-KS-TMQ"/>
+                                </connections>
+                            </scrollView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-gU-jbk">
-                                <rect key="frame" x="0.0" y="272" width="320" height="247"/>
+                                <rect key="frame" x="0.0" y="296" width="320" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" id="zc5-jN-dXl">
@@ -280,17 +284,6 @@
                                     <outlet property="delegate" destination="NZZ-vk-Ect" id="HIy-Q1-8p2"/>
                                 </connections>
                             </tableView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTA-ck-yDe">
-                                <rect key="frame" x="0.0" y="64" width="320" height="185"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="f85-81-UZC">
-                                        <rect key="frame" x="141" y="143" width="39" height="37"/>
-                                    </pageControl>
-                                </subviews>
-                                <connections>
-                                    <outlet property="delegate" destination="NZZ-vk-Ect" id="Chc-KS-TMQ"/>
-                                </connections>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -298,6 +291,7 @@
                         <barButtonItem key="backBarButtonItem" title="back" id="aGL-rM-8Sp"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="headerSectionView" destination="WsZ-JA-qZR" id="TkW-nO-EJc"/>
                         <outlet property="pcPromotion" destination="f85-81-UZC" id="sHe-AK-nIB"/>
                         <outlet property="scvPromotion" destination="MTA-ck-yDe" id="YvE-kW-RGX"/>
                         <outlet property="tbvRestaurant" destination="K2m-gU-jbk" id="pA5-dY-0Us"/>
@@ -439,20 +433,18 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.47450980392156861" green="0.71764705882352942" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Branch Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JM-D5-w3E">
-                                <rect key="frame" x="7" y="204" width="308" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Service Time Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXb-GE-wUh">
+                                <rect key="frame" x="20" y="234" width="280" height="21"/>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Service Time Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXb-GE-wUh">
-                                <rect key="frame" x="20" y="221" width="280" height="21"/>
-                                <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sizzler_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Svr-5D-IKb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sizzler_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Svr-5D-IKb">
                                 <rect key="frame" x="77" y="80" width="167" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="0Rb-hu-dWY"/>
+                                    <constraint firstAttribute="width" constant="167" id="TAk-wA-0HF"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Table" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKp-YE-1Oi">
                                 <rect key="frame" x="67" y="276" width="57" height="21"/>
@@ -460,21 +452,30 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Facebook_Logo_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="zCo-sm-Z9w">
-                                <rect key="frame" x="109" y="151" width="43" height="30"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Branch Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42t-rp-K5R">
-                                <rect key="frame" x="0.0" y="184" width="320" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Branch Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42t-rp-K5R">
+                                <rect key="frame" x="0.0" y="189" width="320" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GyP-e8-PlG"/>
+                                    <constraint firstAttribute="width" constant="320" id="Mo5-2g-Wo3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Medium-Regular" family="Ravenna-Serial-Medium" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Map_pin_Logo_1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2Rd-4Q-jYf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map_pin_Logo_1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2Rd-4Q-jYf">
                                 <rect key="frame" x="178" y="151" width="23" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="gMJ-tu-9GI"/>
+                                    <constraint firstAttribute="height" constant="30" id="rjh-96-u24"/>
+                                </constraints>
                                 <inset key="insetFor6xAndEarlier" minX="-27" minY="0.0" maxX="27" maxY="0.0"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Twitter_Logo_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="bv1-af-S7P">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter_Logo_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="bv1-af-S7P">
                                 <rect key="frame" x="148" y="150" width="25" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="1tE-wA-hgS"/>
+                                    <constraint firstAttribute="height" constant="32" id="5D5-UZ-jax"/>
+                                </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="udy-mI-KPu">
                                 <rect key="frame" x="20" y="299" width="280" height="176"/>
@@ -512,8 +513,37 @@
                                     <outlet property="delegate" destination="cuT-gH-Zzq" id="E4y-Ec-pId"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook_Logo_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="zCo-sm-Z9w">
+                                <rect key="frame" x="109" y="151" width="43" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="Aeq-hv-MzX"/>
+                                    <constraint firstAttribute="height" constant="30" id="V07-Nk-uiz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Branch Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JM-D5-w3E">
+                                <rect key="frame" x="6" y="212" width="308" height="21"/>
+                                <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zCo-sm-Z9w" firstAttribute="top" secondItem="Svr-5D-IKb" secondAttribute="bottom" constant="-2" id="7ju-TE-yig"/>
+                            <constraint firstItem="nXb-GE-wUh" firstAttribute="centerX" secondItem="Vu4-7T-zKo" secondAttribute="centerX" id="9C6-bt-hUm"/>
+                            <constraint firstItem="bv1-af-S7P" firstAttribute="centerX" secondItem="Vu4-7T-zKo" secondAttribute="centerX" id="FbQ-hP-rci"/>
+                            <constraint firstItem="Svr-5D-IKb" firstAttribute="centerX" secondItem="Vu4-7T-zKo" secondAttribute="centerX" id="M1q-gV-aVA"/>
+                            <constraint firstItem="2Rd-4Q-jYf" firstAttribute="leading" secondItem="bv1-af-S7P" secondAttribute="trailing" constant="5" id="MjK-QA-9QI"/>
+                            <constraint firstItem="bv1-af-S7P" firstAttribute="top" secondItem="Svr-5D-IKb" secondAttribute="bottom" constant="-3" id="X13-dF-rdK"/>
+                            <constraint firstItem="2Rd-4Q-jYf" firstAttribute="top" secondItem="Svr-5D-IKb" secondAttribute="bottom" constant="-2" id="YFn-F0-Idv"/>
+                            <constraint firstItem="7JM-D5-w3E" firstAttribute="centerX" secondItem="Vu4-7T-zKo" secondAttribute="centerX" id="ZOH-pa-sjM"/>
+                            <constraint firstItem="bv1-af-S7P" firstAttribute="leading" secondItem="zCo-sm-Z9w" secondAttribute="trailing" constant="-4" id="ZT0-7I-xxR"/>
+                            <constraint firstItem="42t-rp-K5R" firstAttribute="centerX" secondItem="Vu4-7T-zKo" secondAttribute="centerX" id="nlX-fM-T0B"/>
+                            <constraint firstItem="nXb-GE-wUh" firstAttribute="top" secondItem="7JM-D5-w3E" secondAttribute="bottom" constant="1" id="pbK-oU-awy"/>
+                            <constraint firstItem="Svr-5D-IKb" firstAttribute="top" secondItem="SvI-fj-Up7" secondAttribute="bottom" constant="36" id="qoj-Wh-sSO"/>
+                            <constraint firstItem="42t-rp-K5R" firstAttribute="top" secondItem="bv1-af-S7P" secondAttribute="bottom" constant="2" id="wC8-CX-7El"/>
+                            <constraint firstItem="7JM-D5-w3E" firstAttribute="top" secondItem="42t-rp-K5R" secondAttribute="bottom" constant="2" id="wLv-Pn-m6f"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3c9-Wd-rb6"/>
                     <connections>
@@ -4458,13 +4488,13 @@
         <image name="view_qr_2.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZJm-sn-grv"/>
-        <segue reference="d9B-03-t8d"/>
-        <segue reference="gh0-4n-3KS"/>
-        <segue reference="Rri-Qb-Nue"/>
-        <segue reference="H7f-Ae-rEH"/>
+        <segue reference="ah4-Jn-OxO"/>
         <segue reference="pgn-Dw-udU"/>
         <segue reference="Syd-tC-daW"/>
         <segue reference="FDC-6k-oKv"/>
+        <segue reference="d9B-03-t8d"/>
+        <segue reference="gh0-4n-3KS"/>
+        <segue reference="ZJm-sn-grv"/>
+        <segue reference="2Ee-Pf-YM7"/>
     </inferredMetricsTieBreakers>
 </document>

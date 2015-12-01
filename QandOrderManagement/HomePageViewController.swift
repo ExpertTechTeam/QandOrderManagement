@@ -13,6 +13,7 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableVie
     @IBOutlet weak var scvPromotion : UIScrollView!
     @IBOutlet weak var pcPromotion : UIPageControl!
     @IBOutlet weak var tbvRestaurant: UITableView!
+    @IBOutlet weak var headerSectionView: UIView!
     
     var pointNow: CGPoint!
     var pageImages: [UIImage] = []
@@ -21,18 +22,23 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableVie
     var countTimer:Int = 0
     var selectedRestaurant : Int = 0
     
+    var headerLabel = UILabel()
+    var statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+    var imageHeaderSectionView = UIImageView(image: (UIImage(named: "section_background3.png")))
+    
     var customFont = UIFont(name: "ravenna-serial-light-regular", size: 15.0)
+    var sectionFont = UIFont(name: "ravenna-serial-medium-regular", size: 15.0)
     let headerFont = UIFont(name: "ravenna-serial-light-regular", size: 20.0)
     
     var promotionArray : [String] = ["SizzlerPromotion9.png", "PizzaPromotion.jpg", "SwensenPromotion.jpg"]
     var restaurantArray : [String] = ["Sizzler", "The Pizza Company", "Burger King"]
     var imageNames : [String] = ["res_sizzler.png", "res_pizzacompany1.png", "res_swensen.jpg"]
     
+    var frameWidth : CGFloat = 0.0
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        -----Insert App Logo-----
-        //        let applogo = UIImageView(image: UIImage(named: "myq_white.png"))
-        //        self.navigationItem.titleView = applogo
         
         //Setup Navigation
         self.navigationItem.title = "SMART Q AND ORDER"
@@ -41,11 +47,10 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableVie
         self.tbvRestaurant.delegate = self
         self.tbvRestaurant.separatorStyle = UITableViewCellSeparatorStyle.None
         
-        
         //1
-        self.scvPromotion.frame = CGRectMake(0, 0, self.scvPromotion.frame.width, self.scvPromotion.frame.height)
-        let scrollViewWidth:CGFloat = self.scvPromotion.frame.width
-        let scrollViewHeight:CGFloat = self.scvPromotion.frame.height
+        self.frameWidth = self.view.frame.width
+        let scrollViewWidth:CGFloat = self.view.frame.width
+        let scrollViewHeight:CGFloat = self.view.frame.height*0.32
         
         //3
         let imgOne = UIImageView(frame: CGRectMake(0, 0,scrollViewWidth, scrollViewHeight))
@@ -55,20 +60,41 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableVie
         let imgThree = UIImageView(frame: CGRectMake(scrollViewWidth*2, 0,scrollViewWidth, scrollViewHeight))
         imgThree.image = UIImage(named: "PizzaPromotion.png")
         
-        
         self.scvPromotion.addSubview(imgOne)
         self.scvPromotion.addSubview(imgTwo)
         self.scvPromotion.addSubview(imgThree)
+        
         //4
-        self.scvPromotion.contentSize = CGSizeMake(self.scvPromotion.frame.width * 3, self.scvPromotion.frame.height)
+        self.scvPromotion.contentSize = CGSizeMake(self.view.frame.width*3, self.view.frame.height*0.32)
         self.scvPromotion.delegate = self
         self.pcPromotion.currentPage = 0
+        
         
         // Schedule a timer to auto slide to next page
         NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
         
+        
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidLayoutSubviews() {
+        self.scvPromotion.frame = CGRect(x: 0, y: self.navigationController!.navigationBar.frame.height+self.statusBarHeight, width: self.view.frame.width, height: self.view.frame.height*0.32)
+        
+        self.headerSectionView.backgroundColor = UIColor.blueColor()
+        self.headerSectionView.frame = CGRect(x: 0, y: self.scvPromotion.frame.height+self.navigationController!.navigationBar.frame.height+self.statusBarHeight, width: self.view.frame.width, height: 30)
+        self.imageHeaderSectionView.frame = CGRectMake(0, 0, self.view.frame.width, 30)
+        self.headerSectionView.addSubview(imageHeaderSectionView)
+        self.headerLabel = UILabel(frame: CGRectMake(10, 0, self.frameWidth, 30))
+        self.headerLabel.text = "Restaurant"
+        self.headerLabel.font = self.sectionFont
+        self.headerLabel.textColor = UIColor.whiteColor()
+        
+        self.headerSectionView.addSubview(headerLabel)
+        
+        self.tbvRestaurant.frame = CGRect(x: 0, y: self.scvPromotion.frame.height+self.navigationController!.navigationBar.frame.height+self.statusBarHeight+self.headerSectionView.frame.height, width: self.view.frame.width, height: 300)
+        
+    }
+    
     func moveToNextPage (){
         
         // Move to next page
@@ -161,10 +187,10 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableVie
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("cell1") as! UITableViewCell!
         
-        var imageView = UIImageView(frame: CGRectMake(5, 5, cell.frame.width-10, cell.frame.height - 5))
-        print("\(imageNames[indexPath.row])")
-        let image = UIImage(named: imageNames[indexPath.row])
+        var imageView = UIImageView(frame: CGRectMake(5, 5, self.frameWidth-10, self.tbvRestaurant.rowHeight-5))
+        var image = UIImage(named: imageNames[indexPath.row])
         imageView.image = image
+        
         //Just add imageView as subview of cell
         cell.addSubview(imageView)
         cell.sendSubviewToBack(imageView)
