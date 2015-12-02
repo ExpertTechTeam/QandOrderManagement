@@ -118,7 +118,13 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func viewDidLayoutSubviews() {
+        print(" \(self.view.frame.height)")
+        
+        
+//        self.viewBookingBtn.frame.origin = CGPoint(x: 0, y: 580)
+     //   self.bookingView.frame.origin = CGPoint(x: 0, y: self.view.frame.height-50)
+    }
     
     @IBAction func viewBookingInfo(){
         self.bookingViewVisible += 1
