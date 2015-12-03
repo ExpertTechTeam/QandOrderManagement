@@ -8,12 +8,13 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate  {
+class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var scvPromotion : UIScrollView!
     @IBOutlet weak var pcPromotion : UIPageControl!
     @IBOutlet weak var tbvRestaurant: UITableView!
     @IBOutlet weak var headerSectionView: UIView!
+    @IBOutlet weak var constraintTopOfPageControl: NSLayoutConstraint!
     
     var pointNow: CGPoint!
     var pageImages: [UIImage] = []
@@ -67,8 +68,8 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableVie
         //4
         self.scvPromotion.contentSize = CGSizeMake(self.view.frame.width*3, self.view.frame.height*0.32)
         self.scvPromotion.delegate = self
-        self.pcPromotion.currentPage = 0
-        
+        //self.pcPromotion.currentPage = 0
+        self.configurePageControl()
         
         // Schedule a timer to auto slide to next page
         NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
@@ -92,6 +93,8 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableVie
         self.headerSectionView.addSubview(headerLabel)
         
         self.tbvRestaurant.frame = CGRect(x: 0, y: self.scvPromotion.frame.height+self.navigationController!.navigationBar.frame.height+self.statusBarHeight+self.headerSectionView.frame.height, width: self.view.frame.width, height: 300)
+        
+        constraintTopOfPageControl.constant = scvPromotion.frame.height - (scvPromotion.frame.height / 6)
         
     }
     
@@ -210,7 +213,6 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableVie
         print("Exit to main page")
     }
     
-    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -236,6 +238,18 @@ class HomePageViewController: UIViewController, UIScrollViewDelegate, UITableVie
         //        }
         
     }
-    
+    func configurePageControl() {
+        // The total number of pages that are available is based on how many available colors we have.
+     //   self.pcPromotion = UIPageControl(frame: CGRectMake(50, 300, 200, 50))
+        
+        self.pcPromotion.numberOfPages = 3
+        self.pcPromotion.currentPage = 0
+      /*  self.pcPromotion.tintColor = UIColor.redColor()
+        self.pcPromotion.pageIndicatorTintColor = UIColor.blackColor()
+        self.pcPromotion.currentPageIndicatorTintColor = UIColor.greenColor()*/
+        self.scvPromotion.addSubview(self.pcPromotion)
+        self.scvPromotion.bringSubviewToFront(self.pcPromotion)
+        
+    }
     
 }
