@@ -29,6 +29,9 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
     
     @IBOutlet weak var viewBookingBtn : UIButton!
     
+    @IBOutlet weak var constraintBookingBtn: NSLayoutConstraint!
+    @IBOutlet weak var constraintHeightView: NSLayoutConstraint!
+    
     var hidebackitem : Bool = true
     var friendArray : [String] = []
     var queueModel : QueueModel = QueueModel()
@@ -102,7 +105,7 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         }else{
             self.friendList.text = "-"
         }
-        
+        self.autoLayoutSubviews()
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)
@@ -118,12 +121,9 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidLayoutSubviews() {
-        print(" \(self.view.frame.height)")
-        
-        
-//        self.viewBookingBtn.frame.origin = CGPoint(x: 0, y: 580)
-     //   self.bookingView.frame.origin = CGPoint(x: 0, y: self.view.frame.height-50)
+    func autoLayoutSubviews() {
+         constraintHeightView.constant = self.view.frame.height + 135
+        constraintBookingBtn.constant = self.view.frame.height - 135
     }
     
     @IBAction func viewBookingInfo(){
@@ -133,7 +133,7 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
             self.viewBookingBtn.setTitle("Hide Booking Information", forState: UIControlState.Normal)
             
             var addFriendBtn = UIButton(type: UIButtonType.Custom)
-            addFriendBtn.frame = CGRectMake(290, 73, 17, 17)
+            addFriendBtn.frame = CGRectMake(self.bookingView.frame.width - 40, 73, 17, 17)
             addFriendBtn.setImage(UIImage(named: "Plus"), forState: UIControlState.Normal)
             addFriendBtn.addTarget(self, action: "addFriendBtnTapped:", forControlEvents: UIControlEvents.TouchUpInside)
             self.bookingView.addSubview(addFriendBtn)
