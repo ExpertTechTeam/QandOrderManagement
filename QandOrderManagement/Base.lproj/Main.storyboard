@@ -4623,7 +4623,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j8G-V6-3eQ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8G-V6-3eQ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YZ3-Ft-let" userLabel="Home View">
@@ -4701,8 +4701,10 @@
                         <constraints>
                             <constraint firstItem="j8G-V6-3eQ" firstAttribute="leading" secondItem="Zpb-kZ-yAi" secondAttribute="leading" id="AJC-DD-zMF"/>
                             <constraint firstItem="H9d-jD-yab" firstAttribute="top" secondItem="j8G-V6-3eQ" secondAttribute="bottom" id="EuL-Xi-qtd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j8G-V6-3eQ" secondAttribute="trailing" constant="-20" id="Ixi-bk-qqb"/>
                             <constraint firstItem="H9d-jD-yab" firstAttribute="top" secondItem="61p-Gp-SGk" secondAttribute="bottom" id="JBp-Mu-7Y3"/>
                             <constraint firstItem="j8G-V6-3eQ" firstAttribute="top" secondItem="Zpb-kZ-yAi" secondAttribute="top" id="JTx-gl-6eP"/>
+                            <constraint firstItem="H9d-jD-yab" firstAttribute="top" secondItem="j8G-V6-3eQ" secondAttribute="bottom" id="Ljt-xY-aEa"/>
                             <constraint firstAttribute="trailing" secondItem="j8G-V6-3eQ" secondAttribute="trailing" id="SQO-HL-LHC"/>
                             <constraint firstItem="61p-Gp-SGk" firstAttribute="leading" secondItem="Zpb-kZ-yAi" secondAttribute="leading" id="cmB-SF-My5"/>
                             <constraint firstAttribute="trailing" secondItem="61p-Gp-SGk" secondAttribute="trailing" id="lEt-jX-wGF"/>
@@ -4712,9 +4714,9 @@
                                 <exclude reference="61p-Gp-SGk"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="JBp-Mu-7Y3"/>
                                 <exclude reference="cmB-SF-My5"/>
                                 <exclude reference="lEt-jX-wGF"/>
+                                <exclude reference="JBp-Mu-7Y3"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -4722,9 +4724,9 @@
                                 <include reference="61p-Gp-SGk"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="JBp-Mu-7Y3"/>
                                 <include reference="cmB-SF-My5"/>
                                 <include reference="lEt-jX-wGF"/>
+                                <include reference="JBp-Mu-7Y3"/>
                             </mask>
                         </variation>
                     </view>
