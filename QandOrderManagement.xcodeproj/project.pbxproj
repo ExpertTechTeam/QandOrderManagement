@@ -82,6 +82,7 @@
 		3A6E5BC61BF4A3B50078A941 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E5BC51BF4A3B50078A941 /* ContactListTableViewController.swift */; };
 		3A6E5BC91BF4E86E0078A941 /* tick_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A6E5BC71BF4E86E0078A941 /* tick_1.jpg */; };
 		3A6E5BCA1BF4E86E0078A941 /* tick_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A6E5BC81BF4E86E0078A941 /* tick_2.jpg */; };
+		3AC6572C1C13F6FD001BF77D /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6572B1C13F6FD001BF77D /* blank.png */; settings = {ASSET_TAGS = (); }; };
 		3AD5F4CA1BFB30F300AA64DA /* ViewQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5F4C91BFB30F300AA64DA /* ViewQrViewController.swift */; };
 		3AD5F4CC1BFB33DE00AA64DA /* MyQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5F4CB1BFB33DE00AA64DA /* MyQTableViewController.swift */; };
 		3AD5F4D81BFCEE4300AA64DA /* res_sizzler.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4D11BFCEE4300AA64DA /* res_sizzler.png */; };
@@ -496,6 +497,7 @@
 		3A6E5BC51BF4A3B50078A941 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 		3A6E5BC71BF4E86E0078A941 /* tick_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tick_1.jpg; sourceTree = "<group>"; };
 		3A6E5BC81BF4E86E0078A941 /* tick_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tick_2.jpg; sourceTree = "<group>"; };
+		3AC6572B1C13F6FD001BF77D /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank.png; sourceTree = "<group>"; };
 		3AD5F4C91BFB30F300AA64DA /* ViewQrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewQrViewController.swift; sourceTree = "<group>"; };
 		3AD5F4CB1BFB33DE00AA64DA /* MyQTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQTableViewController.swift; sourceTree = "<group>"; };
 		3AD5F4D11BFCEE4300AA64DA /* res_sizzler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = res_sizzler.png; sourceTree = "<group>"; };
@@ -929,6 +931,7 @@
 				A1A25BD51BFC7EAA001012DA /* child.png */,
 				A1A25BD61BFC7EAA001012DA /* man.png */,
 				A1A25BD71BFC7EAA001012DA /* wheelchair.png */,
+				3AC6572B1C13F6FD001BF77D /* blank.png */,
 				A1A25B981BFC5F66001012DA /* icon_splashpage.png */,
 				A1FA26081BF9E82A00F6B0B9 /* dining_room1.png */,
 				A1FA26061BF9E71E00F6B0B9 /* dining_room.png */,
@@ -1527,6 +1530,7 @@
 				A1FA25461BF9D30300F6B0B9 /* beef_mediumrare.png in Resources */,
 				A1A25BE51BFC7EAA001012DA /* SW_LOGO.jpg in Resources */,
 				A1FA257D1BF9D30300F6B0B9 /* header_menu.jpg in Resources */,
+				3AC6572C1C13F6FD001BF77D /* blank.png in Resources */,
 				A1FA254C1BF9D30300F6B0B9 /* beef_mediumwell1.png in Resources */,
 				A1FA25571BF9D30300F6B0B9 /* burg_bbq_bacon.jpg in Resources */,
 				A1FA257A1BF9D30300F6B0B9 /* header_Combination.jpg in Resources */,

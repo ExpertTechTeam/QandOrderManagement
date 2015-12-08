@@ -15,15 +15,17 @@ class TakeQrPhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.queueModel.queueNo = "B08"
+        self.queueModel.queueNo = "B032"
         self.queueModel.noOfPerson = "6"
         self.queueModel.confirmCode = 59103
-        self.queueModel.babyFlag = false
-        self.queueModel.wheelchairFlag = false
+        self.queueModel.babyFlag = true
+        self.queueModel.wheelchairFlag = true
         self.queueModel.status = "Active"
         self.queueModel.restaurant = "Swensen"
         self.queueModel.specialRequest = "Sofa Seat"
-        self.queueModel.branchModel = RestaurantController().getRestaurantById(10008)
+        self.queueModel.waitingQueue = 12
+        self.queueModel.waitingTime = 24
+        self.queueModel.branchModel = RestaurantController().getRestaurantById(10020)
         self.queueModel.friendList = ["Clerk P.", "Mark W.", "Pual R."]
         
         // Do any additional setup after loading the view.

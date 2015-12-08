@@ -307,11 +307,9 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
             }
             
             if(self.specialRequest.text.isEmpty){
-                print("1")
                 self.queueModel.specialRequest = "-"
                 
             }else{
-                print("2")
                 self.queueModel.specialRequest = self.specialRequest.text
                 
             }
@@ -322,6 +320,8 @@ class ReserveQueueViewController: UIViewController, KWStepperDelegate, contactDe
                 self.queueModel.friendList = self.friendArray
                 
             }
+            self.queueModel.waitingQueue = 7
+            self.queueModel.waitingTime = 28
             self.queueModel.status = "Active"
             self.queueModel.restaurant = "Sizzler"
             self.queueModel.branchModel = self.selectedBranch

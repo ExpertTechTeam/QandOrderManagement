@@ -42,7 +42,6 @@ class FeedbackViewController: UIViewController {
     
     @IBAction func submitFeedbackMethod(sender: AnyObject) {
         
-        
     }
     
     

@@ -17,6 +17,8 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
     
     @IBOutlet weak var queueNo : UILabel!
     @IBOutlet weak var confirmCode : UILabel!
+    @IBOutlet weak var waitingQueue : UILabel!
+    @IBOutlet weak var waitingTime : UILabel!
     
     @IBOutlet weak var bookingView : UIView!
     @IBOutlet weak var noOfPerson : UILabel!
@@ -69,6 +71,8 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
         
         self.queueNo.text = self.queueModel.queueNo
         self.confirmCode.text = String(self.queueModel.confirmCode)
+        self.waitingQueue.text = String(self.queueModel.waitingQueue)
+        self.waitingTime.text = String(self.queueModel.waitingTime)
         
         self.noOfPerson.text = self.queueModel.noOfPerson
         if(self.queueModel.babyFlag.boolValue){

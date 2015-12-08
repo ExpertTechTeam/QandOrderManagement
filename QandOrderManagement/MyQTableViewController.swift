@@ -27,14 +27,14 @@ class MyQTableViewController: UITableViewController {
         //Setup Navigation
         self.navigationItem.title = "My Queue"
         
-        let branchForActiveQueue1 = RestaurantModel()
-        branchForActiveQueue1.res_branch_name = "Central World"
-        branchForActiveQueue1.res_address = "3rd Floor, Beacon Zone, Central World"
-        branchForActiveQueue1.res_contact = "02-732-4999"
+//        let branchForActiveQueue1 = RestaurantModel()
+//        branchForActiveQueue1.res_branch_name = "Central World"
+//        branchForActiveQueue1.res_address = "3rd Floor, Beacon Zone, Central World"
+//        branchForActiveQueue1.res_contact = "02-732-4999"
         
         let branchForActiveQueue2 = RestaurantModel()
-        branchForActiveQueue2.res_branch_name = "Siam Paragon"
-        branchForActiveQueue2.res_address = "G Floor, Siam Paragon"
+        branchForActiveQueue2.res_branch_name = "Siam Center"
+        branchForActiveQueue2.res_address = "4th Floor, Siam Center"
         branchForActiveQueue2.res_contact = "02-391-4040"
         
         let branchForTempQueue1 = RestaurantModel()
@@ -42,14 +42,14 @@ class MyQTableViewController: UITableViewController {
         branchForTempQueue1.res_address = "5th Floor, Siam Square One"
         branchForTempQueue1.res_contact = "02-391-4040"
         
-        let activeQueue1 = QueueModel(queueNo: "A009", restaurant : "The Pizza Company", branchModel: branchForActiveQueue1, noOfPerson: "3" ,babyFlag: true, wheelchairFlag: true, specialRequest: "", friendList: [], confirmCode: 492013, status: "Active")
+//        let activeQueue1 = QueueModel(queueNo: "A009", restaurant : "The Pizza Company", branchModel: branchForActiveQueue1, noOfPerson: "3" ,babyFlag: true, wheelchairFlag: true, specialRequest: "", friendList: [], confirmCode: 492013, status: "Active", waitingQueue: 3, waitingTime: 12)
         //        let queueActive2 = QueueModel(queueNo: "A34", restaurant : "Sizzler", branchModel: branchForActiveQueue2, noOfPerson: "4", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 492013, status: "Active")
         
-        let activeQueue3 = QueueModel(queueNo: "A028", restaurant : "Swensen", branchModel: branchForActiveQueue2, noOfPerson: "4", babyFlag: true, wheelchairFlag: false, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 31969, status: "Active")
+        let activeQueue3 = QueueModel(queueNo: "B032", restaurant : "Swensen", branchModel: branchForActiveQueue2, noOfPerson: "6", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 59103, status: "Active", waitingQueue: 12, waitingTime: 24)
         
-        let tempQueue1 = QueueModel(queueNo: "-", restaurant : "The Pizza Company", branchModel: branchForTempQueue1, noOfPerson: "7", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 88710, status: "Draft")
+        let tempQueue1 = QueueModel(queueNo: "-", restaurant : "The Pizza Company", branchModel: branchForTempQueue1, noOfPerson: "7", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 88710, status: "Draft", waitingQueue: 0, waitingTime: 0)
         
-        MyVariables.activeQueueList.append(activeQueue1)
+//        MyVariables.activeQueueList.append(activeQueue1)
         //        MyVariables.activeQueueList.append(queueActive2)
         MyVariables.activeQueueList.append(activeQueue3)
         
@@ -155,6 +155,7 @@ class MyQTableViewController: UITableViewController {
         
         if(indexPath.section == 0){
             //Active Q
+            print("\(self.activeQueue[indexPath.row].queueNo)")
             if(self.activeQueue[indexPath.row].restaurant == "Sizzler"){
                 cell.restuarnatImg.image = UIImage(named: "Sizzler_Logo_3.png")
                 
@@ -170,23 +171,26 @@ class MyQTableViewController: UITableViewController {
             cell.branchName!.text = self.activeQueue[indexPath.row].branchModel.res_branch_name
             cell.noOfPerson!.text = self.activeQueue[indexPath.row].noOfPerson
             if(self.activeQueue[indexPath.row].babyFlag){
+                print("Baby Flag On")
                 cell.img1.image = UIImage(named: "baby.png")
-                
-            }
-            
-            if(self.activeQueue[indexPath.row].wheelchairFlag){
-                var wheelchair = UIImage(named: "wheelchair.png")
-                if(self.activeQueue[indexPath.row].babyFlag){
-                    //img 2
+                if(self.activeQueue[indexPath.row].wheelchairFlag){
+                    var wheelchair = UIImage(named: "wheelchair.png")
                     cell.img2.image = wheelchair
-                }else{
-                    cell.img1.image = wheelchair
                 }
                 
             }else{
-                print("Blank")
+                if(self.activeQueue[indexPath.row].wheelchairFlag){
+                    print("Wheel Chair On")
+                    var wheelchair = UIImage(named: "wheelchair.png")
+                    cell.img1.image = wheelchair
+                    cell.img2.image = UIImage(named: "blank.png")
+                    
+                }else{
+                    cell.img1.image = UIImage(named: "blank.png")
+                    cell.img2.image = UIImage(named: "blank.png")
+                }
+   
             }
-            
         }else{
             
             //Temp Q

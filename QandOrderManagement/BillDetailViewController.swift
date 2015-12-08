@@ -9,7 +9,9 @@
 import UIKit
 
 class BillDetailViewController: UIViewController {
+    
     var common : CommonController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,8 +28,7 @@ class BillDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
     /*
     // MARK: - Navigation
     

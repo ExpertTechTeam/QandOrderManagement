@@ -9,7 +9,7 @@
 import UIKit
 
 class VoucherDetailViewController: UIViewController {
-    
+    @IBOutlet weak var applyBtn: UIButton!
     @IBOutlet weak var imgQRcode: UIImageView!
     var common:CommonController!
     
@@ -36,6 +36,7 @@ class VoucherDetailViewController: UIViewController {
         a.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
             print("Click of default button")
             self.imgQRcode.image = UIImage(named: "QR_Code_Apply.png")
+            self.applyBtn.hidden = true
         }))
         
         a.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
