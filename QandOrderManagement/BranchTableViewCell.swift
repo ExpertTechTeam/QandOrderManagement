@@ -10,6 +10,8 @@ import UIKit
 
 class BranchTableViewCell: UITableViewCell {
     
+    
+    @IBOutlet weak var displayFavButton : UIButton!
     @IBOutlet weak var favButton : UIButton!
     @IBOutlet weak var branchLabel : UILabel!
 

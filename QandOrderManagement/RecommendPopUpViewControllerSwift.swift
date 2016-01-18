@@ -47,6 +47,9 @@ public class RecommendPopUpViewControllerSwift : UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        //self.view.frame = CGRectMake(0, 0,  self.view.frame.width , self.view.frame.height)
+       // self.vContainer.frame = CGRectMake(0, 0,  self.view.frame.width , self.view.frame.height)
+
         self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.6)
         self.vMain.layer.cornerRadius = 5
         self.vMain.layer.shadowOpacity = 0.8

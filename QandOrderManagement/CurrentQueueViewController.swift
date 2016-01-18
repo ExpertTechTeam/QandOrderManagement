@@ -118,6 +118,8 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
         self.popViewController.nav = self.navigationController
         self.popViewController.delegate = self
         self.popViewController.title = "This is a popup view"
+        
+        self.popViewController.view.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
         self.popViewController.showInView(self.view, withImage: UIImage(named: "typpzDemo"), withMessage: "There are more than 20 waiting queue for \(self.selectedRestaurant). Could you prefre the other branch below?", animated: true)
         
     }

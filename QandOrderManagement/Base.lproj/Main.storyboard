@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="039-V9-dih">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="039-V9-dih">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -339,9 +339,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="322" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDa-UT-Oh8">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSh-Pp-hWN">
                                                     <rect key="frame" x="14" y="7" width="21" height="22"/>
                                                     <state key="normal" title="Button" image="star_check.png"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDa-UT-Oh8">
+                                                    <rect key="frame" x="14" y="7" width="30" height="30"/>
+                                                    <state key="normal" title="Button"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRr-fb-Esb">
                                                     <rect key="frame" x="47" y="8" width="257" height="21"/>
@@ -353,6 +357,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="branchLabel" destination="cRr-fb-Esb" id="ByH-Ww-RZj"/>
+                                            <outlet property="displayFavButton" destination="DSh-Pp-hWN" id="mhx-BL-ibm"/>
                                             <outlet property="favButton" destination="RDa-UT-Oh8" id="pLw-Oh-CWo"/>
                                             <segue destination="cuT-gH-Zzq" kind="push" identifier="selectedbranch" id="rSP-Jd-XeI"/>
                                         </connections>
@@ -697,7 +702,7 @@
                                     <constraint firstAttribute="height" constant="20" id="D9N-rR-5kZ"/>
                                     <constraint firstAttribute="width" constant="20" id="o9a-RC-uas"/>
                                 </constraints>
-                                <state key="normal" image="Plus"/>
+                                <state key="normal" image="Plus-Fill"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVB-Qn-eV9" customClass="CountLabel" customModule="QandOrderManagement" customModuleProvider="target">
                                 <rect key="frame" x="221" y="197" width="57" height="21"/>
@@ -715,7 +720,7 @@
                                     <constraint firstAttribute="width" constant="20" id="5HI-3g-dnw"/>
                                     <constraint firstAttribute="height" constant="20" id="ade-E6-Mg4"/>
                                 </constraints>
-                                <state key="normal" image="Minus"/>
+                                <state key="normal" image="Minus-Fill"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Friend List:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCo-Oe-5Rb">
                                 <rect key="frame" x="33" y="398" width="128" height="21"/>
@@ -731,7 +736,7 @@
                                     <constraint firstAttribute="width" constant="20" id="Xda-fU-QHA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Ravenna-Serial-Light-Regular" family="Ravenna-Serial-Light" pointSize="15"/>
-                                <state key="normal" backgroundImage="Plus">
+                                <state key="normal" backgroundImage="Plus-Fill">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -4728,9 +4733,7 @@
         <image name="Button_bg.png" width="282" height="84"/>
         <image name="Facebook_Logo_1.png" width="512" height="512"/>
         <image name="Map_pin_Logo_1.jpg" width="204" height="204"/>
-        <image name="Minus" width="40" height="40"/>
         <image name="Minus-Fill" width="50" height="50"/>
-        <image name="Plus" width="40" height="40"/>
         <image name="Plus-Fill" width="50" height="50"/>
         <image name="QR_Code1.png" width="225" height="225"/>
         <image name="QR_code.png" width="25" height="25"/>
@@ -4785,11 +4788,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="d9B-03-t8d"/>
         <segue reference="gh0-4n-3KS"/>
-        <segue reference="Rri-Qb-Nue"/>
-        <segue reference="ah4-Jn-OxO"/>
-        <segue reference="pgn-Dw-udU"/>
+        <segue reference="qbE-Oc-yNF"/>
+        <segue reference="rSP-Jd-XeI"/>
         <segue reference="Syd-tC-daW"/>
         <segue reference="0Fr-sh-Vjk"/>
-        <segue reference="ZJm-sn-grv"/>
+        <segue reference="2Ee-Pf-YM7"/>
+        <segue reference="H7f-Ae-rEH"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -70,14 +70,14 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         var cell = tableView.dequeueReusableCellWithIdentifier("cell1") as! BranchTableViewCell!
         
         if(indexPath.section == 0){
-            cell.favButton.setImage(UIImage(named: "star_check.png"), forState: UIControlState.Normal)
+            cell.displayFavButton.setImage(UIImage(named: "star_check.png"), forState: UIControlState.Normal)
             cell.favButton.addTarget(self, action: "setFavourite:", forControlEvents: UIControlEvents.TouchUpInside)
             cell.branchLabel.text = branchFavouriteArray[indexPath.row].res_branch_name
             cell.branchLabel.font = customFont
             
         }else{
             
-            cell.favButton.setImage(UIImage(named: "star_uncheck.png"), forState: UIControlState.Normal)
+            cell.displayFavButton.setImage(UIImage(named: "star_uncheck.png"), forState: UIControlState.Normal)
             cell.favButton.addTarget(self, action: "setFavourite:", forControlEvents: UIControlEvents.TouchUpInside)
             cell.branchLabel.text = branchArray[indexPath.row].res_branch_name
             cell.branchLabel.font = customFont

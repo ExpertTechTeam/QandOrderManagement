@@ -138,7 +138,7 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
             
             var addFriendBtn = UIButton(type: UIButtonType.Custom)
             addFriendBtn.frame = CGRectMake(self.bookingView.frame.width - 40, 73, 17, 17)
-            addFriendBtn.setImage(UIImage(named: "Plus"), forState: UIControlState.Normal)
+            addFriendBtn.setImage(UIImage(named: "Plus-Fill"), forState: UIControlState.Normal)
             addFriendBtn.addTarget(self, action: "addFriendBtnTapped:", forControlEvents: UIControlEvents.TouchUpInside)
             self.bookingView.addSubview(addFriendBtn)
             self.scrollView.setContentOffset(CGPointMake(0, 50), animated: true)

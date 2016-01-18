@@ -45,9 +45,9 @@ class MyQTableViewController: UITableViewController {
 //        let activeQueue1 = QueueModel(queueNo: "A009", restaurant : "The Pizza Company", branchModel: branchForActiveQueue1, noOfPerson: "3" ,babyFlag: true, wheelchairFlag: true, specialRequest: "", friendList: [], confirmCode: 492013, status: "Active", waitingQueue: 3, waitingTime: 12)
         //        let queueActive2 = QueueModel(queueNo: "A34", restaurant : "Sizzler", branchModel: branchForActiveQueue2, noOfPerson: "4", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 492013, status: "Active")
         
-        let activeQueue3 = QueueModel(queueNo: "B032", restaurant : "Swensen", branchModel: branchForActiveQueue2, noOfPerson: "6", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 59103, status: "Active", waitingQueue: 12, waitingTime: 24)
+        let activeQueue3 = QueueModel(queueNo: "B032", restaurant : "Swensen", branchModel: branchForActiveQueue2, noOfPerson: "6", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 592103, status: "Active", waitingQueue: 12, waitingTime: 24)
         
-        let tempQueue1 = QueueModel(queueNo: "-", restaurant : "The Pizza Company", branchModel: branchForTempQueue1, noOfPerson: "7", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 88710, status: "Draft", waitingQueue: 0, waitingTime: 0)
+        let tempQueue1 = QueueModel(queueNo: "-", restaurant : "The Pizza Company", branchModel: branchForTempQueue1, noOfPerson: "7", babyFlag: true, wheelchairFlag: true, specialRequest: "Sofa Seat", friendList: ["Patty R.", "Robert E."], confirmCode: 889710, status: "Draft", waitingQueue: 0, waitingTime: 0)
         
 //        MyVariables.activeQueueList.append(activeQueue1)
         //        MyVariables.activeQueueList.append(queueActive2)
