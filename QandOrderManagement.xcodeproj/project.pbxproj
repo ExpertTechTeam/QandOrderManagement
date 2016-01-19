@@ -82,7 +82,7 @@
 		3A6E5BC61BF4A3B50078A941 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E5BC51BF4A3B50078A941 /* ContactListTableViewController.swift */; };
 		3A6E5BC91BF4E86E0078A941 /* tick_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A6E5BC71BF4E86E0078A941 /* tick_1.jpg */; };
 		3A6E5BCA1BF4E86E0078A941 /* tick_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A6E5BC81BF4E86E0078A941 /* tick_2.jpg */; };
-		3AC6572C1C13F6FD001BF77D /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6572B1C13F6FD001BF77D /* blank.png */; settings = {ASSET_TAGS = (); }; };
+		3AC6572C1C13F6FD001BF77D /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6572B1C13F6FD001BF77D /* blank.png */; };
 		3AD5F4CA1BFB30F300AA64DA /* ViewQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5F4C91BFB30F300AA64DA /* ViewQrViewController.swift */; };
 		3AD5F4CC1BFB33DE00AA64DA /* MyQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5F4CB1BFB33DE00AA64DA /* MyQTableViewController.swift */; };
 		3AD5F4D81BFCEE4300AA64DA /* res_sizzler.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD5F4D11BFCEE4300AA64DA /* res_sizzler.png */; };
@@ -331,7 +331,7 @@
 		A1FA258D1BF9D30300F6B0B9 /* pork_porkloin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1FA25141BF9D30300F6B0B9 /* pork_porkloin.jpg */; };
 		A1FA258E1BF9D30300F6B0B9 /* pork_porkrib_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1FA25151BF9D30300F6B0B9 /* pork_porkrib_full.jpg */; };
 		A1FA258F1BF9D30300F6B0B9 /* pork_porkrib_half.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1FA25161BF9D30300F6B0B9 /* pork_porkrib_half.jpg */; };
-		A1FA25901BF9D30300F6B0B9 /* prob_beefloin_spicygrillchic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1FA25171BF9D30300F6B0B9 /* prob_beefloin_spicygrillchic.jpg */; };
+		A1FA25901BF9D30300F6B0B9 /* prob_spicygrillchic_beefloin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1FA25171BF9D30300F6B0B9 /* prob_spicygrillchic_beefloin.jpg */; };
 		A1FA25911BF9D30300F6B0B9 /* prob_beefloin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1FA25181BF9D30300F6B0B9 /* prob_beefloin.jpg */; };
 		A1FA25921BF9D30300F6B0B9 /* prob_newyork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1FA25191BF9D30300F6B0B9 /* prob_newyork.jpg */; };
 		A1FA25931BF9D30300F6B0B9 /* prob_striploin_champign.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1FA251A1BF9D30300F6B0B9 /* prob_striploin_champign.jpg */; };
@@ -746,7 +746,7 @@
 		A1FA25141BF9D30300F6B0B9 /* pork_porkloin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pork_porkloin.jpg; path = MenuSizzler/pork_porkloin.jpg; sourceTree = "<group>"; };
 		A1FA25151BF9D30300F6B0B9 /* pork_porkrib_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pork_porkrib_full.jpg; path = MenuSizzler/pork_porkrib_full.jpg; sourceTree = "<group>"; };
 		A1FA25161BF9D30300F6B0B9 /* pork_porkrib_half.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pork_porkrib_half.jpg; path = MenuSizzler/pork_porkrib_half.jpg; sourceTree = "<group>"; };
-		A1FA25171BF9D30300F6B0B9 /* prob_beefloin_spicygrillchic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = prob_beefloin_spicygrillchic.jpg; path = MenuSizzler/prob_beefloin_spicygrillchic.jpg; sourceTree = "<group>"; };
+		A1FA25171BF9D30300F6B0B9 /* prob_spicygrillchic_beefloin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = prob_spicygrillchic_beefloin.jpg; path = MenuSizzler/prob_spicygrillchic_beefloin.jpg; sourceTree = "<group>"; };
 		A1FA25181BF9D30300F6B0B9 /* prob_beefloin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = prob_beefloin.jpg; path = MenuSizzler/prob_beefloin.jpg; sourceTree = "<group>"; };
 		A1FA25191BF9D30300F6B0B9 /* prob_newyork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = prob_newyork.jpg; path = MenuSizzler/prob_newyork.jpg; sourceTree = "<group>"; };
 		A1FA251A1BF9D30300F6B0B9 /* prob_striploin_champign.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = prob_striploin_champign.jpg; path = MenuSizzler/prob_striploin_champign.jpg; sourceTree = "<group>"; };
@@ -1360,7 +1360,7 @@
 				A1FA25141BF9D30300F6B0B9 /* pork_porkloin.jpg */,
 				A1FA25151BF9D30300F6B0B9 /* pork_porkrib_full.jpg */,
 				A1FA25161BF9D30300F6B0B9 /* pork_porkrib_half.jpg */,
-				A1FA25171BF9D30300F6B0B9 /* prob_beefloin_spicygrillchic.jpg */,
+				A1FA25171BF9D30300F6B0B9 /* prob_spicygrillchic_beefloin.jpg */,
 				A1FA25181BF9D30300F6B0B9 /* prob_beefloin.jpg */,
 				A1FA25191BF9D30300F6B0B9 /* prob_newyork.jpg */,
 				A1FA251A1BF9D30300F6B0B9 /* prob_striploin_champign.jpg */,
@@ -1846,7 +1846,7 @@
 				3A6E5BCA1BF4E86E0078A941 /* tick_2.jpg in Resources */,
 				A1A25C801BFC7EEA001012DA /* crown-512.png in Resources */,
 				A1FA254F1BF9D30300F6B0B9 /* beef_rare.png in Resources */,
-				A1FA25901BF9D30300F6B0B9 /* prob_beefloin_spicygrillchic.jpg in Resources */,
+				A1FA25901BF9D30300F6B0B9 /* prob_spicygrillchic_beefloin.jpg in Resources */,
 				A1A25C7B1BFC7EEA001012DA /* gift_4-512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
