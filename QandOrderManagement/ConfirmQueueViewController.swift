@@ -110,6 +110,9 @@ class ConfirmQueueViewController: UIViewController, contact2Delegate {
             self.friendList.text = "-"
         }
         self.autoLayoutSubviews()
+
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)

@@ -63,6 +63,9 @@ class MyQTableViewController: UITableViewController {
         self.refreshControl1.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl1.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl1)
+
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab3(self)

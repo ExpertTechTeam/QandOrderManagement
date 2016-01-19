@@ -16,6 +16,9 @@ class PromotionMainTableViewController: UITableViewController {
         self.title = "Sizzler Promotion"
         promotionArray = PromotionController().getPromotionByResName("Sizzler")
         
+        
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)

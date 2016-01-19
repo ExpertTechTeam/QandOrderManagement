@@ -32,6 +32,8 @@ class BranchListViewController: UIViewController, UITableViewDelegate, UITableVi
         self.branchFavouriteArray.append(branchArray[4])
         self.branchFavouriteArray.append(branchArray[20])
         
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)

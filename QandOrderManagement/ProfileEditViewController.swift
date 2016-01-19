@@ -30,6 +30,8 @@ class ProfileEditViewController: UIViewController {
         // Do any additional setup after loading the view.
         pickerBirthdate.hidden = true
         
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab5(self)

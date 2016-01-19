@@ -47,10 +47,13 @@ class CurrentQueueViewController: UIViewController, UITableViewDataSource, UITab
         self.branchLocation!.text = self.selectedBranch.res_address
         self.branchServiceTimeContact!.text = "Open 10:00 - 21:30 "+"Tel. "+self.selectedBranch.res_contact
         
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)
     }
+    
     override func viewDidDisappear(animated: Bool) {
         common.deinitNotification()
     }

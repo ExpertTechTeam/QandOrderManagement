@@ -21,8 +21,8 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
         self.orderListTableView.backgroundColor = UIColor.whiteColor()
         self.configureCart()
         self.reCalculate()
-        // Do any additional setup after loading the view.
-        
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)
@@ -32,6 +32,9 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidDisappear(animated: Bool) {
         common.deinitNotification()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
         var quantity = 0
         for order in MyVariables.orderList {
             quantity += order.orderQuantity
@@ -39,7 +42,6 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
         print("Quantity : \(quantity)")
         MyVariables.countCart = quantity
     }
-    
     
     override func viewDidAppear(animated: Bool) {
         lblCartCount.text = "\(MyVariables.countCart)"

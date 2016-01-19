@@ -26,14 +26,11 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab5(self)
-    }
-    override func viewDidDisappear(animated: Bool) {
-        common.deinitNotification()
     }
     
     

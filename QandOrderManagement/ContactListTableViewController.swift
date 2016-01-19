@@ -41,11 +41,15 @@ class ContactListTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = doneItem
         self.navigationItem.hidesBackButton = true
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)
         common.initializeTab3(self)
     }
+    
     override func viewDidDisappear(animated: Bool) {
         common.deinitNotification()
     }

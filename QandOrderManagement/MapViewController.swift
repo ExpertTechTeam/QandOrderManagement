@@ -23,7 +23,8 @@ class MapViewController: UIViewController,MKMapViewDelegate,UIPopoverPresentatio
         self.vMapView.delegate = self
         self.centerMapOnLocation()
         self.pointMapOnLocation()
-        
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)

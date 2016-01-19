@@ -57,7 +57,9 @@ class MenuDetailViewController: UIViewController, UITableViewDelegate, KWStepper
         self.configureBtnSideDisk()
         self.configureStepper()
         self.initialMenuDetail()
-        
+
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)

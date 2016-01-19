@@ -40,6 +40,9 @@ class MenuLevel2ViewController: UIViewController, UITableViewDataSource, UITable
         
         tableView.menuListBySection = menuListBySection
         
+
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)

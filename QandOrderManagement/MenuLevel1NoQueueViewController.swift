@@ -19,13 +19,9 @@ class MenuLevel1NoQueueViewController: UIViewController, UITableViewDelegate, UI
         self.configureCart()
         self.menuLevelTableView.delegate = self
         self.menuLevelTableView.contentInset = UIEdgeInsetsMake(-1.0, 0.0, 0.0, 0.0);
-        
-        // Initial Notification for back to the first page
-        common = CommonController()
-        common.initializeTab1(self)
-        common.initializeTab2(self)
-        common.initializeTab3(self)
+
     }
+    
     override func viewDidDisappear(animated: Bool) {
         common.deinitNotification()
     }
@@ -50,6 +46,11 @@ class MenuLevel1NoQueueViewController: UIViewController, UITableViewDelegate, UI
     }
     
     override func viewWillAppear(animated: Bool) {
+        // Initial Notification for back to the first page
+        common = CommonController()
+        common.initializeTab1(self)
+        common.initializeTab2(self)
+        common.initializeTab3(self)
         lblCartCount.text = "\(MyVariables.countCart)"
     }
     

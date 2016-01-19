@@ -16,6 +16,8 @@ class BillTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         self.tableView.backgroundColor = UIColor.whiteColor()
         
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab4(self)

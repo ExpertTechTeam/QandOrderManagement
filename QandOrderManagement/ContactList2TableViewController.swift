@@ -40,6 +40,8 @@ class ContactLis2tTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = doneItem
         self.navigationItem.hidesBackButton = true
         
+    }
+    override func viewWillAppear(animated: Bool) {
         // Initial Notification for back to the first page
         common = CommonController()
         common.initializeTab1(self)
